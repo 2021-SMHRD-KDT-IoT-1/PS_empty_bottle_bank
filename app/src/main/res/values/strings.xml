@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">IoT3_PS_empty_bottle_bank</string>
+
+
+    <!--Login_Activity.xml-->>
+    <string name="Login_tv_title">🤑PS공병은행🤑</string>
+    <string name="Ligin_btn_Login">로그인</string>
+    <string name="Ligin_btn_join">회원가입</string>
+
 </resources>
