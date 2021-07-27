@@ -11,6 +11,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // 홍진석 ㅋㅋㅋ
+        //테스트 진석진석진석 내 이름은 진석 콩콩콩진석
     }
 }
