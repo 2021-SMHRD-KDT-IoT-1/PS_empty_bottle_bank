@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="05c57b34-f720-4927-864a-2099f0a399e2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test_0726/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test_0726/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test_0726/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test_0726/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test_0726/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test_0726/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test_0726/.idea/render.experimental.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test_0726/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test_0726/app/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test_0726/app/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test_0726/app/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test_0726/app/src/androidTest/java/kr/or/smhrd/test_0726/ExampleInstrumentedTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test_0726/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test_0726/app/src/main/java/kr/or/smhrd/test_0726/Question1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test_0726/app/src/main/java/kr/or/smhrd/test_0726/Question2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test_0726/app/src/main/java/kr/or/smhrd/test_0726/Question3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test_0726/app/src/main/java/kr/or/smhrd/test_0726/Question3_result.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test_0726/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test_0726/app/src/main/res/drawable/apeach.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test_0726/app/src/main/res/drawable/baskin_apeach.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test_0726/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test_0726/app/src/main/res/drawable/lovely_apeach.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test_0726/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test_0726/app/src/main/res/layout/activity_question1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test_0726/app/src/main/res/layout/activity_question2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test_0726/app/src/main/res/layout/activity_question3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test_0726/app/src/main/res/layout/activity_question3_result.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test_0726/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test_0726/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test_0726/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test_0726/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test_0726/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test_0726/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test_0726/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test_0726/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test_0726/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test_0726/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test_0726/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test_0726/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test_0726/app/src/main/res/values-night/themes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test_0726/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test_0726/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test_0726/app/src/main/res/values/themes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test_0726/app/src/test/java/kr/or/smhrd/test_0726/ExampleUnitTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test_0726/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test_0726/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test_0726/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test_0726/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test_0726/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test_0726/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test_0726/settings.gradle" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1vt0mvoceMIwFEIFAGQu5DEaMQy" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../MyApplication213213312123" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="05c57b34-f720-4927-864a-2099f0a399e2" name="Default Changelist" comment="" />
+      <created>1627366240501</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1627366240501</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="255" y="320" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1627366547717">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="255" y="320" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1627366547717" />
+    <state x="267" y="274" key="FileChooserDialogImpl" timestamp="1627366709850">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="267" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1627366709850" />
+    <state x="72" y="256" key="Vcs.Push.Dialog.v2" timestamp="1627367320874">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="72" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1627367320874" />
+    <state x="295" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1627367334952">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="295" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1627367334952" />
+  </component>
+</project>
