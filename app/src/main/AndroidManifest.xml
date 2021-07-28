@@ -10,14 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.IoT3_PS_empty_bottle_bank">
         <activity android:name=".Join_Activity2"></activity>
-        <activity android:name=".Login_Activity">   <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".Login_Activity">
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
         </activity>
         <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 
