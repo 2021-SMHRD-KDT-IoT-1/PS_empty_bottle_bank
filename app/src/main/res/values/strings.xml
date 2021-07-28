@@ -6,6 +6,12 @@
     <string name="Login_tv_title">🤑PS공병은행🤑</string>
     <string name="Ligin_btn_Login">로그인</string>
     <string name="Ligin_btn_join">회원가입</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <!--Main.xml-->
+    <string name="gongji">대박 로또 게임 진행중(07.01~08.31)</string>
 
 
 
