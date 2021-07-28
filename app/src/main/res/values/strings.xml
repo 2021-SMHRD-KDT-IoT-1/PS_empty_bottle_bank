@@ -7,4 +7,18 @@
     <string name="Ligin_btn_Login">로그인</string>
     <string name="Ligin_btn_join">회원가입</string>
 
+
+
+    <!--join.xml -->
+    <string name="join_btn">회원가입</string>
+    <string name="join_back">취소</string>
+    <string name="app_arg"> 아아아ㅏㅇ아ㅏㅏ아아아아앙 </string>
+    <string name="underlined_text1">이건뭔데 그러나</string>
+    <string name="app_arg2" />
+    <string name="app_arg3" />
+    <string name="btn_bobobo">보기</string>
+
+        <string name="underlined_text"><u>보기</u></string>
+
+
 </resources>
