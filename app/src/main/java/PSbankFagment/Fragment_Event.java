@@ -1,4 +1,4 @@
-package kr.or.iot3_ps_empty_bottle_bank;
+package PSbankFagment;
 
 import android.os.Bundle;
 
@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import kr.or.iot3_ps_empty_bottle_bank.R;
 
 public class Fragment_Event extends Fragment {
 

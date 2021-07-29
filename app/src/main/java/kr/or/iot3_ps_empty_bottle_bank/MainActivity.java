@@ -3,11 +3,15 @@ package kr.or.iot3_ps_empty_bottle_bank;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Fragment;
 import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+import PSbankFagment.Fragment_Event;
+import PSbankFagment.Fragment_Guide;
+import PSbankFagment.Fragment_Main;
+import PSbankFagment.Fragment_Myinfo;
 
 public class MainActivity extends AppCompatActivity {
 
