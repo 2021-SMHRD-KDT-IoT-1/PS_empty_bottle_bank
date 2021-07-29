@@ -12,11 +12,11 @@
         android:icon="@android:drawable/btn_star_big_on"
         android:title="이벤트" />
     <item
-        android:id="@+id/item_guide"
-        android:icon="@android:drawable/ic_menu_directions"
-        android:title="가이드" />
-    <item
         android:id="@+id/item_myinfo"
         android:icon="@android:drawable/ic_menu_myplaces"
         android:title="내정보" />
+    <item
+        android:id="@+id/item_setting"
+        android:icon="@android:drawable/ic_menu_directions"
+        android:title="설정" />
 </menu>

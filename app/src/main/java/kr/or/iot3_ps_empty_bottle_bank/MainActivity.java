@@ -9,17 +9,14 @@ import android.view.MenuItem;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import PSbankFagment.Fragment_Event;
-import PSbankFagment.Fragment_Guide;
-import PSbankFagment.Fragment_Main;
-import PSbankFagment.Fragment_Myinfo;
 
 public class MainActivity extends AppCompatActivity {
 
     BottomNavigationView navigation;
     Fragment_Main fragment_main;
-    Fragment_Event fragment_event;
-    Fragment_Guide fragment_guide;
+    Fragment_Setting fragment_setting;
     Fragment_Myinfo fragment_myinfo;
+    Fragment_Event fragment_event;
 
 
     @Override
@@ -29,9 +26,10 @@ public class MainActivity extends AppCompatActivity {
 
         navigation = findViewById(R.id.navigation);
         fragment_main = new Fragment_Main();
-        fragment_event = new Fragment_Event();
-        fragment_guide = new Fragment_Guide();
+        fragment_setting = new Fragment_Setting();
         fragment_myinfo = new Fragment_Myinfo();
+        fragment_event = new Fragment_Event();
+
 
 
         //프래그먼트매니저를 이용하여 FrameLayout에 Fragment화면을 설정
@@ -48,8 +46,8 @@ public class MainActivity extends AppCompatActivity {
                     getSupportFragmentManager().beginTransaction().replace(R.id.frame, fragment_main).commit();
                 }else if (itemId == R.id.item_event){
                     getSupportFragmentManager().beginTransaction().replace(R.id.frame, fragment_event).commit();
-                }else if (itemId == R.id.item_guide){
-                    getSupportFragmentManager().beginTransaction().replace(R.id.frame, fragment_guide).commit();
+                }else if (itemId == R.id.item_setting){
+                    getSupportFragmentManager().beginTransaction().replace(R.id.frame, fragment_setting).commit();
                 }else if (itemId == R.id.item_myinfo){
                     getSupportFragmentManager().beginTransaction().replace(R.id.frame, fragment_myinfo).commit();
                 }

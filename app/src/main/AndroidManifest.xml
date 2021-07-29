@@ -11,6 +11,7 @@
         android:theme="@style/Theme.IoT3_PS_empty_bottle_bank">
         <activity android:name=".Detail_Activity"></activity>
         <activity android:name=".Main_QR_Activity" />
+        <activity android:name=".Myinfo_Modify_Result"></activity>
         <activity android:name=".Join_Activity2" />
         <activity android:name=".Login_Activity">
             <intent-filter>

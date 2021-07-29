@@ -7,13 +7,27 @@
     tools:context="PSbankFagment.Fragment_Event">
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/event_notice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="이벤트화면"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:gravity="center"
+        android:text="공지사항 : 대박 로또 게임 진행중(07.01~08.31)"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/event_ListView"
+        android:layout_width="406dp"
+        android:layout_height="609dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/event_notice" />
 </androidx.constraintlayout.widget.ConstraintLayout>
