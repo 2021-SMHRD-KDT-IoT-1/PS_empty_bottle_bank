@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment_Myinfo">
+
+    <ImageView
+        android:id="@+id/s_myinfo_img"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="52dp"
+        android:src="@drawable/apeach"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/s_myinfo_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:text="수거자 ㅣ 콩진석"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.603"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/s_myinfo_adr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="광주 ㅣ 나도몰랑/기모띠"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/s_myinfo_name"
+        app:layout_constraintTop_toBottomOf="@+id/s_myinfo_name" />
+
+    <Button
+        android:id="@+id/s_myinfo_btn_edt"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="12dp"
+        android:text="수정하기"
+        android:textColor="@color/black"
+        app:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/s_myinfo_adr"
+        app:layout_constraintTop_toBottomOf="@+id/s_myinfo_adr" />
+
+    <TextView
+        android:id="@+id/s_myinfo_total_money_view"
+        android:layout_width="213dp"
+        android:layout_height="38dp"
+        android:gravity="right"
+        android:text="400원"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/s_myinfo_total_money"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.804"
+        app:layout_constraintStart_toEndOf="@+id/s_myinfo_total_money"
+        app:layout_constraintTop_toTopOf="@+id/s_myinfo_total_money"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/s_myinfo_total_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="총 적립 금액"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.068"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/s_myinfo_img" />
+
+    <TextView
+        android:id="@+id/s_myinfo_current_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="현재 적립 금액"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="@+id/s_myinfo_total_money"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/s_myinfo_total_money"
+        app:layout_constraintTop_toBottomOf="@+id/s_myinfo_total_money" />
+
+    <TextView
+        android:id="@+id/s_myinfo_ranking"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="랭킹"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="@+id/s_myinfo_current_money"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/s_myinfo_current_money"
+        app:layout_constraintTop_toBottomOf="@+id/s_myinfo_current_money" />
+
+    <TextView
+        android:id="@+id/s_myinfo_ranking_view"
+        android:layout_width="213dp"
+        android:layout_height="38dp"
+        android:gravity="right"
+        android:text="0위"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/s_myinfo_ranking"
+        app:layout_constraintEnd_toEndOf="@+id/s_myinfo_current_money_view"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/s_myinfo_current_money_view"
+        app:layout_constraintTop_toTopOf="@+id/s_myinfo_ranking"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/s_myinfo_current_money_view"
+        android:layout_width="213dp"
+        android:layout_height="38dp"
+        android:gravity="right"
+        android:text="400원"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/s_myinfo_current_money"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/s_myinfo_total_money_view"
+        app:layout_constraintTop_toTopOf="@+id/s_myinfo_current_money"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/s_myinfo_btn_event"
+        android:layout_width="377dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="372dp"
+        android:gravity="left"
+        android:text="이벤트 참여내역"
+        android:textColor="@color/black"
+        app:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/s_myinfo_btn_store"
+        android:layout_width="377dp"
+        android:layout_height="47dp"
+        android:gravity="left"
+        android:text="스토어 구매내역"
+        android:textColor="@color/black"
+        app:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/s_myinfo_btn_event"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/s_myinfo_btn_event"
+        app:layout_constraintTop_toBottomOf="@+id/s_myinfo_btn_event" />
+
+    <Button
+        android:id="@+id/s_myinfo_btn_total"
+        android:layout_width="377dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        android:text="적립내역 및 사용내역 보기"
+        android:textColor="@color/black"
+        app:backgroundTint="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="@+id/s_myinfo_btn_event"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/s_myinfo_btn_event"
+        app:layout_constraintTop_toBottomOf="@+id/s_myinfo_btn_event" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

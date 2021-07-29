@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_shapes"
+    tools:context=".Login_Activity">
+
+    <EditText
+        android:id="@+id/Login_edt_PW"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="PW"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/Login_btn_login"
+        app:layout_constraintStart_toStartOf="@+id/Login_edt_ID"
+        app:layout_constraintTop_toBottomOf="@+id/Login_edt_ID" />
+
+    <EditText
+        android:id="@+id/Login_edt_ID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="128dp"
+        android:ems="10"
+        android:hint="ID"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/Login_btn_login"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:text="@string/Login_tv_title"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/Login_btn_login"
+        android:layout_width="109dp"
+        android:layout_height="95dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
+        android:text="@string/Ligin_btn_Login"
+        app:backgroundTint="#706B6B"
+        app:layout_constraintBottom_toBottomOf="@+id/Login_edt_PW"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Login_edt_ID" />
+
+    <Button
+        android:id="@+id/Login_btn_join"
+        android:layout_width="306dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="88dp"
+        android:text="@string/Ligin_btn_join"
+        app:backgroundTint="#706B6B"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/Login_btn_login"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/Login_edt_ID"
+        app:layout_constraintTop_toBottomOf="@+id/Login_edt_PW" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

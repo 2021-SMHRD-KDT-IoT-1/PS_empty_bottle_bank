@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment_Setting">
+
+    <Button
+        android:id="@+id/set_btn_log"
+        android:layout_width="350dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="12dp"
+        android:gravity="left"
+        android:text="User - 로그아웃,비밀번호변경,탈퇴"
+        android:textColor="@color/black"
+        app:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/setting_info" />
+
+    <TextView
+        android:id="@+id/setting_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="기본정보"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="248dp"
+        android:text="고객문의"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/setting_info"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/setting_info"
+        app:layout_constraintTop_toBottomOf="@+id/setting_info" />
+
+    <Button
+        android:id="@+id/set_btn_help"
+        android:layout_width="350dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="3dp"
+        android:gravity="left"
+        android:text="도움말"
+        android:textColor="@color/black"
+        app:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/set_btn_notice"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/set_btn_notice"
+        app:layout_constraintTop_toBottomOf="@+id/set_btn_notice" />
+
+    <Button
+        android:id="@+id/set_btn_new_ad"
+        android:layout_width="350dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="3dp"
+        android:gravity="left"
+        android:text="신규 광고 알림"
+        android:textColor="@color/black"
+        app:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/set_btn_help"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/set_btn_help"
+        app:layout_constraintTop_toBottomOf="@+id/set_btn_help" />
+
+    <Button
+        android:id="@+id/set_btn_version"
+        android:layout_width="350dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="3dp"
+        android:gravity="left"
+        android:text="버전정보"
+        android:textColor="@color/black"
+        app:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/set_btn_new_ad"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/set_btn_new_ad"
+        app:layout_constraintTop_toBottomOf="@+id/set_btn_new_ad" />
+
+    <Button
+        android:id="@+id/set_customer_btn_email"
+        android:layout_width="350dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="12dp"
+        android:gravity="left"
+        android:text="이메일 발송"
+        android:textColor="@color/black"
+        app:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <Button
+        android:id="@+id/set_customer_btn_call"
+        android:layout_width="350dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="3dp"
+        android:gravity="left"
+        android:text="전화  (1588-1234)"
+        android:textColor="@color/black"
+        app:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/set_customer_btn_email"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/set_customer_btn_email"
+        app:layout_constraintTop_toBottomOf="@+id/set_customer_btn_email" />
+
+    <Button
+        android:id="@+id/set_ad_btn_email"
+        android:layout_width="350dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="12dp"
+        android:gravity="left"
+        android:text="이메일 발송"
+        android:textColor="@color/black"
+        app:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <Button
+        android:id="@+id/set_ad_btn_call"
+        android:layout_width="350dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="3dp"
+        android:gravity="left"
+        android:text="전화 (1588-1235)"
+        android:textColor="@color/black"
+        app:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/set_ad_btn_email"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/set_ad_btn_email"
+        app:layout_constraintTop_toBottomOf="@+id/set_ad_btn_email" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="112dp"
+        android:text="광고 문의"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/textView8"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView8"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <Button
+        android:id="@+id/set_btn_notice"
+        android:layout_width="350dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="3dp"
+        android:gravity="left"
+        android:text="공지사항"
+        android:textColor="@color/black"
+        app:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/set_btn_log"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/set_btn_log"
+        app:layout_constraintTop_toBottomOf="@+id/set_btn_log" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

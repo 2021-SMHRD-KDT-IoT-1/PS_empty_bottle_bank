@@ -1,0 +1,2 @@
+rootProject.name = "IoT3_PS_empty_bottle_bank"
+include ':app'

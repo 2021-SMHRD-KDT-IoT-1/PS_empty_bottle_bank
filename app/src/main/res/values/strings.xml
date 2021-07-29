@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">IoT3_PS_empty_bottle_bank</string>
+
+
+    <!--Login_Activity.xml-->>
+    <string name="Login_tv_title">🤑PS공병은행🤑</string>
+    <string name="Ligin_btn_Login">로그인</string>
+    <string name="Ligin_btn_join">회원가입</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <!--Main.xml-->
+    <string name="gongji">대박 로또 게임 진행중(07.01~08.31)</string>
+
+
+    <!--join.xml -->
+    <string name="join_btn">회원가입</string>
+    <string name="join_back">취소</string>
+    <string name="app_arg"> 아아아ㅏㅇ아ㅏㅏ아아아아앙 </string>
+    <string name="underlined_text1">이건뭔데 그러나</string>
+    <string name="app_arg2" />
+    <string name="app_arg3" />
+    <string name="btn_bobobo">보기</string>
+
+    <string name="underlined_text"><u>보기</u></string>
+
+
+    <!-- main_list_view -->
+
+    <string name="main_list_tlt">구시청 무인공병 회수기</string>
+    <string name="main_list_text1">상무지구</string>
+    <string name="main_list_text2">회수상태 OK</string>
+    <string name="main_list_text3">소주병 맥주병 전용</string>
+    <string name="main_list_text4">환금금 : 소주병 100원, 맥주병, 130원</string>
+
+
+</resources>
