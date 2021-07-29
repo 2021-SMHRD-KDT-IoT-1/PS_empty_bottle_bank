@@ -9,6 +9,8 @@ import android.view.MenuItem;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import PSbankFagment.Fragment_Event;
+import PSbankFagment.Fragment_Guide;
+import PSbankFagment.Fragment_Main;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     Fragment_Event fragment_event;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,10 +29,9 @@ public class MainActivity extends AppCompatActivity {
 
         navigation = findViewById(R.id.navigation);
         fragment_main = new Fragment_Main();
-        fragment_setting = new Fragment_Setting();
         fragment_myinfo = new Fragment_Myinfo();
+        fragment_setting = new Fragment_Setting();
         fragment_event = new Fragment_Event();
-
 
 
         //프래그먼트매니저를 이용하여 FrameLayout에 Fragment화면을 설정
