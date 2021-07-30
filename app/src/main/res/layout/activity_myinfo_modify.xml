@@ -110,4 +110,14 @@
         app:layout_constraintStart_toEndOf="@+id/myinfo_tellnum"
         app:layout_constraintTop_toTopOf="@+id/myinfo_tellnum" />
 
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="147dp"
+        android:layout_height="29dp"
+        android:spinnerMode="dropdown"
+        app:layout_constraintBottom_toBottomOf="@+id/myinfo_loc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/myinfo_loc"
+        app:layout_constraintTop_toTopOf="@+id/myinfo_loc" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
