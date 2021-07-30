@@ -53,4 +53,8 @@
     <string name="Check_loc_btn">위치보기</string>
 
 
+    <!-- event_list_view.xml-->
+    <string name="envent_tlt">우리동네 공병왕 이벤트</string>
+    <string name="envent_time">2021.03.18 ~ 2021.08.13</string>
+
 </resources>
