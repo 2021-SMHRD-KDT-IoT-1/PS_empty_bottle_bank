@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragment_Setting">
+    tools:context="PSbankFagment.Fragment_Setting">
 
     <Button
         android:id="@+id/set_btn_log"
