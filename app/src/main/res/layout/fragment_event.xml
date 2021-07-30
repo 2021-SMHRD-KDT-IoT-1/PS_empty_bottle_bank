@@ -18,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ListView
-        android:id="@+id/event_ListView"
+        android:id="@+id/event_main_ListView"
         android:layout_width="406dp"
         android:layout_height="609dp"
         android:layout_marginStart="1dp"

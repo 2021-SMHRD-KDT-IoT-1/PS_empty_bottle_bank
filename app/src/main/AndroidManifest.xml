@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.IoT3_PS_empty_bottle_bank">
-        <activity android:name=".Detail_Activity"></activity>
+        <activity android:name=".Detail_event_Activity"></activity>
+        <activity android:name=".Check_Loc_Activity" />
+        <activity android:name=".Detail_Activity" />
         <activity android:name=".Main_QR_Activity" />
         <activity android:name=".Myinfo_Modify"></activity>
         <activity android:name=".Returner_Myinfo_Modify"></activity>
