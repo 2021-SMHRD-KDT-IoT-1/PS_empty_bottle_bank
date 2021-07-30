@@ -15,11 +15,15 @@ import PSbankAdapter.event_list_Adapter;
 import PSbankVO.event_ProductVO;
 import kr.or.iot3_ps_empty_bottle_bank.R;
 
-public class Fragment_Event extends Fragment {
+public class Fragment_Event extends Fragment  {
+
+
+
 
     private ListView event_main_ListView;
     private event_list_Adapter event_Adapter;
     private ArrayList<event_ProductVO> event_list_data;
+
 
 
     private int[] eventArray = {R.drawable.sojo, R.drawable.apeach, R.drawable.item1, R.drawable.item2,R.drawable.item3};
@@ -28,11 +32,23 @@ public class Fragment_Event extends Fragment {
     private String[] eventtime = {"2021.03.14 ~ 2021.08.13", "2021.03.14 ~ 2021.08.13", "2021.03.14 ~ 2021.08.13",
             "2021.03.14 ~ 2021.08.13","2021.03.14 ~ 2021.08.13"};
 
+
+
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_event, container, false);
+
+
+
+
+
+
+
+
 
 
 
@@ -44,6 +60,8 @@ public class Fragment_Event extends Fragment {
         for(int i = 0; i<eventArray.length; i++) {
             event_list_data.add(new event_ProductVO(eventArray[i], eventname[i], eventtime[i]));
         }
+
+
 
         event_Adapter = new event_list_Adapter(getActivity(), R.layout.event_list_view ,event_list_data);
 

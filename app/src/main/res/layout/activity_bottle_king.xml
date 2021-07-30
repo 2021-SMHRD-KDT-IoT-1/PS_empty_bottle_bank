@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Detail_event_Activity">
+    tools:context=".Bottle_king_Activity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="이벤트 상세ㅠㅔ이지"
-        android:textSize="34sp"
-        tools:layout_editor_absoluteX="47dp"
-        tools:layout_editor_absoluteY="182dp" />
+    <ListView
+        android:id="@+id/bottle_list_king"
+        android:layout_width="409dp"
+        android:layout_height="657dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
