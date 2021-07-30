@@ -18,7 +18,7 @@
         app:srcCompat="@drawable/apeach" />
 
     <TextView
-        android:id="@+id/myinfo_nickname"
+        android:id="@+id/myinfo_result_nickname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="72dp"
@@ -30,7 +30,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/myinfo_id"
+        android:id="@+id/myinfo_result_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
@@ -38,35 +38,35 @@
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/myinfo_nickname"
-        app:layout_constraintTop_toBottomOf="@+id/myinfo_nickname" />
+        app:layout_constraintStart_toStartOf="@+id/myinfo_result_nickname"
+        app:layout_constraintTop_toBottomOf="@+id/myinfo_result_nickname" />
 
     <TextView
-        android:id="@+id/myinfo_tellnum"
+        android:id="@+id/myinfo_result_tellnum"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:text="전화번호 : 010-0000-0000"
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="@+id/myinfo_id"
+        app:layout_constraintEnd_toEndOf="@+id/myinfo_result_id"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/myinfo_id"
-        app:layout_constraintTop_toBottomOf="@+id/myinfo_id" />
+        app:layout_constraintStart_toStartOf="@+id/myinfo_result_id"
+        app:layout_constraintTop_toBottomOf="@+id/myinfo_result_id" />
 
     <TextView
-        android:id="@+id/myinfo_loc"
+        android:id="@+id/myinfo_result_loc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:text="내지역 : 광주"
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="@+id/myinfo_tellnum"
+        app:layout_constraintEnd_toEndOf="@+id/myinfo_result_tellnum"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/myinfo_tellnum"
-        app:layout_constraintTop_toBottomOf="@+id/myinfo_tellnum" />
+        app:layout_constraintStart_toStartOf="@+id/myinfo_result_tellnum"
+        app:layout_constraintTop_toBottomOf="@+id/myinfo_result_tellnum" />
 
     <Button
-        android:id="@+id/myinfo_btn_modify"
+        android:id="@+id/myinfo_result_btn_modify"
         android:layout_width="352dp"
         android:layout_height="39dp"
         android:text="수정하기"
