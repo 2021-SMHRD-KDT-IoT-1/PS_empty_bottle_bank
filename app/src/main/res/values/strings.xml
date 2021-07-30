@@ -35,4 +35,22 @@
     <string name="main_list_text4">환금금 : 소주병 100원, 맥주병, 130원</string>
 
 
+    <!-- Detail_Activity.xml-->
+    <string name="Detail_tlt">PS무인공병 상무지구점</string>
+    <string name="Detail_text1">소주병, 맥주병전용</string>
+    <string name="Detail_text2">환급금</string>
+    <string name="Detail_text3">소주병 100원</string>
+    <string name="Detail_text4">맥주병 130원</string>
+    <string name="Detail_btn_back">뒤로</string>
+    <string name="Detail_bottle_set">  투입가능갯수</string>
+    <string name="Detail_bottle_set_num">5</string>
+    <string name="Detail_bottle_now">  현재공병갯수</string>
+    <string name="Detail_bottle_now_num">15</string>
+    <string name="Detail_care">📢 주의 사항 📢</string>
+    <string name="Detail_content"> 현재 PS 상무지구점 무인 공병 회수기는 소주병 맥주병전용입니다.
+    이물질이 들어간 병 삽입은 삼가해주시기 바랍니다. 소주병, 맥주병이 아닌 것들은 삽입을 삼가해주시 바랍니다.
+    (주) PS공병은행 </string>
+    <string name="Check_loc_btn">위치보기</string>
+
+
 </resources>
