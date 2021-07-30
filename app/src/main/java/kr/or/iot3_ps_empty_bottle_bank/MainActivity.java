@@ -9,8 +9,8 @@ import android.view.MenuItem;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import PSbankFagment.Fragment_Event;
-import PSbankFagment.Fragment_Guide;
 import PSbankFagment.Fragment_Main;
+import PSbankFagment.Fragment_Setting;
 
 public class MainActivity extends AppCompatActivity {
 
