@@ -44,14 +44,6 @@ public class Fragment_Event extends Fragment  {
 
 
 
-
-
-
-
-
-
-
-
         // ===========여기는 플레그먼트 이벤트 출력하는 곳
 
         event_main_ListView = view.findViewById(R.id.event_main_ListView);
