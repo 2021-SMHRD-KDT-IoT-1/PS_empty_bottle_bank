@@ -64,4 +64,9 @@
     <string name="bottle_king_now">현재 갯수</string>
     <string name="bottle_king_score">120ECO</string>
 
+    <!-- lotto.xml -->
+    <string name="lotto_back_btn">뒤로</string>
+    <string name="lotto_round">1회차</string>
+    <string name="lotto_number">3,12,23,24,45,47</string>
+
 </resources>

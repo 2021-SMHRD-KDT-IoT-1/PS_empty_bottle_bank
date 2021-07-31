@@ -77,6 +77,8 @@ public class event_list_Adapter extends BaseAdapter {
                 Intent intent = new Intent(event_context, Bottle_king_Activity.class);
                 intent.setFlags(intent.FLAG_ACTIVITY_NEW_TASK);
                 event_context.startActivity(intent);
+
+
                 }else if (position == 1 ){
                     Intent intent = new Intent(event_context, Lotto_Activity.class);
                     intent.setFlags(intent.FLAG_ACTIVITY_NEW_TASK);
