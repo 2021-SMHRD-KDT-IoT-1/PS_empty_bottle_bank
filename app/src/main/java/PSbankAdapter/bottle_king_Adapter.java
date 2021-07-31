@@ -71,9 +71,6 @@ public class bottle_king_Adapter extends BaseAdapter {
         bottle_king_score.setText(king_vo2.getBottle_king_score());
 
 
-        Intent intent = new Intent(king_context, Bottle_king_Activity.class);
-        intent.setFlags(intent.FLAG_ACTIVITY_NEW_TASK);
-        king_context.startActivity(intent);
 
         return convertView;
     }

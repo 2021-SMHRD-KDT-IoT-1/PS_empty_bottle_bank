@@ -41,10 +41,7 @@ public class Bottle_king_Activity extends AppCompatActivity {
         }
 
 
-
         bottle_king_Adapter = new bottle_king_Adapter(getApplicationContext(), R.layout.bottle_king_win, bottle_king_data);
-
-
         bottle_list_king.setAdapter(bottle_king_Adapter);
 
     }
