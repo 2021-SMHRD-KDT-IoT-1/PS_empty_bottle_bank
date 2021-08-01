@@ -51,7 +51,7 @@
         <ImageView
             android:id="@+id/advertisement_img"
             android:layout_width="324dp"
-            android:layout_height="154dp"
+            android:layout_height="144dp"
             android:src="@drawable/apeach"
             app:layout_constraintBottom_toTopOf="@+id/guideline6"
             app:layout_constraintEnd_toEndOf="parent"
@@ -63,7 +63,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_begin="176dp" />
+            app:layout_constraintGuide_begin="135dp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -77,8 +77,8 @@
 
         <ListView
             android:id="@+id/main_list"
-            android:layout_width="wrap_content"
-            android:layout_height="359dp"
+            android:layout_width="405dp"
+            android:layout_height="336dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -89,8 +89,8 @@
         android:id="@+id/constraintLayout4"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
 

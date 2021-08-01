@@ -30,6 +30,7 @@ public class lotto_win_Adapter extends BaseAdapter {
         this.lotto_layout = lotto_layout;
         this.lotto_data = lotto_data;
         this.inflater_lotto = (LayoutInflater) lotto_context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
     }
 
     @Override

@@ -1,7 +1,5 @@
 package kr.or.iot3_ps_empty_bottle_bank;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -43,27 +41,22 @@ public class Lotto_Activity extends AppCompatActivity {
         lotto_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               Intent intent = new Intent(getApplicationContext(), Fragment_Event.class);
+               Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                startActivity(intent);
             }
         });
 
 
+
+
+
         // ============로또 리스트 뷰 =================
         ListView lotto_main_list_view = findViewById(R.id.lotto_main_list_view);
         lotto_data = new ArrayList<>();
-
         for(int i = 0; i<lotto_round.length; i++) {
             lotto_data.add(new lotto_winVO(lotto_round[i], lotto_win_1[i], lotto_win_2[i], lotto_win_3[i]));
         }
-
-
-
         lotto_win_Adapter = new lotto_win_Adapter(getApplicationContext(), R.layout.lotto_winner, lotto_data);
-
-
         lotto_main_list_view.setAdapter(lotto_win_Adapter);
-
-
     }
 }
