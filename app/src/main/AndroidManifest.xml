@@ -10,6 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.IoT3_PS_empty_bottle_bank">
         <activity android:name=".My_event_Activity"></activity>
+        <activity android:name=".Notice_Activity"></activity>
         <activity android:name=".Lotto_Activity" />
         <activity android:name=".Bottle_king_Activity" />
         <activity android:name=".Check_Loc_Activity" />

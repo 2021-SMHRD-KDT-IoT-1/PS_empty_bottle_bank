@@ -16,39 +16,41 @@ import kr.or.iot3_ps_empty_bottle_bank.R;
 
 public class Fragment_Setting extends Fragment {
 
-    Button set_btn_log,set_btn_notice;
+    Button set_btn_log;
+    Button set_btn_notice;
+
 
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_setting, container, false);
-
-        set_btn_log = view.findViewById(R.id.set_btn_log);
+        ViewGroup Setting_view = (ViewGroup)inflater.inflate(R.layout.fragment_setting, container, false);
 
 
+        set_btn_log = Setting_view.findViewById(R.id.set_btn_log);
         set_btn_log.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), Account_info.class);
-                startActivity(intent);
+                Intent intent1 = new Intent(getActivity(), Account_info.class);
+                startActivity(intent1);
             }
         });
 
-        set_btn_notice = view.findViewById(R.id.set_btn_notice);
 
+
+
+        // ===여기 공지사항
+        set_btn_notice = (Button)Setting_view.findViewById(R.id.set_btn_notice);
         set_btn_notice.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), Notice_Activity.class);
-                startActivity(intent);
+                Intent intent2 = new Intent(getActivity(),Notice_Activity.class);
+                startActivity(intent2);
             }
         });
 
-        return view;
+        return Setting_view;
     }
-
 
 }

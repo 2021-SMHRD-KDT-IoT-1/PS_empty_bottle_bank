@@ -56,10 +56,6 @@ public class Fragment_Myinfo extends Fragment {
         });
 
 
-
-
-
-
         return rootview;
     }
 }

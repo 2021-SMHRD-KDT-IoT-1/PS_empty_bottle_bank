@@ -23,9 +23,7 @@ public class my_eventcontentVO {
         return event_my_content;
     }
 
-    public void setEvent_my_content(String event_my_content) {
-        this.event_my_content = event_my_content;
-    }
+    public void setEvent_my_content(String event_my_content) { this.event_my_content = event_my_content; }
 
     public String getEvent_my_point() {
         return event_my_point;
