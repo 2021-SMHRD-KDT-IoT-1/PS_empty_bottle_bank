@@ -27,8 +27,8 @@ public class Detail_Activity extends AppCompatActivity {
         Detail_btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),Fragment_Main.class);
-                startActivity(intent);
+                Intent intent_main_back = new Intent(getApplicationContext(),MainActivity.class);
+                startActivity(intent_main_back);
             }
         });
 
@@ -36,8 +36,8 @@ public class Detail_Activity extends AppCompatActivity {
         Check_loc_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Check_Loc_Activity.class);
-                startActivity(intent);
+                Intent intent_loc = new Intent(getApplicationContext(), Check_Loc_Activity.class);
+                startActivity(intent_loc);
             }
         });
 

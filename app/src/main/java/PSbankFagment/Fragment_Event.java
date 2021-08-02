@@ -59,6 +59,7 @@ public class Fragment_Event extends Fragment  {
 
 
         event_main_ListView.setAdapter(event_Adapter);
+
         return view;
     }
 }

@@ -10,6 +10,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import PSbankFagment.Fragment_Event;
 import PSbankFagment.Fragment_Main;
+import PSbankFagment.Fragment_Myinfo;
 import PSbankFagment.Fragment_Setting;
 
 public class MainActivity extends AppCompatActivity {
