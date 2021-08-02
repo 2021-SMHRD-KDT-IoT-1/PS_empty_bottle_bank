@@ -4,65 +4,67 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".My_event_Activity">
+    tools:context=".Point_Check_Activity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout9"
+        android:id="@+id/constraintLayout11"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout12"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".My_event_Activity">
 
         <TextView
-            android:id="@+id/my_event_tlt"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:gravity="center"
-            android:text="@string/my_event_tlt"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/my_event_name"
-            android:layout_width="130dp"
-            android:layout_height="33dp"
-            android:layout_marginStart="64dp"
-            android:layout_marginLeft="64dp"
-            android:layout_marginTop="44dp"
-            android:layout_marginBottom="3dp"
-            android:gravity="center"
-            android:text="@string/my_event_name"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/my_event_tlt" />
-
-        <TextView
-            android:id="@+id/my_event_point"
+            android:id="@+id/my_event_point2"
             android:layout_width="158dp"
             android:layout_height="36dp"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
             android:gravity="center"
             android:text="@string/my_event_point"
-            app:layout_constraintBottom_toBottomOf="@+id/my_event_name"
+            app:layout_constraintBottom_toBottomOf="@+id/my_event_name2"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/my_event_name"
-            app:layout_constraintTop_toTopOf="@+id/my_event_name"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintStart_toEndOf="@+id/my_event_name2"
+            app:layout_constraintTop_toTopOf="@+id/my_event_name2" />
+
+        <TextView
+            android:id="@+id/my_event_name2"
+            android:layout_width="130dp"
+            android:layout_height="33dp"
+            android:layout_marginStart="44dp"
+            android:layout_marginLeft="44dp"
+            android:layout_marginTop="64dp"
+            android:layout_marginBottom="3dp"
+            android:gravity="center"
+            android:text="@string/my_event_name"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Point_Check_tlt" />
+
+        <TextView
+            android:id="@+id/Point_Check_tlt"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:text="@string/Point_Check_tlt"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout10"
+        android:id="@+id/constraintLayout12"
         android:layout_width="409dp"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout9">
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout11">
 
         <LinearLayout
             android:layout_width="407dp"
@@ -97,19 +99,17 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="@string/event_Check"
+                android:text="@string/s_my_store_Check"
                 android:textSize="20sp" />
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ListView
-        android:id="@+id/my_event_list_view_co"
+        android:id="@+id/Point_main_ck_list"
         android:layout_width="409dp"
-        android:layout_height="520dp"
-        android:layout_marginBottom="1dp"
+        android:layout_height="500dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout10" />
-
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout12" />
 </androidx.constraintlayout.widget.ConstraintLayout>

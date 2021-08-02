@@ -69,15 +69,36 @@
     <string name="lotto_round">1회차</string>
     <string name="lotto_number">3,12,23,24,45,47</string>
 
-    <!-- My_event_xml -->
-    <string name="my_event_tlt">이벤트 사용내역 및 적립내역</string>
+    <!-- 여기는 스토어 및 이벤트 공용 -->
+
     <string name="my_event_name">홍진석님의 포인트</string>
     <string name="my_event_point">💳 500,000P</string>
     <string name="event_day">날짜</string>
     <string name="event_Content">내용</string>
+
+
+    <!-- My_event_xml -->
+    <string name="my_event_tlt">이벤트 사용내역 및 적립내역</string>
+
     <string name="event_Check">적립+/사용-</string>
     <string name="event_my_day">2021.03.14</string>
     <string name="event_my_Content">로또 이벤트 참여</string>
     <string name="event_my_point"> -5000 </string>
+
+
+    <!-- S_my_store.xml-->
+    <string name="s_my_store_tlt">스토어 사용내역</string>
+    <string name="s_my_store_Check">사용</string>
+    <string name="s_my_store_day">2021.02.20</string>
+    <string name="s_my_store_content">쓰레기봉투구입</string>
+    <string name="s_my_point">-1700</string>
+
+
+    <!--Point_Check_Activity.xml-->
+    <string name="Point_Check_tlt">현재 적립 금액</string>
+    <string name="Point_Ck_day">1999.02.20</string>
+    <string name="Point_Ck_content">맥주병 Point 적립</string>
+    <string name="Point_Ck_point">+120</string>
+
 
 </resources>
