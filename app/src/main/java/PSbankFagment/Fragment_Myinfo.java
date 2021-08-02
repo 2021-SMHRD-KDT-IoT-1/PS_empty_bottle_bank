@@ -12,6 +12,7 @@ import androidx.fragment.app.Fragment;
 import kr.or.iot3_ps_empty_bottle_bank.My_event_Activity;
 import kr.or.iot3_ps_empty_bottle_bank.Myinfo_Modify_Result;
 import kr.or.iot3_ps_empty_bottle_bank.R;
+import kr.or.iot3_ps_empty_bottle_bank.S_my_store_Activity;
 
 
 public class Fragment_Myinfo extends Fragment {
@@ -55,6 +56,16 @@ public class Fragment_Myinfo extends Fragment {
             }
         });
 
+
+        // ===== 여기는 스토어 구매내역으로 넘어가는 이벤트
+        s_myinfo_btn_store = (Button)rootview.findViewById(R.id.s_myinfo_btn_store);
+        s_myinfo_btn_store.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), S_my_store_Activity.class);
+                startActivity(intent);
+            }
+        });
 
 
 

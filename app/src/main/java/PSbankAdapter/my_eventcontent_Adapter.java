@@ -55,7 +55,7 @@ public class my_eventcontent_Adapter extends BaseAdapter {
         TextView event_my_day = convertView.findViewById(R.id.event_my_day);
         TextView event_my_Content = convertView.findViewById(R.id.event_my_Content);
         TextView event_my_point = convertView.findViewById(R.id.event_my_point);
-        View content_event_list_view = convertView.findViewById(R.id.content_event_list_view);
+        View content_event_list_view = convertView.findViewById(R.id.S_store_list_view);
 
 
         my_eventcontentVO my_event_contentVO2 = my_event_data.get(position);
