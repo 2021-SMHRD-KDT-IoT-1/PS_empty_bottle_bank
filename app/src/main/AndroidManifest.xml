@@ -9,8 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.IoT3_PS_empty_bottle_bank">
-        <activity android:name=".My_event_Activity"></activity>
-        <activity android:name=".Notice_Activity"></activity>
+        <activity android:name=".User_Activity"></activity>
+        <activity android:name=".Version_Info_Activity" />
+        <activity android:name=".Notice_1_Activity" />
+        <activity android:name=".Help_Activity" />
+        <activity android:name=".Edt_Notice_Activity" />
+        <activity android:name=".My_event_Activity" />
+        <activity android:name=".Notice_Activity" />
         <activity android:name=".Lotto_Activity" />
         <activity android:name=".Bottle_king_Activity" />
         <activity android:name=".Check_Loc_Activity" />

@@ -61,20 +61,6 @@
         app:layout_constraintTop_toBottomOf="@+id/set_btn_notice" />
 
     <Button
-        android:id="@+id/set_btn_new_ad"
-        android:layout_width="350dp"
-        android:layout_height="42dp"
-        android:layout_marginTop="3dp"
-        android:gravity="left"
-        android:text="신규 광고 알림"
-        android:textColor="@color/black"
-        app:backgroundTint="@color/white"
-        app:layout_constraintEnd_toEndOf="@+id/set_btn_help"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/set_btn_help"
-        app:layout_constraintTop_toBottomOf="@+id/set_btn_help" />
-
-    <Button
         android:id="@+id/set_btn_version"
         android:layout_width="350dp"
         android:layout_height="42dp"
@@ -83,10 +69,10 @@
         android:text="버전정보"
         android:textColor="@color/black"
         app:backgroundTint="@color/white"
-        app:layout_constraintEnd_toEndOf="@+id/set_btn_new_ad"
+        app:layout_constraintEnd_toEndOf="@+id/set_btn_help"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/set_btn_new_ad"
-        app:layout_constraintTop_toBottomOf="@+id/set_btn_new_ad" />
+        app:layout_constraintStart_toStartOf="@+id/set_btn_help"
+        app:layout_constraintTop_toBottomOf="@+id/set_btn_help" />
 
     <Button
         android:id="@+id/set_customer_btn_email"

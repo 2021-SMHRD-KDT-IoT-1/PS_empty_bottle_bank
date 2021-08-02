@@ -1,17 +1,22 @@
 package PSbankAdapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.zip.Inflater;
 
 import PSbankVO.noticeVO;
+import kr.or.iot3_ps_empty_bottle_bank.Bottle_king_Activity;
+import kr.or.iot3_ps_empty_bottle_bank.Lotto_Activity;
+import kr.or.iot3_ps_empty_bottle_bank.Notice_1_Activity;
 import kr.or.iot3_ps_empty_bottle_bank.R;
 
 
@@ -53,11 +58,34 @@ public class notice_Adapter extends BaseAdapter {
 
         TextView notice_title = convertView.findViewById(R.id.notice_title);
         TextView notice_content = convertView.findViewById(R.id.notice_content);
+        View notice_list_view = convertView.findViewById(R.id.notice_list_view);
 
         noticeVO noticevo = notice_data.get(position);
 
         notice_title.setText(noticevo.getNotice_title());
         notice_content.setText(noticevo.getNotice_content());
+
+       notice_list_view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (position == 0) {
+
+                    Intent intent = new Intent(notice_context, Notice_1_Activity.class);
+                    intent.setFlags(intent.FLAG_ACTIVITY_NEW_TASK);
+                    notice_context.startActivity(intent);
+
+
+                }else if (position == 1 ){
+                    Intent intent = new Intent(notice_context, Lotto_Activity.class);
+                    intent.setFlags(intent.FLAG_ACTIVITY_NEW_TASK);
+                    notice_context.startActivity(intent);
+                }
+            }
+        });
+
+
+
+
 
         return convertView;
     }
