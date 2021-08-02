@@ -18,6 +18,7 @@ import java.util.ArrayList;
 import PSbankAdapter.main_list_Adapter;
 import PSbankVO.main_ProductVO;
 import kr.or.iot3_ps_empty_bottle_bank.Main_QR_Activity;
+import kr.or.iot3_ps_empty_bottle_bank.QR_main_Activity;
 import kr.or.iot3_ps_empty_bottle_bank.R;
 
 
@@ -63,7 +64,7 @@ public class Fragment_Main extends Fragment {
         btn_main_qr.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), Main_QR_Activity.class);
+                Intent intent = new Intent(getActivity(), QR_main_Activity.class);
                 startActivity(intent);
             }
         });
