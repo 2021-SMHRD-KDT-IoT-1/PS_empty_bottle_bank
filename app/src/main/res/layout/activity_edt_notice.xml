@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Edt_Notice_Activity">
+
+    <TextView
+        android:layout_width="208dp"
+        android:layout_height="48dp"
+        android:gravity="center"
+        android:text="공지사항 작성"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/edt_notice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edt_notice"
+        android:layout_width="305dp"
+        android:layout_height="52dp"
+        android:maxLength="30"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.849"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.176" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="77dp"
+        android:layout_height="47dp"
+        android:gravity="center"
+        android:text="제목"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/edt_notice"
+        app:layout_constraintEnd_toStartOf="@+id/edt_notice"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/edt_notice" />
+
+    <EditText
+        android:id="@+id/edt_notice_content"
+        android:layout_width="370dp"
+        android:layout_height="355dp"
+        android:ems="10"
+        android:gravity="start"
+        android:inputType="textMultiLine"
+        android:scrollHorizontally="false"
+        android:maxLength="300"
+        android:hint="내용"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_notice"
+        app:layout_constraintVertical_bias="0.123" />
+
+    <Button
+        android:id="@+id/btn_edt_notice_complet"
+        android:layout_width="256dp"
+        android:layout_height="47dp"
+        android:text="작성완료"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:backgroundTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_notice_content" />
+</androidx.constraintlayout.widget.ConstraintLayout>
