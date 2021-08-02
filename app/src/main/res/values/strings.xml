@@ -93,4 +93,12 @@
     <string name="s_my_store_content">쓰레기봉투구입</string>
     <string name="s_my_point">-1700</string>
 
+
+    <!--Point_Check_Activity.xml-->
+    <string name="Point_Check_tlt">현재 적립 금액</string>
+    <string name="Point_Ck_day">1999.02.20</string>
+    <string name="Point_Ck_content">맥주병 Point 적립</string>
+    <string name="Point_Ck_point">+120</string>
+
+
 </resources>

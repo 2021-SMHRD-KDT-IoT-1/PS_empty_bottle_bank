@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment;
 
 import kr.or.iot3_ps_empty_bottle_bank.My_event_Activity;
 import kr.or.iot3_ps_empty_bottle_bank.Myinfo_Modify_Result;
+import kr.or.iot3_ps_empty_bottle_bank.Point_Check_Activity;
 import kr.or.iot3_ps_empty_bottle_bank.R;
 import kr.or.iot3_ps_empty_bottle_bank.S_my_store_Activity;
 
@@ -67,6 +68,16 @@ public class Fragment_Myinfo extends Fragment {
             }
         });
 
+
+        // ==== 공병 적립 내역 리스트 뷰
+        s_myinfo_btn_total = rootview.findViewById(R.id.s_myinfo_btn_total);
+        s_myinfo_btn_total.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), Point_Check_Activity.class);
+                startActivity(intent);
+            }
+        });
 
 
 

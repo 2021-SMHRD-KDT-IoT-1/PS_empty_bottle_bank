@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/Point_Ck_day"
+        android:layout_width="89dp"
+        android:layout_height="78dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/s_my_store_day"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Point_Ck_content"
+        android:layout_width="239dp"
+        android:layout_height="77dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/s_my_store_content"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/Point_Ck_point"
+        app:layout_constraintStart_toEndOf="@+id/Point_Ck_day"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Point_Ck_point"
+        android:layout_width="79dp"
+        android:layout_height="76dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/s_my_point"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/Point_Ck_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Point_Ck_content" />
+</androidx.constraintlayout.widget.ConstraintLayout>
