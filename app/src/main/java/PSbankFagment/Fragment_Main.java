@@ -38,7 +38,7 @@ public class Fragment_Main extends Fragment {
     private ArrayList<main_ProductVO> main_list_data;
 
 
-
+//    private int[] main_list_img = {"1회차", "2회차", "3회차" ,"4회차","5회차"};
 
 
     @Override

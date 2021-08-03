@@ -2,10 +2,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="kr.or.iot3_ps_empty_bottle_bank">
 
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CAMERA" />
 
+
+
     <application
+
         android:allowBackup="true"
         android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
@@ -13,7 +17,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.IoT3_PS_empty_bottle_bank"
-        android:usesCleartextTraffic="true">
+        android:usesCleartextTraffic="true"
+        >
+
         <activity android:name=".QR_main_Activity"></activity>
         <activity android:name=".Point_Check_Activity" />
         <activity android:name=".S_my_store_Activity" />

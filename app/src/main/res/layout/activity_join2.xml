@@ -8,7 +8,7 @@
     tools:context=".Join_Activity2">
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress"
+        android:id="@+id/edt_join_id"
         android:layout_width="325dp"
         android:layout_height="45dp"
         android:layout_marginTop="44dp"
@@ -20,50 +20,50 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/edt_join_pw"
         android:layout_width="325dp"
         android:layout_height="45dp"
         android:layout_marginTop="36dp"
         android:ems="10"
         android:hint="비밀번호 입력"
         android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextEmailAddress"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextEmailAddress"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
+        app:layout_constraintEnd_toEndOf="@+id/edt_join_id"
+        app:layout_constraintStart_toStartOf="@+id/edt_join_id"
+        app:layout_constraintTop_toBottomOf="@+id/edt_join_id" />
 
     <EditText
-        android:id="@+id/editTextTextPassword2"
+        android:id="@+id/edt_join_pw_ck"
         android:layout_width="325dp"
         android:layout_height="45dp"
         android:ems="10"
         android:hint="비밀번호 확인"
         android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPassword"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPassword"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+        app:layout_constraintEnd_toEndOf="@+id/edt_join_pw"
+        app:layout_constraintStart_toStartOf="@+id/edt_join_pw"
+        app:layout_constraintTop_toBottomOf="@+id/edt_join_pw" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/edt_join_name"
         android:layout_width="325dp"
         android:layout_height="45dp"
         android:layout_marginTop="32dp"
         android:ems="10"
         android:hint="아름 입력"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPassword2"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPassword2"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword2" />
+        app:layout_constraintEnd_toEndOf="@+id/edt_join_pw_ck"
+        app:layout_constraintStart_toStartOf="@+id/edt_join_pw_ck"
+        app:layout_constraintTop_toBottomOf="@+id/edt_join_pw_ck" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/edt_join_tel"
         android:layout_width="325dp"
         android:layout_height="45dp"
         android:ems="10"
         android:hint="핸드폰 번호 입력"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintEnd_toEndOf="@+id/edt_join_name"
+        app:layout_constraintStart_toStartOf="@+id/edt_join_name"
+        app:layout_constraintTop_toBottomOf="@+id/edt_join_name" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -71,9 +71,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="52dp"
         android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName2"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName2"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2">
+        app:layout_constraintEnd_toEndOf="@+id/edt_join_tel"
+        app:layout_constraintStart_toStartOf="@+id/edt_join_tel"
+        app:layout_constraintTop_toBottomOf="@+id/edt_join_tel">
 
         <Spinner
             android:id="@+id/spinner_loc_data"
@@ -123,6 +123,17 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+    <Button
+        android:id="@+id/check_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="@+id/edt_join_id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/edt_join_id"
+        app:layout_constraintVertical_bias="1.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
