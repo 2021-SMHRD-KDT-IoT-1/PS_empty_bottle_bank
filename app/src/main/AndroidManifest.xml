@@ -4,8 +4,11 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
+        android:usesCleartextTraffic="true"
+        android:networkSecurityConfig="@xml/network_security_config"
         android:allowBackup="true"
         android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
@@ -20,14 +23,13 @@
         <activity android:name=".Edt_Notice_Activity" />
         <activity android:name=".My_event_Activity" />
         <activity android:name=".Notice_Activity" />
-        android:theme="@style/Theme.IoT3_PS_empty_bottle_bank"
-        android:usesCleartextTraffic="true">
         <activity android:name=".QR_main_Activity"></activity>
         <activity android:name=".Point_Check_Activity" />
         <activity android:name=".S_my_store_Activity" />
         <activity android:name=".Lotto_Activity" />
         <activity android:name=".Bottle_king_Activity" />
         <activity android:name=".Check_Loc_Activity" />
+        <meta-data android:name="com.kakao.sdk.AppKey" android:value="c123bcbfb1bdda0406a3af74119835d4"/>
         <activity android:name=".Detail_Activity" />
         <activity android:name=".Main_QR_Activity" />
         <activity android:name=".Myinfo_Modify" />
@@ -44,5 +46,11 @@
         </activity>
         <activity android:name=".MainActivity" />
     </application>
+
+
+
+
+
+
 
 </manifest>
