@@ -2,16 +2,20 @@ package kr.or.iot3_ps_empty_bottle_bank;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ListView;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import PSbankAdapter.notice_Adapter;
 import PSbankVO.noticeVO;
 
 public class Notice_Activity extends AppCompatActivity {
+
+    Button btn_edt_notice;
 
     private ListView notice_listview;
     private PSbankAdapter.notice_Adapter notice_Adapter;
@@ -28,6 +32,15 @@ public class Notice_Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notice);
 
+        btn_edt_notice = findViewById(R.id.btn_edt_notice);
+
+        btn_edt_notice.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),Edt_Notice_Activity.class);
+                startActivity(intent);
+            }
+        });
 
 
         notice_listview = findViewById(R.id.notice_listview);
@@ -36,9 +49,11 @@ public class Notice_Activity extends AppCompatActivity {
         for(int i =0; i<notice_title.length; i++){
             notice_data.add(new noticeVO(notice_title[i],notice_content[i]));
         }
-        notice_Adapter = new notice_Adapter(getApplicationContext(), R.layout.list_notice, notice_data);
+        notice_Adapter = new notice_Adapter(getApplicationContext(), R.layout.notice_list_view, notice_data);
 
         notice_listview.setAdapter(notice_Adapter);
+
+
 
     }
 }
