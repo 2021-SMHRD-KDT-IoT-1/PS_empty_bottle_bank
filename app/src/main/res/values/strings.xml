@@ -15,6 +15,7 @@
 
 
     <!--join.xml -->
+    <string name="check_button">확인</string>
     <string name="join_btn">회원가입</string>
     <string name="join_back">취소</string>
     <string name="app_arg"> 아아아ㅏㅇ아ㅏㅏ아아아아앙 </string>

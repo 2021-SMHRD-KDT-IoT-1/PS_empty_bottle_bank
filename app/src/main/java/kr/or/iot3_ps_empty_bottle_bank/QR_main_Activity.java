@@ -3,6 +3,7 @@ package kr.or.iot3_ps_empty_bottle_bank;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
@@ -92,9 +93,12 @@ public class QR_main_Activity extends AppCompatActivity {
 
         if (!address.startsWith("http://")) {
             address = "http://" + address;
-
         }
         QR_wv.loadUrl(address);
+
+    Log.d("QR주소", address);
+
+
     }
 
     @Override
@@ -111,28 +115,29 @@ public class QR_main_Activity extends AppCompatActivity {
         }
     }
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
 
-        IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
-
-        if (result != null) {
-            if (result.getContents() == null) {
-
-            } else {
-                //qr코드를 읽어서 Edit Text에 입력해줍니다.
-                QR_et.setText(result.getContents());
-
-                //Button의 onclick호출
-                QR_bt.callOnClick();
-
-                Toast.makeText(this, "Scanned :" + result.getContents(), Toast.LENGTH_SHORT).show();
-            }
-        } else {
-            super.onActivityResult(requestCode, resultCode, data);
-        }
-
-    }
+//    @Override
+//    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+//
+//        IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
+//
+//        if (result != null) {
+//            if (result.getContents() == null) {
+//
+//            } else {
+//                //qr코드를 읽어서 Edit Text에 입력해줍니다.
+//                QR_et.setText(result.getContents());
+//
+//                //Button의 onclick호출
+//                QR_bt.callOnClick();
+//
+//                Toast.makeText(this, "Scanned :" + result.getContents(), Toast.LENGTH_SHORT).show();
+//            }
+//        } else {
+//            super.onActivityResult(requestCode, resultCode, data);
+//        }
+//
+//    }
 
 
 }
