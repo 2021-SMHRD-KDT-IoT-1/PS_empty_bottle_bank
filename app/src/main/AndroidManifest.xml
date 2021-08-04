@@ -26,7 +26,7 @@
         <activity android:name=".Edt_Notice_Activity" />
         <activity android:name=".My_event_Activity" />
         <activity android:name=".Notice_Activity" />
-        <activity android:name=".QR_main_Activity"></activity>
+        <activity android:name=".QR_main_Activity"/>
         <activity android:name=".Point_Check_Activity" />
         <activity android:name=".S_my_store_Activity" />
         <activity android:name=".Lotto_Activity" />
@@ -40,14 +40,14 @@
         <activity android:name=".Returner_Myinfo_Modify_Result" />
         <activity android:name=".Myinfo_Modify_Result" />
         <activity android:name=".Join_Activity2" />
-        <activity android:name=".Login_Activity"/>
-        <activity android:name=".MainActivity" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".Login_Activity">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
         </activity>
+        <activity android:name=".MainActivity" />
     </application>
 
 
