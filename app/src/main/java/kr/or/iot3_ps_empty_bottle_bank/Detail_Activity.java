@@ -50,7 +50,6 @@ public class Detail_Activity extends AppCompatActivity {
     private String now_bottle;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,62 +66,43 @@ public class Detail_Activity extends AppCompatActivity {
         Detail_bottle_now_num = findViewById(R.id.Detail_bottle_now_num);
         detail_queue = Volley.newRequestQueue(getApplicationContext());
 
-        String Detail_url = "http://rspring41.iptime.org:3000/machine/1";
+        String Detail_url = "http://192.168.11.203:8081/AndroidServer/Detail_Activity";
+
 
         StringRequest request = new StringRequest(Request.Method.GET, Detail_url,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
 
-                        //tv_data.setText(response);
-                        //response 객체에는 JSONARRay형태 정보가 담겨있기 때문에
-                        //JSONArray 타입으로 객체생성 필요
-
                         try {
-
                             JSONArray machine_infos = new JSONArray(response);
 
+                            for (int i = 0; i < machine_infos.length(); i++) {
+                                JSONObject machine_info = machine_infos.getJSONObject(i);
 
-                        for (int i=0; i<machine_infos.length(); i++) {
-                            JSONObject machine_info = machine_infos.getJSONObject(i);
+                                machine_name_tlt.setText(machine_info.getString("machine_name"));
+                                Detail_bottle_set_num.setText(machine_info.getString("max_bottle"));
+                                Detail_bottle_now_num.setText(machine_info.getString("now_bottle"));
 
-                            String machine_name = machine_info.getString("machine_name");
-                            String max_bottle = machine_info.getString(" max_bottle");
-                            String now_bottle = machine_info.getString("now_bottle");
-
-                            Log.d("몽키 D 루피 해적왕이 될꺼야!", "machineㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗ_name");
-                            Log.d("몽키 D 루피 해적왕이 될꺼야!", "machineㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗ_name");
-                            Log.d("몽키 D 루피 해적왕이 될꺼야!", "machineㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗ_name");
-                            Log.d("몽키 D 루피 해적왕이 될꺼야!", "machineㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗㅗ_name");
-
-                            Detail_data.add(new main_DetailVO(machine_name, max_bottle, now_bottle));
-
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
                         }
-                    } catch (JSONException e) {
-                        e.printStackTrace();
+
+
                     }
-
-
-            }
-        }, new Response.ErrorListener() {
+                }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
                 Log.d("오류", "접속실패");
-               Toast.makeText(getApplicationContext(), "접속 실패", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "접속 실패", Toast.LENGTH_SHORT).show();
 
             }
         });
 
 
-
-
-
         //요청큐에 요청 객체 생성
         detail_queue.add(request);
-
-
-
-
 
 
 //                StringRequest stringRequest = new StringRequest(Request.Method.GET, Detail_url,
@@ -157,18 +137,8 @@ public class Detail_Activity extends AppCompatActivity {
 //            detail_queue.add(jsonobjectrequest);
 
 
-
-
-
-
-
-
-
-
         // 위치보기 == 여기에 API 기능 넣어줘야 함
-                Check_loc_btn = findViewById(R.id.Check_loc_btn);
-
-
+        Check_loc_btn = findViewById(R.id.Check_loc_btn);
 
 
         Check_loc_btn.setOnClickListener(new View.OnClickListener() {
