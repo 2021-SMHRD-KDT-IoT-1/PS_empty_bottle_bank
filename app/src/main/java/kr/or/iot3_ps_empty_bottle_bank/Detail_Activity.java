@@ -66,6 +66,7 @@ public class Detail_Activity extends AppCompatActivity {
                         JSONObject  machine = (JSONObject)array.get(i);
 
 
+
                         machine_name = machine.getString("machine_name");
                         max_bottle = machine.getString("max_bottle");
                         now_bottle = machine.getString("now_bottle");
