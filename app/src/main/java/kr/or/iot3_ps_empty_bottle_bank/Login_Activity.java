@@ -78,7 +78,7 @@ public class Login_Activity extends AppCompatActivity {
                             public void onResponse(String response) {
                                 Log.v("계정내역", response);
                                 if(response.equals("0")){
-                                    Toast.makeText(Login_Activity.this, "로그인 실패", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(getApplicationContext(), "로그인 실패", Toast.LENGTH_SHORT).show();
                                 }else{
                                     Toast.makeText(Login_Activity.this, "로그인 성공", Toast.LENGTH_SHORT).show();
 
@@ -110,14 +110,6 @@ public class Login_Activity extends AppCompatActivity {
                     }
                 };
                 queue.add(request);
-
-
-
-                // 진석이 영상 찍어주느라 조금 수정함
-//                위쪽 주석은 취소하고
-//                        아래는 삭제
-//                Intent intent = new Intent(Login_Activity.this, MainActivity.class);
-//                startActivity(intent);
 
 
             }

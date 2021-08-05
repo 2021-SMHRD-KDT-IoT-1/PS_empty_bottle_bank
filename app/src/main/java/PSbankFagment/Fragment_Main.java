@@ -16,6 +16,8 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.android.volley.RequestQueue;
+
 import java.util.ArrayList;
 
 import PSbankAdapter.main_list_Adapter;
@@ -31,8 +33,7 @@ public class Fragment_Main extends Fragment {
     ImageView advertisement_img, main_list_img;
     Button btn_main_qr;
     int page = 0;
-
-
+    RequestQueue queue;
 
 
     //====== 여긴 메인리스트 뷰
@@ -42,11 +43,9 @@ public class Fragment_Main extends Fragment {
     //===== 메인 리스트뷰에 들어갈 데이터
     private ArrayList<main_ProductVO> main_list_data;
 
-
  // ===== 여기는 메인 페이지
     private int[] main_imgview = {R.drawable.item1, R.drawable.item2, R.drawable.item3};
-
-
+    private int[] machine_num = {1, 2, 3};
 
 
     @Override
@@ -61,6 +60,9 @@ public class Fragment_Main extends Fragment {
         btn_main_qr = view.findViewById(R.id.btn_main_qr);
 
 
+
+
+
         //=============여기는 메인 페이지 광고 노출 공간
             main_Thread thread = new main_Thread();
             thread.start();
@@ -68,7 +70,7 @@ public class Fragment_Main extends Fragment {
 
 
 
-        //fg1_tv_data.setText("첫 번째 프래그먼트 화면");
+
 // ================ 여기는 큐알코드 화면으로 넘어가는 곳 ============
         btn_main_qr.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,7 +87,7 @@ public class Fragment_Main extends Fragment {
         main_list = view.findViewById(R.id.main_list);
         main_list_data = new ArrayList<>();
         for (int i = 0; i < main_imgview.length; i++) {
-            main_list_data.add(new main_ProductVO(main_imgview[i], "상무지구 무인회수기",
+            main_list_data.add(new main_ProductVO(machine_num[i],main_imgview[i], "상무지구 무인회수기",
                     "상무지구", "회수상태 OK", "소주병 맥주병 전용",
                     "환급금 : 소주병100원, 맥주뱡 130"));
 
