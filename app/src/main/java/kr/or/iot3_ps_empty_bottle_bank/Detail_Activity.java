@@ -42,12 +42,10 @@ public class Detail_Activity extends AppCompatActivity {
     private ArrayList<main_DetailVO> Detail_data;
 
 
-    // Detail에 들어갈
 
 
-    private String machine_name;
-    private String max_bottle;
-    private String now_bottle;
+
+
 
 
     @Override
@@ -66,7 +64,7 @@ public class Detail_Activity extends AppCompatActivity {
         Detail_bottle_now_num = findViewById(R.id.Detail_bottle_now_num);
         detail_queue = Volley.newRequestQueue(getApplicationContext());
 
-        String Detail_url = "http://192.168.11.203:8081/AndroidServer/Detail_Activity";
+        String Detail_url = "http://rspring41.iptime.org:3000/machine/1";
 
 
         StringRequest request = new StringRequest(Request.Method.GET, Detail_url,
@@ -75,16 +73,26 @@ public class Detail_Activity extends AppCompatActivity {
                     public void onResponse(String response) {
 
                         try {
-                            JSONArray machine_infos = new JSONArray(response);
+//                            JSONArray machine_infos = new JSONArray(response);
+//
+//                            for (int i = 0; i < machine_infos.length(); i++) {
+//                                JSONObject machine_info = machine_infos.getJSONObject(i);
+//
+//                                machine_name_tlt.setText(machine_info.getString("machine_name"));
+//                                Detail_bottle_set_num.setText(machine_info.getString("max_bottle"));
+//                                Detail_bottle_now_num.setText(machine_info.getString("now_bottle"));
+//
+//                            }
 
-                            for (int i = 0; i < machine_infos.length(); i++) {
-                                JSONObject machine_info = machine_infos.getJSONObject(i);
+                            JSONObject machine_info = new JSONObject(response);
 
-                                machine_name_tlt.setText(machine_info.getString("machine_name"));
-                                Detail_bottle_set_num.setText(machine_info.getString("max_bottle"));
-                                Detail_bottle_now_num.setText(machine_info.getString("now_bottle"));
 
-                            }
+                            machine_name_tlt.setText(machine_info.getString("machine_name"));
+                            Detail_bottle_set_num.setText(machine_info.getString("max_bottle"));
+                            Detail_bottle_now_num.setText(machine_info.getString("now_bottle"));
+
+
+
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
@@ -105,36 +113,7 @@ public class Detail_Activity extends AppCompatActivity {
         detail_queue.add(request);
 
 
-//                StringRequest stringRequest = new StringRequest(Request.Method.GET, Detail_url,
-//                new Response.Listener<String>() {
-//                    @Override
-//                    public void onResponse(String response) {
-//                        try {
-//                            JSONObject jsonObject = new JSONObject(response);
-//
-//                            Log.d("데이터 받음", jsonObject.getString("now_bottle"));
-//                            String machine_name = jsonObject.getString("machine_name");
-//                            String max_bottle = jsonObject.getString("max_bottle");
-//                            String now_bottle = jsonObject.getString("now_bottle");
-//
-//
-//                        } catch (JSONException e) {
-//                            e.printStackTrace();
-//                        }
-//
-//                    }
-//                }, new Response.ErrorListener() {
-//            @Override
-//            public void onErrorResponse(VolleyError error) {
-//                Log.v("오류", "요청실패");
-//                Toast.makeText(getApplicationContext(), "접속 실패", Toast.LENGTH_SHORT).show();
-//
-//
-//            }
-//        });
 
-//                detail_queue.add(stringRequest);
-//            detail_queue.add(jsonobjectrequest);
 
 
         // 위치보기 == 여기에 API 기능 넣어줘야 함

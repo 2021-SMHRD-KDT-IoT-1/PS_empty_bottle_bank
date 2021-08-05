@@ -39,9 +39,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
-            android:layout_marginLeft="24dp"
             android:layout_marginTop="8dp"
-            android:text="@string/Detail_tlt"
+            android:text="@string/temp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/Detail_img"
@@ -126,7 +125,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="@string/Detail_bottle_set_num" />
+                android:text="@string/temp" />
         </LinearLayout>
 
         <LinearLayout
@@ -153,7 +152,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="@string/Detail_bottle_now_num" />
+                android:text="@string/temp" />
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 

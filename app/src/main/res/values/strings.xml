@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">IoT3_PS_empty_bottle_bank</string>
-
+    <string name="temp">"-"</string>
 
     <!--Login_Activity.xml-->>
     <string name="Login_tv_title">🤑PS공병은행🤑</string>
