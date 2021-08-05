@@ -23,7 +23,7 @@
             app:layout_constraintGuide_begin="231dp" />
 
         <ImageView
-            android:id="@+id/imageView3"
+            android:id="@+id/Detail_img"
             android:layout_width="174dp"
             android:layout_height="122dp"
             android:layout_marginStart="16dp"
@@ -44,8 +44,8 @@
             android:text="@string/Detail_tlt"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/imageView3"
-            app:layout_constraintTop_toTopOf="@+id/imageView3" />
+            app:layout_constraintStart_toEndOf="@+id/Detail_img"
+            app:layout_constraintTop_toTopOf="@+id/Detail_img" />
 
         <TextView
             android:id="@+id/textView6"
@@ -74,7 +74,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/Detail_text4"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+            app:layout_constraintBottom_toBottomOf="@+id/Detail_img"
             app:layout_constraintEnd_toEndOf="@+id/textView7"
             app:layout_constraintStart_toStartOf="@+id/textView7"
             app:layout_constraintTop_toBottomOf="@+id/textView7" />

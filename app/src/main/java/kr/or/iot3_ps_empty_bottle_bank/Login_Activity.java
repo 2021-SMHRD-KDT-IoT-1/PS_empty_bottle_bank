@@ -59,7 +59,7 @@ public class Login_Activity extends AppCompatActivity {
                 String id = Login_edt_ID.getText().toString();
                 String pw = Login_edt_PW.getText().toString();
 
-                String login_url = "http://psbottle94.iptime.org:3000/login";
+                String login_url = "http://rspring41.iptime.org:3000/login";
 
                 if(id.length() == 0){
                     Toast.makeText(Login_Activity.this, "아이디를 입력하세요.", Toast.LENGTH_SHORT).show();

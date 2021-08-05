@@ -32,6 +32,7 @@ public class main_list_Adapter extends BaseAdapter {
 
     }
 
+    String Detail_url = "http://psbottle94.iptime.org:3000/machine";
 
     @Override
     public int getCount() {
@@ -53,7 +54,6 @@ public class main_list_Adapter extends BaseAdapter {
 
         if (convertView == null) {
             convertView = inflater.inflate(mains_layout, parent, false);
-
 
         }
 
