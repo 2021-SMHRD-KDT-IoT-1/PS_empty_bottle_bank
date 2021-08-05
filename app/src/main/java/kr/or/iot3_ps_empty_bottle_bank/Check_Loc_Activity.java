@@ -26,6 +26,8 @@ import net.daum.mf.map.api.MapView;
 
 
 
+
+
 public class Check_Loc_Activity extends AppCompatActivity implements
     MapView.CurrentLocationEventListener, MapReverseGeoCoder.ReverseGeoCodingResultListener {
 

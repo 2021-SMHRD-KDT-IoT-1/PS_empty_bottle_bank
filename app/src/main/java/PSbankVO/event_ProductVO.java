@@ -2,15 +2,19 @@ package PSbankVO;
 
 public class event_ProductVO {
 
+    private int event_num;
     private int event_img;
     private String event_tlt;
     private String event_time;
 
-    public event_ProductVO(int event_img, String event_tlt, String event_time) {
+    public event_ProductVO(int event_num, int event_img, String event_tlt, String event_time) {
+        this.event_num = event_num;
         this.event_img = event_img;
         this.event_tlt = event_tlt;
         this.event_time = event_time;
     }
+
+    public int getEvent_num() { return  event_num;}
 
     public int getEvent_img() {
         return event_img;
@@ -24,6 +28,8 @@ public class event_ProductVO {
         return event_time;
     }
 
+
+    public void setEvent_num(int event_num) { this.event_num = event_num; }
 
     public void setEvent_img(int event_img) {
         this.event_img = event_img;
