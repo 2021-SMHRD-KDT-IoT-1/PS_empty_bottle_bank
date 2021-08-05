@@ -25,9 +25,8 @@ public class Fragment_Event extends Fragment  {
     private ArrayList<event_ProductVO> event_list_data;
 
 
-
-    private int[] eventArray = {R.drawable.sojo, R.drawable.apeach, R.drawable.item1, R.drawable.item2,R.drawable.item3};
-
+    private int[] eventnum = {1,2,3,4,5};
+    private int[] imgArray = {R.drawable.sojo, R.drawable.apeach, R.drawable.item1, R.drawable.item2,R.drawable.item3};
     private String[] eventname = {"우리동네 공병왕 이벤트", "대박로또이벤트", "내 이름은 콩진석" ,"내 이름은 콩진석","내 이름은 콩진석"};
     private String[] eventtime = {"2021.03.14 ~ 2021.08.13", "2021.03.14 ~ 2021.08.13", "2021.03.14 ~ 2021.08.13",
             "2021.03.14 ~ 2021.08.13","2021.03.14 ~ 2021.08.13"};
@@ -49,8 +48,8 @@ public class Fragment_Event extends Fragment  {
         event_main_ListView = view.findViewById(R.id.event_main_ListView);
         event_list_data = new ArrayList<>();
 
-        for(int i = 0; i<eventArray.length; i++) {
-            event_list_data.add(new event_ProductVO(eventArray[i], eventname[i], eventtime[i]));
+        for(int i = 0; i<imgArray.length; i++) {
+            event_list_data.add(new event_ProductVO(eventnum[i],imgArray[i], eventname[i], eventtime[i]));
         }
 
 

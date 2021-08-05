@@ -8,7 +8,11 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.android.volley.RequestQueue;
+
 import java.util.ArrayList;
+
 import PSbankVO.event_ProductVO;
 import kr.or.iot3_ps_empty_bottle_bank.Bottle_king_Activity;
 import kr.or.iot3_ps_empty_bottle_bank.Lotto_Activity;
@@ -21,6 +25,8 @@ public class event_list_Adapter extends BaseAdapter {
     private int event_layout;
     private ArrayList<event_ProductVO> event_data;
     private LayoutInflater inflater1;
+
+    RequestQueue queue;
 
 
     public event_list_Adapter(Context event_context, int event_layout, ArrayList<event_ProductVO> event_data) {
@@ -48,7 +54,7 @@ public class event_list_Adapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        if(convertView == null) {
+        if (convertView == null) {
             convertView = inflater1.inflate(event_layout, parent, false);
         }
 
@@ -65,22 +71,21 @@ public class event_list_Adapter extends BaseAdapter {
         event_text.setText(event_vo2.getEvent_time());
 
 
-
-
-
-
         event_list_view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
                 if (position == 0) {
+                    Intent intent = new Intent(event_context, Bottle_king_Activity.class);
+                    intent.putExtra("event_num", 0);
+                    intent.setFlags(intent.FLAG_ACTIVITY_NEW_TASK);
+                    event_context.startActivity(intent);
 
-                Intent intent = new Intent(event_context, Bottle_king_Activity.class);
-                intent.setFlags(intent.FLAG_ACTIVITY_NEW_TASK);
-                event_context.startActivity(intent);
 
-
-                }else if (position == 1 ){
+                } else if (position == 1) {
                     Intent intent = new Intent(event_context, Lotto_Activity.class);
+                    intent.putExtra("event_num", 1);
                     intent.setFlags(intent.FLAG_ACTIVITY_NEW_TASK);
                     event_context.startActivity(intent);
                 }
