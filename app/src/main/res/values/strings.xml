@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">IoT3_PS_empty_bottle_bank</string>
-
+    <string name="temp">"-"</string>
 
     <!--Login_Activity.xml-->>
     <string name="Login_tv_title">🤑PS공병은행🤑</string>
@@ -81,7 +81,7 @@
     <!-- My_event_xml -->
     <string name="my_event_tlt">이벤트 사용내역 및 적립내역</string>
 
-    <string name="event_Check">적립+/사용-</string>
+    <string name="event_Check">적립/사용-</string>
     <string name="event_my_day">2021.03.14</string>
     <string name="event_my_Content">로또 이벤트 참여</string>
     <string name="event_my_point"> -5000 </string>
@@ -96,6 +96,7 @@
 
 
     <!--Point_Check_Activity.xml-->
+    <string name="s_my_point_Ck">금액</string>
     <string name="Point_Check_tlt">현재 적립 금액</string>
     <string name="Point_Ck_day">1999.02.20</string>
     <string name="Point_Ck_content">맥주병 Point 적립</string>

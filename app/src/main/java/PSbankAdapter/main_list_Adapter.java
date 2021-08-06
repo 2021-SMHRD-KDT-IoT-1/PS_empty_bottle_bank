@@ -17,6 +17,7 @@ import kr.or.iot3_ps_empty_bottle_bank.Detail_Activity;
 
 public class main_list_Adapter extends BaseAdapter {
 
+
     private Context main_context;
     private int mains_layout;
     private ArrayList<main_ProductVO> main_data;
@@ -31,6 +32,7 @@ public class main_list_Adapter extends BaseAdapter {
 
     }
 
+    String Detail_url = "http://psbottle94.iptime.org:3000/machine";
 
     @Override
     public int getCount() {
@@ -52,7 +54,6 @@ public class main_list_Adapter extends BaseAdapter {
 
         if (convertView == null) {
             convertView = inflater.inflate(mains_layout, parent, false);
-
 
         }
 
@@ -81,11 +82,31 @@ public class main_list_Adapter extends BaseAdapter {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(main_context, Detail_Activity.class);
-                intent.setFlags(intent.FLAG_ACTIVITY_NEW_TASK);
-                main_context.startActivity(intent);
+
+                if(position == 0) {
+                    Intent intent = new Intent(main_context, Detail_Activity.class);
+                    intent.putExtra("machine_num",0);
+                    intent.setFlags(intent.FLAG_ACTIVITY_NEW_TASK);
+                    main_context.startActivity(intent);
+
             }
-        });
+                else if (position == 1) {
+                    Intent intent = new Intent(main_context, Detail_Activity.class);
+                    intent.putExtra("machine_num",1);
+                    intent.setFlags(intent.FLAG_ACTIVITY_NEW_TASK);
+                    main_context.startActivity(intent);
+
+                }
+                else if (position == 2){
+                    Intent intent = new Intent(main_context, Detail_Activity.class);
+                    intent.putExtra("machine_num",2);
+                    intent.setFlags(intent.FLAG_ACTIVITY_NEW_TASK);
+                    main_context.startActivity(intent);
+                }
+
+
+
+            }});
 
         return convertView;
     }
