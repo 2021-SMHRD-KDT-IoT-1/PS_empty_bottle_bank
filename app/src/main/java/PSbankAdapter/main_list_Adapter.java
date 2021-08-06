@@ -2,6 +2,7 @@ package PSbankAdapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,7 +33,6 @@ public class main_list_Adapter extends BaseAdapter {
 
     }
 
-    String Detail_url = "http://psbottle94.iptime.org:3000/machine";
 
     @Override
     public int getCount() {
@@ -58,11 +58,9 @@ public class main_list_Adapter extends BaseAdapter {
         }
 
         ImageView main_list_img = convertView.findViewById(R.id.main_list_img);
-        TextView main_list_tlt = convertView.findViewById(R.id.main_list_tlt);
+        TextView main_list_tlt = convertView.findViewById(R.id.machine_name);
         TextView main_list_text1 = convertView.findViewById(R.id.main_list_text1);
-        TextView main_list_text2 = convertView.findViewById(R.id.main_list_text2);
-        TextView main_list_text3 = convertView.findViewById(R.id.main_list_text3);
-        TextView main_list_text4 = convertView.findViewById(R.id.main_list_text4);
+        TextView main_list_text2 = convertView.findViewById(R.id.broken);
         View main_list_view = convertView.findViewById(R.id.main_list_view);
 
 
@@ -70,41 +68,21 @@ public class main_list_Adapter extends BaseAdapter {
         main_ProductVO main_vo2 = main_data.get(position);
 
 
+
+        main_list_tlt.setText(main_vo2.getMachine_name());
         main_list_img.setImageResource(main_vo2.getMain_list_img());
-        main_list_tlt.setText(main_vo2.getMain_list_tlt());
-        main_list_text1.setText(main_vo2.getMain_list_text1());
-        main_list_text2.setText(main_vo2.getMain_list_text2());
-        main_list_text3.setText(main_vo2.getMain_list_text3());
-        main_list_text4.setText(main_vo2.getMain_list_text4());
+        Log.d("img_check", String.valueOf(main_vo2.getMain_list_img()));
+        main_list_text1.setText(main_vo2.getStorable_bottle());
+        main_list_text2.setText(main_vo2.getBroken());
 
 
         main_list_view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-
-                if(position == 0) {
                     Intent intent = new Intent(main_context, Detail_Activity.class);
-                    intent.putExtra("machine_num",0);
+                    intent.putExtra("machine_num", String.valueOf(main_vo2.getMachine_num()));
                     intent.setFlags(intent.FLAG_ACTIVITY_NEW_TASK);
                     main_context.startActivity(intent);
-
-            }
-                else if (position == 1) {
-                    Intent intent = new Intent(main_context, Detail_Activity.class);
-                    intent.putExtra("machine_num",1);
-                    intent.setFlags(intent.FLAG_ACTIVITY_NEW_TASK);
-                    main_context.startActivity(intent);
-
-                }
-                else if (position == 2){
-                    Intent intent = new Intent(main_context, Detail_Activity.class);
-                    intent.putExtra("machine_num",2);
-                    intent.setFlags(intent.FLAG_ACTIVITY_NEW_TASK);
-                    main_context.startActivity(intent);
-                }
-
-
 
             }});
 

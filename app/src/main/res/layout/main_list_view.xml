@@ -18,7 +18,7 @@
         app:srcCompat="@drawable/sojo" />
 
     <TextView
-        android:id="@+id/main_list_tlt"
+        android:id="@+id/machine_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
@@ -37,10 +37,10 @@
         android:layout_marginTop="4dp"
         android:text="@string/main_list_text1"
         app:layout_constraintStart_toEndOf="@+id/main_list_img"
-        app:layout_constraintTop_toBottomOf="@+id/main_list_tlt" />
+        app:layout_constraintTop_toBottomOf="@+id/machine_name" />
 
     <TextView
-        android:id="@+id/main_list_text2"
+        android:id="@+id/broken"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -58,10 +58,10 @@
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:text="@string/main_list_text3"
-        app:layout_constraintBottom_toBottomOf="@+id/main_list_text2"
+        app:layout_constraintBottom_toBottomOf="@+id/broken"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/main_list_text2"
-        app:layout_constraintTop_toTopOf="@+id/main_list_text2"
+        app:layout_constraintStart_toEndOf="@+id/broken"
+        app:layout_constraintTop_toTopOf="@+id/broken"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
