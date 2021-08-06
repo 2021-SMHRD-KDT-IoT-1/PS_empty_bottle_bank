@@ -67,7 +67,6 @@ public class bottle_king_Adapter extends BaseAdapter {
         bottle_king_img.setImageResource(king_vo2.getBottle_king_img());
         bottle_king_round.setText(king_vo2.getBottle_king_round());
         bottle_king_id.setText(king_vo2.getBottle_king_id());
-        bottle_king_now.setText(king_vo2.getBottle_king_now());
         bottle_king_score.setText(king_vo2.getBottle_king_score());
 
 

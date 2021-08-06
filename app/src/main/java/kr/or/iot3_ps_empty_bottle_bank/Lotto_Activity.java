@@ -24,9 +24,9 @@ public class Lotto_Activity extends AppCompatActivity {
     private ArrayList<lotto_winVO> lotto_data;
 
     private String[] lotto_round = {"1회차", "2회차", "3회차" ,"4회차","5회차"};
-    private String[] lotto_win_1 = { "1등 : 홍진석 1억원","1등 : 홍진석 1억원","1등 : 홍진석 1억원","1등 : 홍진석 1억원","1등 : 홍진석 1억원"};
-    private String[] lotto_win_2 = { "2등 : 콩진석 3천만원","2등 : 콩진석 3천만원","2등 : 콩진석 3천만원","2등 : 콩진석 3천만원","2등 : 콩진석 3천만원"};
-    private String[] lotto_win_3 = { "3등 : 콩콩진석 400만원", "3등 : 콩콩진석 400만원", "3등 : 콩콩진석 400만원", "3등 : 콩콩진석 400만원", "3등 : 콩콩진석 400만원"};
+    private String[] lotto_win_1 = { "1등 : 홍진석 1억원","1등 : 채평성 1억원","1등 : 최정현 1억원","1등 : 기나해 1억원","1등 : 임성미 1억원"};
+    private String[] lotto_win_2 = { "2등 : 황혜서 3천만원","2등 : 짱구 3천만원","2등 : 도라에몽 3천만원","2등 : 오이 3천만원","2등 : 민트초코 3천만원"};
+    private String[] lotto_win_3 = { "3등 : 아맛나 400만원", "3등 : 보석바 400만원", "3등 : 슬리퍼 400만원", "3등 : 카카오 400만원", "3등 : 롤리폴리 400만원"};
 
     Button lotto_back;
 
@@ -44,6 +44,7 @@ public class Lotto_Activity extends AppCompatActivity {
                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                startActivity(intent);
             }
+
         });
 
 

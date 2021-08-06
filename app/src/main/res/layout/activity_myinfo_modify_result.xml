@@ -18,14 +18,14 @@
         app:srcCompat="@drawable/apeach" />
 
     <TextView
-        android:id="@+id/myinfo_result_nickname"
+        android:id="@+id/myinfo_result_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
-        android:text="닉네임 : 홍진길똥"
+        android:layout_marginTop="96dp"
+        android:text="이름 : 홍진똥"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.657"
+        app:layout_constraintHorizontal_bias="0.598"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -38,8 +38,8 @@
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/myinfo_result_nickname"
-        app:layout_constraintTop_toBottomOf="@+id/myinfo_result_nickname" />
+        app:layout_constraintStart_toStartOf="@+id/myinfo_result_name"
+        app:layout_constraintTop_toBottomOf="@+id/myinfo_result_name" />
 
     <TextView
         android:id="@+id/myinfo_result_tellnum"
@@ -52,18 +52,6 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/myinfo_result_id"
         app:layout_constraintTop_toBottomOf="@+id/myinfo_result_id" />
-
-    <TextView
-        android:id="@+id/myinfo_result_loc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="내지역 : 광주"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="@+id/myinfo_result_tellnum"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/myinfo_result_tellnum"
-        app:layout_constraintTop_toBottomOf="@+id/myinfo_result_tellnum" />
 
     <Button
         android:id="@+id/myinfo_result_btn_modify"

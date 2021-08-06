@@ -10,7 +10,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Myinfo_Modify extends AppCompatActivity {
 
-    Spinner spinner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,25 +17,7 @@ public class Myinfo_Modify extends AppCompatActivity {
         setContentView(R.layout.activity_myinfo_modify);
 
 
-        spinner = findViewById(R.id.spinner);
 
-        ArrayAdapter loc_Adapter = ArrayAdapter.createFromResource(this, R.array.locArray, R.layout.support_simple_spinner_dropdown_item);
-
-        loc_Adapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
-
-        spinner.setAdapter(loc_Adapter);
-
-        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
 
 
     }

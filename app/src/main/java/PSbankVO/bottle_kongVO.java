@@ -5,15 +5,13 @@ public class bottle_kongVO {
     private int bottle_king_img;
     private String bottle_king_round;
     private String bottle_king_id;
-    private String bottle_king_now;
     private String bottle_king_score;
 
 
-    public bottle_kongVO(int bottle_king_img, String bottle_king_round, String bottle_king_id, String bottle_king_now, String bottle_king_score) {
+    public bottle_kongVO(int bottle_king_img, String bottle_king_round, String bottle_king_id, String bottle_king_now) {
         this.bottle_king_img = bottle_king_img;
         this.bottle_king_round = bottle_king_round;
         this.bottle_king_id = bottle_king_id;
-        this.bottle_king_now = bottle_king_now;
         this.bottle_king_score = bottle_king_score;
 
     }
@@ -26,13 +24,13 @@ public class bottle_kongVO {
         this.bottle_king_img = bottle_king_img;
     }
 
+
     public String getBottle_king_round() {
         return bottle_king_round;
     }
 
-    public void setBottle_king_round(String bottle_king_round) {
-        this.bottle_king_round = bottle_king_round;
-    }
+    public void setBottle_king_round(String bottle_king_round) { this.bottle_king_round = bottle_king_round; }
+
 
     public String getBottle_king_id() {
         return bottle_king_id;
@@ -42,19 +40,12 @@ public class bottle_kongVO {
         this.bottle_king_id = bottle_king_id;
     }
 
-    public String getBottle_king_now() {
-        return bottle_king_now;
-    }
-
-    public void setBottle_king_now(String bottle_king_now) {
-        this.bottle_king_now = bottle_king_now;
-    }
 
     public String getBottle_king_score() {
         return bottle_king_score;
     }
 
-    public void setBottle_king_score(String bottle_king_score) {
-        this.bottle_king_score = bottle_king_score;
-    }
+    public void setBottle_king_score(String bottle_king_score) { this.bottle_king_score = bottle_king_score; }
+
+
 }

@@ -18,14 +18,14 @@
         app:srcCompat="@drawable/apeach" />
 
     <TextView
-        android:id="@+id/myinfo_nickname"
+        android:id="@+id/myinfo_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
-        android:text="닉네임 : "
+        android:layout_marginTop="88dp"
+        android:text="이름 : "
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.541"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -36,10 +36,10 @@
         android:layout_marginTop="15dp"
         android:text="아이디 : "
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="@+id/myinfo_nickname"
+        app:layout_constraintEnd_toEndOf="@+id/myinfo_name"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/myinfo_nickname"
-        app:layout_constraintTop_toBottomOf="@+id/myinfo_nickname" />
+        app:layout_constraintStart_toStartOf="@+id/myinfo_name"
+        app:layout_constraintTop_toBottomOf="@+id/myinfo_name" />
 
     <TextView
         android:id="@+id/myinfo_tellnum"
@@ -52,18 +52,6 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/myinfo_id"
         app:layout_constraintTop_toBottomOf="@+id/myinfo_id" />
-
-    <TextView
-        android:id="@+id/myinfo_loc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="내지역 : "
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="@+id/myinfo_tellnum"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/myinfo_tellnum"
-        app:layout_constraintTop_toBottomOf="@+id/myinfo_tellnum" />
 
     <Button
         android:id="@+id/myinfo_btn_modify"
@@ -83,10 +71,10 @@
         android:layout_height="45dp"
         android:ems="10"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="@+id/myinfo_nickname"
+        app:layout_constraintBottom_toBottomOf="@+id/myinfo_name"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/myinfo_nickname"
-        app:layout_constraintTop_toTopOf="@+id/myinfo_nickname" />
+        app:layout_constraintStart_toEndOf="@+id/myinfo_name"
+        app:layout_constraintTop_toTopOf="@+id/myinfo_name" />
 
     <EditText
         android:id="@+id/edt_id"
@@ -109,15 +97,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/myinfo_tellnum"
         app:layout_constraintTop_toTopOf="@+id/myinfo_tellnum" />
-
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="147dp"
-        android:layout_height="29dp"
-        android:spinnerMode="dropdown"
-        app:layout_constraintBottom_toBottomOf="@+id/myinfo_loc"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/myinfo_loc"
-        app:layout_constraintTop_toTopOf="@+id/myinfo_loc" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
