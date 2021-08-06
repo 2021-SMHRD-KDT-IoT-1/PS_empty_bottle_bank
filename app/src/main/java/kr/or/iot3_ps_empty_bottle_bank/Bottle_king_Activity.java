@@ -26,6 +26,7 @@ import PSbankAdapter.bottle_king_Adapter;
 import PSbankAdapter.event_list_Adapter;
 import PSbankVO.bottle_kongVO;
 import PSbankVO.event_ProductVO;
+import PSbankVO.lotto_winVO;
 
 public class Bottle_king_Activity extends AppCompatActivity {
 
@@ -38,11 +39,10 @@ public class Bottle_king_Activity extends AppCompatActivity {
     RequestQueue queue;
 
 
-//    private int[] bottle_img_Array = {R.drawable.sojo, R.drawable.apeach, R.drawable.item1, R.drawable.item2, R.drawable.item3};
-//    private String[] bottle_round = {"1", "2", "3", "4", "5"};
-//    private String[] bottle_id = {"홍진석", "콩진석", "콩콩진석", "콩콩콩진석", "콩콩콩콩진석"};
-//    private String[] bottle_now = {"현재갯수", "현재갯수", "현재갯수", "현재갯수", "현재갯수"};
-//    private String[] bottle_score = {"150ECO", "130ECO", "120ECO", "110ECO", "100ECO"};
+    private int[] bottle_img_Array = {R.drawable.sojo, R.drawable.apeach, R.drawable.item1, R.drawable.item2, R.drawable.item3};
+    private String[] bottle_round = {"1", "2", "3", "4", "5"};
+    private String[] bottle_id = {"홍진석", "콩진석", "콩콩진석", "콩콩콩진석", "콩콩콩콩진석"};
+    private String[] bottle_score = {"150ECO", "130ECO", "120ECO", "110ECO", "100ECO"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,13 +53,13 @@ public class Bottle_king_Activity extends AppCompatActivity {
         queue = Volley.newRequestQueue(getApplicationContext());
 
 
-        String event_num = getIntent().getStringExtra("event_num");
-        Log.d("이거 이벤트 코드", event_num);
+        String event_num =  getIntent().getStringExtra("event_num");
+//        Log.d("이거 이벤트 코드", event_num);
 
 
 
         // 여기가 접속 주소
-        String bottleking_url = "http://rspring41.iptime.org:3000/bottleking";
+        String bottleking_url = "http://222.102.104.159:8081/AndroidServer/Bottle_king_Activity";
 
 
         StringRequest request = new StringRequest(Request.Method.POST, bottleking_url,
@@ -78,7 +78,7 @@ public class Bottle_king_Activity extends AppCompatActivity {
 
                                     bottle_king_data.add(new bottle_kongVO(
 
-                                            db_object.getInt("bottleking_user_img"),
+                                            bottle_img_Array[row],
                                             db_object.getString("bottleking_rangking"),
                                             db_object.getString("bottleking_user_name"),
                                             db_object.getString("bottleking_user_score")
@@ -114,8 +114,13 @@ public class Bottle_king_Activity extends AppCompatActivity {
 
         // 여기는 ViewList에 대한 ID를 찾고 위에서 계속 더해서 만든 array를 출력하는 부분
         ListView bottle_list_king = findViewById(R.id.bottle_list_king);
+        bottle_king_data = new ArrayList<>();
+        /*for(int i = 0; i<bottle_img_Array.length; i++) {
+            bottle_king_data.add(new bottle_kongVO(bottle_img_Array[i], bottle_round[i], bottle_id[i], bottle_score[i]));
+        }*/
         bottle_king_Adapter = new bottle_king_Adapter(getApplicationContext(), R.layout.bottle_king_win, bottle_king_data);
         bottle_list_king.setAdapter(bottle_king_Adapter);
+
 
     }
 }

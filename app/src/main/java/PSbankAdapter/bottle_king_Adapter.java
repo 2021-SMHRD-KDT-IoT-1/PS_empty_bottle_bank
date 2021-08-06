@@ -58,16 +58,16 @@ public class bottle_king_Adapter extends BaseAdapter {
         ImageView bottle_king_img = convertView.findViewById(R.id.bottle_king_img);
         TextView bottle_king_round = convertView.findViewById(R.id.bottle_king_round);
         TextView bottle_king_id = convertView.findViewById(R.id.bottle_king_id);
-        TextView bottle_king_now = convertView.findViewById(R.id.bottle_king_now);
         TextView bottle_king_score = convertView.findViewById(R.id.bottle_king_score);
         View bottle_king_view = convertView.findViewById(R.id.bottle_king_view);
 
         bottle_kongVO king_vo2 = king_data.get(position);
 
-        bottle_king_img.setImageResource(king_vo2.getBottle_king_img());
+        /*bottle_king_img.setImageResource(king_vo2.getBottle_king_img());*/
         bottle_king_round.setText(king_vo2.getBottle_king_round());
         bottle_king_id.setText(king_vo2.getBottle_king_id());
         bottle_king_score.setText(king_vo2.getBottle_king_score());
+
 
 
 

@@ -8,7 +8,7 @@ public class bottle_kongVO {
     private String bottle_king_score;
 
 
-    public bottle_kongVO(int bottle_king_img, String bottle_king_round, String bottle_king_id, String bottle_king_now) {
+    public bottle_kongVO(int bottle_king_img, String bottle_king_round, String bottle_king_id, String bottle_king_score) {
         this.bottle_king_img = bottle_king_img;
         this.bottle_king_round = bottle_king_round;
         this.bottle_king_id = bottle_king_id;

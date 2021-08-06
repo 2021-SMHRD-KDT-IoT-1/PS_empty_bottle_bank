@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class User_Activity extends AppCompatActivity {
 
-    Button btn_logout;
+    Button btn_logout, btn_change_pass;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +21,15 @@ public class User_Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(),Login_Activity.class);
+                startActivity(intent);
+            }
+        });
+
+        btn_change_pass = findViewById(R.id.btn_change_pass);
+        btn_change_pass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Password_Change_Activity.class);
                 startActivity(intent);
             }
         });
