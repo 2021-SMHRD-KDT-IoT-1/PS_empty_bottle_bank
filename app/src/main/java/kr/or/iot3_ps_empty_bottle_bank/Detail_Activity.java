@@ -42,18 +42,12 @@ public class Detail_Activity extends AppCompatActivity {
     private ArrayList<main_DetailVO> Detail_data;
 
 
-
-
-
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
-//        int machine_num = getIntent().getIntExtra();
+        String machine_num = getIntent().getStringExtra("machine_num");
 
 
         //회수기 이름
@@ -64,7 +58,7 @@ public class Detail_Activity extends AppCompatActivity {
         Detail_bottle_now_num = findViewById(R.id.Detail_bottle_now_num);
         detail_queue = Volley.newRequestQueue(getApplicationContext());
 
-        String Detail_url = "http://rspring41.iptime.org:3000/machine/1";
+        String Detail_url = "http://rspring41.iptime.org:3000/machine/" + machine_num;
 
 
         StringRequest request = new StringRequest(Request.Method.GET, Detail_url,
@@ -73,9 +67,15 @@ public class Detail_Activity extends AppCompatActivity {
                     public void onResponse(String response) {
 
                         try {
-//                            JSONArray machine_infos = new JSONArray(response);
-//
-//                            for (int i = 0; i < machine_infos.length(); i++) {
+                            JSONObject machine_info = new JSONObject(response);
+
+                            machine_name_tlt.setText(machine_info.getString("machine_name"));
+                            Detail_bottle_set_num.setText(machine_info.getString("max_bottle"));
+                            Detail_bottle_now_num.setText(machine_info.getString("now_bottle"));
+
+
+
+                            //                            for (int i = 0; i < machine_infos.length(); i++) {
 //                                JSONObject machine_info = machine_infos.getJSONObject(i);
 //
 //                                machine_name_tlt.setText(machine_info.getString("machine_name"));
@@ -83,14 +83,6 @@ public class Detail_Activity extends AppCompatActivity {
 //                                Detail_bottle_now_num.setText(machine_info.getString("now_bottle"));
 //
 //                            }
-
-                            JSONObject machine_info = new JSONObject(response);
-
-
-                            machine_name_tlt.setText(machine_info.getString("machine_name"));
-                            Detail_bottle_set_num.setText(machine_info.getString("max_bottle"));
-                            Detail_bottle_now_num.setText(machine_info.getString("now_bottle"));
-
 
 
                         } catch (JSONException e) {
