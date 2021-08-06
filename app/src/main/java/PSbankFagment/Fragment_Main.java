@@ -55,15 +55,12 @@ public class Fragment_Main extends Fragment {
     private ListView main_list;
     //====== 메인리스트 뷰에 들어갈 메인 어뎁터
     private main_list_Adapter main_adapter;
-    //===== 메인 리스트뷰에 들어갈 데이터
-    private ArrayList<main_ProductVO> main_list_data = new ArrayList<>();
-    ;
+
 
     // ===== 여기는 메인 페이지
     private int[] main_imgview = {R.drawable.item1, R.drawable.item2, R.drawable.item3};
     private int[] machine_num = {1, 2, 3};
 
-    private StringRequest request;
 
 
     @Override
@@ -98,16 +95,21 @@ public class Fragment_Main extends Fragment {
 
         main_list = view.findViewById(R.id.main_list);
 
+        // =========================================================서버통신
+        String main_url = "http://rspring41.iptime.org:3000/machine";
 
-        String login_url = "http://rspring41.iptime.org:3000/machine";
-
-        request = new StringRequest(Request.Method.GET, login_url,
+        StringRequest request = new StringRequest(Request.Method.GET, main_url,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
+
+
+                        ArrayList<main_ProductVO> main_list_data = new ArrayList<>();
+
                         try {
 
                             JSONArray json = new JSONArray(response);
+
 
                             for (int i = 0; i < json.length(); i++) {
                                 JSONObject json_object = json.getJSONObject(i);

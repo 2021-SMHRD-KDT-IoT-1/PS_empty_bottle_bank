@@ -36,7 +36,7 @@ public class Detail_Activity extends AppCompatActivity {
 
 
     ImageView Detail_img;
-    TextView Detail_bottle_set_num, Detail_bottle_now_num, machine_name_tlt;
+    TextView Detail_bottle_set_num, Detail_bottle_now_num, machine_name_tlt, Detail_broken;
     Button Check_loc_btn;
     RequestQueue detail_queue;
     private ArrayList<main_DetailVO> Detail_data;
@@ -56,6 +56,9 @@ public class Detail_Activity extends AppCompatActivity {
         Detail_bottle_set_num = findViewById(R.id.Detail_bottle_set_num);
         //회수기 현재
         Detail_bottle_now_num = findViewById(R.id.Detail_bottle_now_num);
+        //고장여부
+        Detail_broken = findViewById(R.id.Detail_broken);
+
         detail_queue = Volley.newRequestQueue(getApplicationContext());
 
         String Detail_url = "http://rspring41.iptime.org:3000/machine/" + machine_num;
@@ -69,10 +72,18 @@ public class Detail_Activity extends AppCompatActivity {
                         try {
                             JSONObject machine_info = new JSONObject(response);
 
+                            String broken;
+                            if(machine_info.getString("broken").equals("0")){
+                                broken = "정상";
+                            }else{
+                                broken = "고장";
+                            }
+
+
                             machine_name_tlt.setText(machine_info.getString("machine_name"));
                             Detail_bottle_set_num.setText(machine_info.getString("max_bottle"));
                             Detail_bottle_now_num.setText(machine_info.getString("now_bottle"));
-
+                            Detail_broken.setText(broken);
 
 
                             //                            for (int i = 0; i < machine_infos.length(); i++) {
