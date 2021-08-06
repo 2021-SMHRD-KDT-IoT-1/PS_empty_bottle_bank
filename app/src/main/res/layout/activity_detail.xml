@@ -89,6 +89,18 @@
             app:layout_constraintStart_toStartOf="@+id/machine_name_tlt"
             app:layout_constraintTop_toBottomOf="@+id/machine_name_tlt" />
 
+        <TextView
+            android:id="@+id/Detail_broken"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="고장"
+            android:textSize="34sp"
+            app:layout_constraintBottom_toTopOf="@+id/machine_name_tlt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.756"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -140,8 +152,8 @@
 
             <TextView
                 android:id="@+id/Detail_bottle_now"
-                android:layout_width="46dp"
-                android:layout_height="43dp"
+                android:layout_width="38dp"
+                android:layout_height="49dp"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="@string/Detail_bottle_now" />
