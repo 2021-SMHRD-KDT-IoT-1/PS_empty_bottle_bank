@@ -31,12 +31,17 @@ import PSbankVO.lotto_winVO;
 public class Bottle_king_Activity extends AppCompatActivity {
 
 
+
+
     private ListView bottle_king_view;
     private PSbankAdapter.bottle_king_Adapter bottle_king_Adapter;
     private ArrayList<bottle_kongVO> bottle_king_data;
 
+
     // 큐 객체 생성
     RequestQueue queue;
+
+    private StringRequest request;
 
 
     private int[] bottle_img_Array = {R.drawable.sojo, R.drawable.apeach, R.drawable.item1, R.drawable.item2, R.drawable.item3};
@@ -54,40 +59,45 @@ public class Bottle_king_Activity extends AppCompatActivity {
 
 
         String event_num =  getIntent().getStringExtra("event_num");
-//        Log.d("이거 이벤트 코드", event_num);
 
 
 
         // 여기가 접속 주소
         String bottleking_url = "http://222.102.104.159:8081/AndroidServer/Bottle_king_Activity";
+        /*String Detail_url = "http://rspring41.iptime.org:3000/machine/" + machine_num;*/
 
 
-        StringRequest request = new StringRequest(Request.Method.POST, bottleking_url,
+        request = new StringRequest(Request.Method.POST, bottleking_url,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-
-
                         // 여기서 서버에서 받은 반환값 (response)를  JSONArray에 담에서 저장함
                         try {
+
                             JSONArray db_array = new JSONArray(response);
 
                             bottle_king_data = new ArrayList<>();
-                            for (int row = 0; row < db_array.length(); row++) {
-                                JSONObject db_object = (JSONObject) db_array.get(row);
-
+                            for (int i = 0; i < db_array.length(); i++) {
+                                /*JSONObject db_object = (JSONObject) db_array.get(row);*/
+                                JSONObject db_object = db_array.getJSONObject(i);
                                     bottle_king_data.add(new bottle_kongVO(
 
-                                            bottle_img_Array[row],
+                                            bottle_img_Array[i],
                                             db_object.getString("bottleking_rangking"),
                                             db_object.getString("bottleking_user_name"),
                                             db_object.getString("bottleking_user_score")
+
                                             ) );
 
                             }
                         }catch (Exception e){
                             e.printStackTrace();
                         }
+
+                        ListView bottle_list_king = findViewById(R.id.bottle_list_king);
+                        bottle_king_Adapter = new bottle_king_Adapter(getApplicationContext(), R.layout.bottle_king_win, bottle_king_data);
+                        bottle_list_king.setAdapter(bottle_king_Adapter);
+
                     }
                 },
                 new Response.ErrorListener() {
@@ -112,14 +122,15 @@ public class Bottle_king_Activity extends AppCompatActivity {
         queue.add(request);
 
 
+
+        /*bottle_king_Adapter = new bottle_king_Adapter(getApplicationContext(), R.layout.bottle_king_win, bottle_king_data);*/
         // 여기는 ViewList에 대한 ID를 찾고 위에서 계속 더해서 만든 array를 출력하는 부분
-        ListView bottle_list_king = findViewById(R.id.bottle_list_king);
-        bottle_king_data = new ArrayList<>();
+       /* ListView bottle_list_king = findViewById(R.id.bottle_list_king);*/
+        /*bottle_list_king.setAdapter(bottle_king_Adapter);*/
         /*for(int i = 0; i<bottle_img_Array.length; i++) {
             bottle_king_data.add(new bottle_kongVO(bottle_img_Array[i], bottle_round[i], bottle_id[i], bottle_score[i]));
         }*/
-        bottle_king_Adapter = new bottle_king_Adapter(getApplicationContext(), R.layout.bottle_king_win, bottle_king_data);
-        bottle_list_king.setAdapter(bottle_king_Adapter);
+
 
 
     }

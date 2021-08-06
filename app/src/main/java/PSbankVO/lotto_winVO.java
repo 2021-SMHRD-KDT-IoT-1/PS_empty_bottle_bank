@@ -15,9 +15,7 @@ public class lotto_winVO {
 
     }
 
-    public String getLotto_round() {
-        return lotto_round;
-    }
+    public String getLotto_round() { return lotto_round; }
 
     public void setLotto_round(String lotto_round) {
         this.lotto_round = lotto_round;
