@@ -8,23 +8,28 @@
 
     <TextView
         android:id="@+id/S_my_store_day"
-        android:layout_width="89dp"
-        android:layout_height="78dp"
+        android:layout_width="108dp"
+        android:layout_height="79dp"
+        android:layout_marginStart="8dp"
         android:layout_weight="1"
         android:gravity="center"
+        android:inputType="textMultiLine"
+        android:scrollHorizontally="false"
         android:text="@string/s_my_store_day"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/S_my_store_content"
-        android:layout_width="239dp"
-        android:layout_height="77dp"
+        android:layout_width="209dp"
+        android:layout_height="82dp"
         android:layout_weight="1"
         android:gravity="center"
+        android:inputType="textMultiLine"
+        android:scrollHorizontally="false"
         android:text="@string/s_my_store_content"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/S_my_store_day"
@@ -37,7 +42,8 @@
         android:layout_width="79dp"
         android:layout_height="76dp"
         android:layout_marginEnd="1dp"
-        android:layout_marginRight="1dp"
+        android:inputType="textMultiLine"
+        android:scrollHorizontally="false"
         android:layout_weight="1"
         android:gravity="center"
         android:text="@string/s_my_point"
