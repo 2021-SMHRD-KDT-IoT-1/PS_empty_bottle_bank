@@ -7,6 +7,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.webkit.CookieManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -19,8 +20,11 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
+import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
+
+import javax.net.ssl.HttpsURLConnection;
 
 public class Login_Activity extends AppCompatActivity {
 
@@ -53,6 +57,10 @@ public class Login_Activity extends AppCompatActivity {
         });
 
 
+
+
+
+
         Login_btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -72,6 +80,10 @@ public class Login_Activity extends AppCompatActivity {
                     return;
                 }
 
+
+
+
+
                 StringRequest request = new StringRequest(Request.Method.POST, login_url,
                         new Response.Listener<String>() {
                             @Override
@@ -90,6 +102,7 @@ public class Login_Activity extends AppCompatActivity {
                                     editor.commit();
                                     Intent intent = new Intent(Login_Activity.this, MainActivity.class);
                                     startActivity(intent);
+
                                 }
                             }
                         },
@@ -106,10 +119,12 @@ public class Login_Activity extends AppCompatActivity {
                         params.put("id", id);
                         params.put("pw", pw);
 
+
                         return params;
                     }
                 };
                 queue.add(request);
+
 
 
             }

@@ -21,9 +21,9 @@
         android:id="@+id/s_myinfo_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="64dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.603"
+        app:layout_constraintHorizontal_bias="0.481"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -128,10 +128,22 @@
         app:layout_constraintTop_toBottomOf="@+id/s_myinfo_btn_event" />
 
     <Button
+        android:id="@+id/s_myinfo_btn_store2"
+        android:layout_width="377dp"
+        android:layout_height="47dp"
+        android:gravity="left"
+        android:text="스토어 상점"
+        android:textColor="@color/black"
+        app:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/s_myinfo_btn_event"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/s_myinfo_btn_event"
+        app:layout_constraintTop_toBottomOf="@+id/s_myinfo_btn_store" />
+
+    <Button
         android:id="@+id/s_myinfo_btn_total"
         android:layout_width="377dp"
         android:layout_height="47dp"
-        android:layout_marginTop="60dp"
         android:gravity="center"
         android:text="적립내역 및 사용내역 보기"
         android:textColor="@color/black"
@@ -139,6 +151,16 @@
         app:layout_constraintEnd_toEndOf="@+id/s_myinfo_btn_event"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/s_myinfo_btn_event"
-        app:layout_constraintTop_toBottomOf="@+id/s_myinfo_btn_event" />
+        app:layout_constraintTop_toBottomOf="@+id/s_myinfo_btn_store2" />
+
+    <TextView
+        android:id="@+id/user_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/s_myinfo_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
