@@ -7,6 +7,17 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
+
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 
@@ -15,11 +26,15 @@ import PSbankVO.noticeVO;
 
 public class Notice_Activity extends AppCompatActivity {
 
-    Button btn_edt_notice;
+
 
     private ListView notice_listview;
     private PSbankAdapter.notice_Adapter notice_Adapter;
     private ArrayList<noticeVO> notice_data;
+
+    RequestQueue queue;
+
+    private StringRequest request;
 
     private String[] notice_title = {"긴급공지","슬리퍼","케이스","인형","피규어","안마봉",
             "마우스패드","노트","필통","파우치","티셔츠"};
@@ -32,26 +47,73 @@ public class Notice_Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notice);
 
-        btn_edt_notice = findViewById(R.id.btn_edt_notice);
+        queue = Volley.newRequestQueue(getApplicationContext());
 
-        btn_edt_notice.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),Edt_Notice_Activity.class);
-                startActivity(intent);
-            }
-        });
+       /* String notice_url = "http://rspring41.iptime.org:3000/notice";*/
+        String notice_url = "http://222.102.104.159:8081/AndroidServer/Notice_Activity";
 
 
-        notice_listview = findViewById(R.id.notice_listview);
-        notice_data = new ArrayList<>();
+        request = new StringRequest(Request.Method.POST, notice_url,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
 
-        for(int i =0; i<notice_title.length; i++){
-            notice_data.add(new noticeVO(notice_title[i],notice_content[i]));
-        }
-        notice_Adapter = new notice_Adapter(getApplicationContext(), R.layout.notice_list_view, notice_data);
+                        try {
 
-        notice_listview.setAdapter(notice_Adapter);
+                            JSONArray notice_array = new JSONArray(response);
+
+                            notice_data = new ArrayList<>();
+                            for (int i = 0; i < notice_array.length(); i++) {
+                                /*JSONObject db_object = (JSONObject) db_array.get(row);*/
+                                JSONObject db_object = notice_array.getJSONObject(i);
+                                notice_data.add(new noticeVO(
+
+                                        db_object.getString("notice_num"),
+                                        db_object.getString("notice_title"),
+                                        db_object.getString("notice_content")
+
+                                ) );
+
+                            }
+                        }catch (Exception e){
+                            e.printStackTrace();
+                        }
+
+                        ListView notice_listview = findViewById(R.id.notice_listview);
+                        notice_Adapter = new notice_Adapter(getApplicationContext(), R.layout.notice_list_view, notice_data);
+                        notice_listview.setAdapter(notice_Adapter);
+
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Toast.makeText(Notice_Activity.this, "서버 오류", Toast.LENGTH_SHORT).show();
+                    }
+                }
+
+        );
+
+        queue.add(request);
+
+
+
+
+
+
+
+
+
+
+//        notice_listview = findViewById(R.id.notice_listview);
+//        notice_data = new ArrayList<>();
+//
+//        for(int i =0; i<notice_title.length; i++){
+//            notice_data.add(new noticeVO(notice_title[i],notice_content[i]));
+//        }
+//        notice_Adapter = new notice_Adapter(getApplicationContext(), R.layout.notice_list_view, notice_data);
+//
+//        notice_listview.setAdapter(notice_Adapter);
 
 
 

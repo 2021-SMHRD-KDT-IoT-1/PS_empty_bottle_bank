@@ -29,15 +29,4 @@
         app:layout_constraintTop_toBottomOf="@+id/textView14"
         app:layout_constraintVertical_bias="0.098" />
 
-    <Button
-        android:id="@+id/btn_edt_notice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="작성하기"
-        android:textColor="@color/black"
-        app:backgroundTint="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/notice_listview" />
 </androidx.constraintlayout.widget.ConstraintLayout>

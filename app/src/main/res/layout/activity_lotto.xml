@@ -17,17 +17,12 @@
 
         <TextView
             android:id="@+id/textView22"
-            android:layout_width="355dp"
+            android:layout_width="0dp"
             android:layout_height="41dp"
-            android:layout_marginStart="56dp"
-            android:layout_marginLeft="56dp"
-            android:layout_marginEnd="272dp"
-            android:layout_marginRight="272dp"
             android:gravity="center"
             android:text="대박로또 추첨"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -42,26 +37,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout7">
 
-        <TextView
-            android:id="@+id/textView26"
-            android:layout_width="78dp"
-            android:layout_height="55dp"
-            android:gravity="center"
-            android:text="@string/lotto_round"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/textView27"
-            android:layout_width="310dp"
-            android:layout_height="54dp"
-            android:gravity="center"
-            android:text="@string/lotto_number"
-            app:layout_constraintBottom_toBottomOf="@+id/textView26"
+        <Button
+            android:id="@+id/btn_lotto_participation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_lotto_participation"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/textView26"
-            app:layout_constraintTop_toTopOf="@+id/textView26" />
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="6dp" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ListView

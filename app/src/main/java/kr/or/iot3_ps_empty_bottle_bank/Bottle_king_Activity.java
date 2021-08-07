@@ -63,11 +63,11 @@ public class Bottle_king_Activity extends AppCompatActivity {
 
 
         // 여기가 접속 주소
-        String bottleking_url = "http://222.102.104.159:8081/AndroidServer/Bottle_king_Activity";
-        /*String Detail_url = "http://rspring41.iptime.org:3000/machine/" + machine_num;*/
+        /*String bottleking_url = "http://222.102.104.159:8081/AndroidServer/Bottle_king_Activity";*/
+        String bottleking_url = "http://rspring41.iptime.org:3000/bottleking";
 
 
-        request = new StringRequest(Request.Method.POST, bottleking_url,
+        request = new StringRequest(Request.Method.GET, bottleking_url,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -83,9 +83,9 @@ public class Bottle_king_Activity extends AppCompatActivity {
                                     bottle_king_data.add(new bottle_kongVO(
 
                                             bottle_img_Array[i],
-                                            db_object.getString("bottleking_rangking"),
-                                            db_object.getString("bottleking_user_name"),
-                                            db_object.getString("bottleking_user_score")
+                                            db_object.getString("rank"),
+                                            db_object.getString("name"),
+                                            db_object.getString("sum_count")
 
                                             ) );
 

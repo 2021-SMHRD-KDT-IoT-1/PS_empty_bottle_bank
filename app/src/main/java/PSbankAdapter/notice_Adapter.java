@@ -56,12 +56,14 @@ public class notice_Adapter extends BaseAdapter {
             convertView = notice_inflater.inflate(notice_layout, parent,false);
         }
 
+        TextView notice_num = convertView.findViewById(R.id.notice_num);
         TextView notice_title = convertView.findViewById(R.id.notice_title);
         TextView notice_content = convertView.findViewById(R.id.notice_content);
         View notice_list_view = convertView.findViewById(R.id.notice_list_view);
 
         noticeVO noticevo = notice_data.get(position);
 
+        notice_num.setText(noticevo.getNotice_num());
         notice_title.setText(noticevo.getNotice_title());
         notice_content.setText(noticevo.getNotice_content());
 

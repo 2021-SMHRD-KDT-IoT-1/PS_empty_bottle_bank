@@ -13,17 +13,19 @@
         android:layout_marginTop="8dp"
         android:gravity="center"
         android:text="TextView"
-        android:textSize="16sp"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.664"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.025" />
+        app:layout_constraintVertical_bias="0.123" />
 
     <TextView
         android:id="@+id/notice_content"
-        android:layout_width="381dp"
-        android:layout_height="19dp"
+        android:layout_width="316dp"
+        android:layout_height="38dp"
         android:layout_marginTop="12dp"
         android:layout_marginBottom="16dp"
         android:gravity="center"
@@ -32,4 +34,19 @@
         app:layout_constraintEnd_toEndOf="@+id/notice_title"
         app:layout_constraintStart_toStartOf="@+id/notice_title"
         app:layout_constraintTop_toBottomOf="@+id/notice_title" />
+
+    <TextView
+        android:id="@+id/notice_num"
+        android:layout_width="37dp"
+        android:layout_height="33dp"
+        android:text="1"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.042"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.507" />
 </androidx.constraintlayout.widget.ConstraintLayout>
