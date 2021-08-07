@@ -1,6 +1,8 @@
 package PSbankFagment;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -36,7 +38,7 @@ import kr.or.iot3_ps_empty_bottle_bank.S_my_store_Activity;
 
 public class Fragment_Myinfo extends Fragment {
 
-    TextView s_myinfo_name, s_myinfo_current_money_view, s_myinfo_ranking_view;
+    TextView s_myinfo_name, s_myinfo_current_money_view, s_myinfo_ranking_view,user_state;
 
 
     // ====이벤트 참여내역 버튼
@@ -52,7 +54,8 @@ public class Fragment_Myinfo extends Fragment {
 
     //=====큐 생성
     RequestQueue queue;
-    private StringRequest request;
+
+
     private ArrayList<fg_MyinfoVO> my_info_data;
 
 
@@ -63,6 +66,7 @@ public class Fragment_Myinfo extends Fragment {
         ViewGroup rootview = (ViewGroup)inflater.inflate(R.layout.fragment_myinfo,container,false);
 
         //초기화
+        user_state = rootview.findViewById(R.id.user_state);
         s_myinfo_name = rootview.findViewById(R.id.s_myinfo_name);
         s_myinfo_current_money_view = rootview.findViewById(R.id.s_myinfo_current_money_view);
         s_myinfo_ranking_view = rootview.findViewById(R.id.s_myinfo_ranking_view);
@@ -70,10 +74,13 @@ public class Fragment_Myinfo extends Fragment {
         queue = Volley.newRequestQueue(requireActivity().getApplicationContext());
 
 
+        // 접속한 사용자 ID가져오기===================================================
+        SharedPreferences sf = getActivity().getSharedPreferences("login", Context.MODE_PRIVATE);
+        String login_id = sf.getString("login_id","");
 
-        String My_info_url = "http://192.168.11.203:8081/AndroidServer/myinfo_Activity";
+        String My_info_url = "http://rspring41.iptime.org:3000/myinfo/"  + login_id;
 
-        request = new StringRequest(Request.Method.GET, My_info_url, new Response.Listener<String>() {
+        StringRequest request = new StringRequest(Request.Method.GET, My_info_url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
 
@@ -86,9 +93,19 @@ public class Fragment_Myinfo extends Fragment {
                         Log.d("여기여기!!", response);
                         JSONObject json_object = jsonArray.getJSONObject(i);
 
+                        String state;
+                        if(json_object.getString("user_state").equals("0")){
+                            state = "회원";
+                        }else{
+                            state = "정지회원";
+                        }
+
+
+
+                        user_state.setText(state);
                         s_myinfo_name.setText(json_object.getString("name"));
                         s_myinfo_current_money_view.setText(json_object.getString("point"));
-                        s_myinfo_ranking_view.setText(json_object.getString("Ranking"));
+                        s_myinfo_ranking_view.setText(json_object.getString("rank"));
 
 
                     }

@@ -13,6 +13,9 @@ public class My_event_Activity extends AppCompatActivity {
     private PSbankAdapter.my_eventcontent_Adapter my_eventcontent_Adapter;
     private ArrayList<my_eventcontentVO> my_event_data;
 
+
+
+
     private String[] event_my_day = {"2021.03.14", "2021.03.19", "2021.06.16", "2021.06.17", "2021.09.16"};
     private String[] event_my_content = {"1회차 대박로또이벤트 참여","1회차 대박로또이벤트 당첨","4회차 대박로또이벤트 참여","5회차 대박로또이벤트 참여","6회차 대박로또이벤트 참여"};
     private String[] event_my_point = {"-5000P", "+1억P", "-5000P","-5000P","-5000P"};

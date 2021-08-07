@@ -3,8 +3,12 @@ package kr.or.iot3_ps_empty_bottle_bank;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -23,10 +27,14 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+
 
 
         navigation = findViewById(R.id.navigation);
@@ -34,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
         fragment_myinfo = new Fragment_Myinfo();
         fragment_setting = new Fragment_Setting();
         fragment_event = new Fragment_Event();
+
 
 
         //프래그먼트매니저를 이용하여 FrameLayout에 Fragment화면을 설정

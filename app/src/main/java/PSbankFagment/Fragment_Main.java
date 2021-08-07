@@ -59,13 +59,15 @@ public class Fragment_Main extends Fragment {
 
     // ===== 여기는 메인 페이지
     private int[] main_imgview = {R.drawable.item1, R.drawable.item2, R.drawable.item3};
-    private int[] machine_num = {1, 2, 3};
-
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+
+
+
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_main, container, false);
         queue = Volley.newRequestQueue(requireActivity().getApplicationContext());

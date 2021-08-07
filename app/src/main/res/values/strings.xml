@@ -72,7 +72,7 @@
 
     <!-- 여기는 스토어 및 이벤트 공용 -->
 
-    <string name="my_event_name">홍진석님의 포인트</string>
+    <string name="my_event_name">홍진석</string>
     <string name="my_event_point">💳 500,000P</string>
     <string name="event_day">날짜</string>
     <string name="event_Content">내용</string>
