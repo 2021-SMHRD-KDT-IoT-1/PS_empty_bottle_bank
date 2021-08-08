@@ -2,14 +2,26 @@ package kr.or.iot3_ps_empty_bottle_bank;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.android.volley.Request;
 import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.ArrayList;
+import java.util.Arrays;
 
 import PSbankAdapter.Point_Ck_Adapter;
 import PSbankVO.Point_ckVO;
@@ -54,9 +66,9 @@ public class Point_Check_Activity extends AppCompatActivity {
 //        for (int i = 0; i<Point_Ck_day.length; i++) {
 //            Point_ck_data.add(new Point_ckVO(Point_Ck_day[i],Point_Ck_content[i],Point_Ck_point[i]));
 //        }
-//
-//        Point_Ck_Adapter = new Point_Ck_Adapter(getApplicationContext(), R.layout.point_custom_list, Point_ck_data);
-//        Point_main_ck_list.setAdapter(Point_Ck_Adapter);
+
+        Point_Ck_Adapter = new Point_Ck_Adapter(getApplicationContext(), R.layout.point_custom_list, Point_ck_data);
+        Point_main_ck_list.setAdapter(Point_Ck_Adapter);
 
     }
 }
