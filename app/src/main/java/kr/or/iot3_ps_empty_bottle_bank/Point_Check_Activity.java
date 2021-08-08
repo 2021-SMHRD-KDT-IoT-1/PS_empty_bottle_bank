@@ -54,9 +54,9 @@ public class Point_Check_Activity extends AppCompatActivity {
 //        for (int i = 0; i<Point_Ck_day.length; i++) {
 //            Point_ck_data.add(new Point_ckVO(Point_Ck_day[i],Point_Ck_content[i],Point_Ck_point[i]));
 //        }
-
-        Point_Ck_Adapter = new Point_Ck_Adapter(getApplicationContext(), R.layout.point_custom_list, Point_ck_data);
-        Point_main_ck_list.setAdapter(Point_Ck_Adapter);
+//
+//        Point_Ck_Adapter = new Point_Ck_Adapter(getApplicationContext(), R.layout.point_custom_list, Point_ck_data);
+//        Point_main_ck_list.setAdapter(Point_Ck_Adapter);
 
     }
 }

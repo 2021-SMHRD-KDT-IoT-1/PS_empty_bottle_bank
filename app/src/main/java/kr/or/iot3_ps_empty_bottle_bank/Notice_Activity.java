@@ -79,7 +79,7 @@ public class Notice_Activity extends AppCompatActivity {
                             e.printStackTrace();
                         }
 
-                        ListView notice_listview = findViewById(R.id.notice_listview);
+                        notice_listview = findViewById(R.id.notice_listview);
                         notice_Adapter = new notice_Adapter(getApplicationContext(), R.layout.notice_list_view, notice_data);
                         notice_listview.setAdapter(notice_Adapter);
 

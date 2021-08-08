@@ -128,7 +128,7 @@
         app:layout_constraintTop_toBottomOf="@+id/s_myinfo_btn_event" />
 
     <Button
-        android:id="@+id/s_myinfo_btn_store2"
+        android:id="@+id/s_myinfo_btn_buy_store"
         android:layout_width="377dp"
         android:layout_height="47dp"
         android:gravity="left"
@@ -151,7 +151,7 @@
         app:layout_constraintEnd_toEndOf="@+id/s_myinfo_btn_event"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/s_myinfo_btn_event"
-        app:layout_constraintTop_toBottomOf="@+id/s_myinfo_btn_store2" />
+        app:layout_constraintTop_toBottomOf="@+id/s_myinfo_btn_buy_store" />
 
     <TextView
         android:id="@+id/user_state"
