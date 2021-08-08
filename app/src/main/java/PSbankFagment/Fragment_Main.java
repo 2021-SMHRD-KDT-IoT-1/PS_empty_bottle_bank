@@ -58,8 +58,8 @@ public class Fragment_Main extends Fragment {
 
 
     // ===== 여기는 메인 페이지
-    private int[] main_imgview = {R.drawable.item1, R.drawable.item2, R.drawable.item3};
-
+    private int[] main_imgview = {R.drawable.item1, R.drawable.item2, R.drawable.item3, R.drawable.item1, R.drawable.item2, R.drawable.item3,
+            R.drawable.item1, R.drawable.item2, R.drawable.item3, R.drawable.item1, R.drawable.item2, R.drawable.item3};
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -145,6 +145,7 @@ public class Fragment_Main extends Fragment {
                     public void onErrorResponse(VolleyError error) {
                         Log.d("이거 오류얌", "고쳐줘~");
                     }
+
                 });
 
         //요청큐에 요청 객체 생성
@@ -181,10 +182,11 @@ public class Fragment_Main extends Fragment {
         public void run() {
 
             while (true) {
-                int ppltime1 = 3000;
-                int ppltime2 = 3000;
-                int ppltime3 = 3000;
-                int ppltime4 = 3000;
+                int ppltime1 = 2500;
+                int ppltime2 = 2500;
+                int ppltime3 = 2500;
+                int ppltime4 = 2500;
+                int ppltime5 = 2500;
 
                 try {
                     Thread.sleep(ppltime1);
@@ -192,7 +194,7 @@ public class Fragment_Main extends Fragment {
                     e.printStackTrace();
                 }
                 Message msg = new Message();
-                msg.arg2 = R.drawable.sojo;
+                msg.arg2 = R.drawable.ad1;
                 msg.obj = "ppl1";
 
                 main_handler.sendMessage(msg);
@@ -204,7 +206,7 @@ public class Fragment_Main extends Fragment {
                     e.printStackTrace();
                 }
                 msg = new Message();
-                msg.arg2 = R.drawable.apeach;
+                msg.arg2 = R.drawable.ad2;
                 msg.obj = "ppl2";
 
                 main_handler.sendMessage(msg);
@@ -215,7 +217,7 @@ public class Fragment_Main extends Fragment {
                     e.printStackTrace();
                 }
                 msg = new Message();
-                msg.arg2 = R.drawable.item1;
+                msg.arg2 = R.drawable.ad3;
                 msg.obj = "ppl3";
 
                 main_handler.sendMessage(msg);
@@ -226,8 +228,19 @@ public class Fragment_Main extends Fragment {
                     e.printStackTrace();
                 }
                 msg = new Message();
-                msg.arg2 = R.drawable.item2;
+                msg.arg2 = R.drawable.event1;
                 msg.obj = "ppl4";
+
+                main_handler.sendMessage(msg);
+
+                try {
+                    Thread.sleep(ppltime5);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                msg = new Message();
+                msg.arg2 = R.drawable.event2;
+                msg.obj = "ppl5";
 
                 main_handler.sendMessage(msg);
 

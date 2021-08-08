@@ -64,7 +64,6 @@ public class Point_Check_Activity extends AppCompatActivity {
             @Override
             public void onResponse(String response) {
 
-                Log.d("여기여기", response);
 
                 try {
                     String p_where = "";

@@ -26,10 +26,10 @@ public class Fragment_Event extends Fragment  {
 
 
     private int[] eventnum = {1,2,3,4,5};
-    private int[] imgArray = {R.drawable.sojo, R.drawable.apeach, R.drawable.item1, R.drawable.item2,R.drawable.item3};
-    private String[] eventname = {"우리동네 공병왕 이벤트", "대박로또이벤트", "내 이름은 콩진석" ,"내 이름은 콩진석","내 이름은 콩진석"};
-    private String[] eventtime = {"2021.03.14 ~ 2021.08.13", "2021.03.14 ~ 2021.08.13", "2021.03.14 ~ 2021.08.13",
-            "2021.03.14 ~ 2021.08.13","2021.03.14 ~ 2021.08.13"};
+    private int[] imgArray = {R.drawable.event1, R.drawable.event2, R.drawable.eventwait1, R.drawable.eventwait1,R.drawable.eventwait1};
+    private String[] eventname = {"우리동네 공병왕 이벤트", "대박로또이벤트", "현재 이벤트 준비중 입니다." ,"현재 이벤트 준비중 입니다.","현재 이벤트 준비중 입니다."};
+    private String[] eventtime = {"2021.03.14 ~ 2021.08.13", "2021.03.14 ~ 2021.08.13", "",
+            "",""};
 
 
 

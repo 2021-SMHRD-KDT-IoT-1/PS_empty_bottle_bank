@@ -1,7 +1,6 @@
 package PSbankAdapter;
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,10 +11,6 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import PSbankVO.Store_productVO;
-import PSbankVO.bottle_kongVO;
-import PSbankVO.event_ProductVO;
-import kr.or.iot3_ps_empty_bottle_bank.Bottle_king_Activity;
-import kr.or.iot3_ps_empty_bottle_bank.Detail_Activity;
 import kr.or.iot3_ps_empty_bottle_bank.R;
 
 public class Store_product_Adapter extends BaseAdapter {
@@ -57,16 +52,19 @@ public class Store_product_Adapter extends BaseAdapter {
         }
 
         ImageView product_img = convertView.findViewById(R.id.product_img);
-        TextView product_name = convertView.findViewById(R.id.product_name);
-        TextView product_price = convertView.findViewById(R.id.product_price);
+        TextView item_name = convertView.findViewById(R.id.item_name);
+        TextView item_price = convertView.findViewById(R.id.item_price);
+        TextView item_count = convertView.findViewById(R.id.item_count);
+
+
         View product_view = convertView.findViewById(R.id.bottle_king_view);
 
         Store_productVO productVO = product_data.get(position);
 
         product_img.setImageResource(productVO.getProduct_img());
-        product_name.setText(productVO.getProduct_name());
-        product_price.setText(productVO.getProduct_price());
-
+        item_name.setText(productVO.getItem_name());
+        item_price.setText(productVO.getItem_price());
+        item_count.setText(productVO.getItem_count());
 
 
 

@@ -50,13 +50,14 @@
 
         <ImageView
             android:id="@+id/advertisement_img"
-            android:layout_width="324dp"
-            android:layout_height="144dp"
+            android:layout_width="397dp"
+            android:layout_height="120dp"
             android:src="@drawable/apeach"
             app:layout_constraintBottom_toTopOf="@+id/guideline6"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ad1" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline6"
@@ -79,6 +80,7 @@
             android:id="@+id/main_list"
             android:layout_width="413dp"
             android:layout_height="363dp"
+            android:layout_marginTop="1dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"

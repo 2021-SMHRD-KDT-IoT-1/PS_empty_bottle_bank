@@ -44,10 +44,10 @@ public class Bottle_king_Activity extends AppCompatActivity {
     private StringRequest request;
 
 
-    private int[] bottle_img_Array = {R.drawable.sojo, R.drawable.apeach, R.drawable.item1, R.drawable.item2, R.drawable.item3};
-    private String[] bottle_round = {"1", "2", "3", "4", "5"};
-    private String[] bottle_id = {"홍진석", "콩진석", "콩콩진석", "콩콩콩진석", "콩콩콩콩진석"};
-    private String[] bottle_score = {"150ECO", "130ECO", "120ECO", "110ECO", "100ECO"};
+    private int[] bottle_img_Array = {R.drawable.profile2, R.drawable.profile1, R.drawable.profile3, R.drawable.profile3, R.drawable.profile3};
+//    private String[] bottle_round = {"1", "2", "3", "4", "5"};
+//    private String[] bottle_id = {"홍진석", "콩진석", "콩콩진석", "콩콩콩진석", "콩콩콩콩진석"};
+//    private String[] bottle_score = {"150ECO", "130ECO", "120ECO", "110ECO", "100ECO"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -10,49 +10,93 @@
         android:id="@+id/product_img"
         android:layout_width="130dp"
         android:layout_height="130dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.051"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.028"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/item1" />
 
     <TextView
-        android:id="@+id/product_name"
+        android:id="@+id/item_name"
         android:layout_width="122dp"
         android:layout_height="43dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
         android:gravity="center"
         android:text="라이언 텀블러"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.186"
+        app:layout_constraintEnd_toStartOf="@+id/btn_buy"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/product_img"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.196" />
+        app:layout_constraintVertical_chainStyle="packed" />
 
     <TextView
-        android:id="@+id/product_price"
-        android:layout_width="122dp"
+        android:id="@+id/item_price"
+        android:layout_width="55dp"
         android:layout_height="43dp"
-        android:layout_marginTop="20dp"
         android:gravity="center"
-        android:text="5000 point"
-        app:layout_constraintEnd_toEndOf="@+id/product_name"
-        app:layout_constraintStart_toStartOf="@+id/product_name"
-        app:layout_constraintTop_toBottomOf="@+id/product_name" />
+        android:text="5000"
+        app:layout_constraintBottom_toBottomOf="@+id/item_count3"
+        app:layout_constraintStart_toEndOf="@+id/item_count3"
+        app:layout_constraintTop_toTopOf="@+id/item_count3"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/item_price2"
+        android:layout_width="55dp"
+        android:layout_height="43dp"
+        android:gravity="center"
+        android:text="Point"
+        app:layout_constraintBottom_toBottomOf="@+id/item_price"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/item_price"
+        app:layout_constraintTop_toTopOf="@+id/item_price"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/item_count"
+        android:layout_width="55dp"
+        android:layout_height="43dp"
+        android:gravity="center"
+        android:text="12"
+        app:layout_constraintBottom_toBottomOf="@+id/item_count2"
+        app:layout_constraintStart_toEndOf="@+id/item_count2"
+        app:layout_constraintTop_toTopOf="@+id/item_count2" />
+
+    <TextView
+        android:id="@+id/item_count2"
+        android:layout_width="55dp"
+        android:layout_height="43dp"
+        android:gravity="center"
+        android:text="수량"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/item_price"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/item_count3"
+        app:layout_constraintTop_toBottomOf="@+id/item_count3"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/item_count3"
+        android:layout_width="55dp"
+        android:layout_height="43dp"
+        android:gravity="center"
+        android:text="가격"
+        app:layout_constraintEnd_toEndOf="@+id/item_name"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/item_name"
+        app:layout_constraintTop_toBottomOf="@+id/item_name" />
 
     <Button
         android:id="@+id/btn_buy"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="구매하기"
-        app:layout_constraintBottom_toBottomOf="@+id/product_img"
+        app:layout_constraintBottom_toBottomOf="@+id/item_count"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.959"
-        app:layout_constraintStart_toEndOf="@+id/product_img"
-        app:layout_constraintTop_toTopOf="@+id/product_img"
-        app:layout_constraintVertical_bias="0.378" />
+        app:layout_constraintTop_toBottomOf="@+id/item_price" />
 </androidx.constraintlayout.widget.ConstraintLayout>

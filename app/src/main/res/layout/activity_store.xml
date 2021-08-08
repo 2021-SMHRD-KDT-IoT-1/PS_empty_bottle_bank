@@ -6,54 +6,56 @@
     android:layout_height="match_parent"
     tools:context=".Store_Activity">
 
-    <ImageView
-        android:id="@+id/user_img"
-        android:layout_width="126dp"
-        android:layout_height="125dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/store_product_listview"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.056"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/apeach" />
-
-    <ListView
-        android:id="@+id/store_product_listview"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout13"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="164dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="내 포인트"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/user_points"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="10000 point"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/user_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/user_name"
+            app:layout_constraintTop_toTopOf="@+id/user_name" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout14"
+        android:layout_width="409dp"
+        android:layout_height="617dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/user_img" />
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout13">
 
-    <TextView
-        android:id="@+id/user_name"
-        android:layout_width="164dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="15dp"
-        android:gravity="center"
-        android:text="콩진석"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/store_product_listview"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toEndOf="@+id/user_img"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.128" />
+        <ListView
+            android:id="@+id/store_product_listview"
+            android:layout_width="407dp"
+            android:layout_height="615dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <TextView
-        android:id="@+id/user_points"
-        android:layout_width="164dp"
-        android:layout_height="40dp"
-        android:layout_marginBottom="15dp"
-        android:gravity="center"
-        android:text="10000 point"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/store_product_listview"
-        app:layout_constraintEnd_toEndOf="@+id/user_name"
-        app:layout_constraintStart_toStartOf="@+id/user_name"
-        app:layout_constraintTop_toBottomOf="@+id/user_name" />
 </androidx.constraintlayout.widget.ConstraintLayout>
