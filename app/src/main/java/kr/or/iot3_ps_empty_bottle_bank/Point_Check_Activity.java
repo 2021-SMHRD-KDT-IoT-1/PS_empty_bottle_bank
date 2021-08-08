@@ -21,6 +21,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 import PSbankAdapter.Point_Ck_Adapter;
 import PSbankVO.Point_ckVO;
@@ -49,9 +50,7 @@ public class Point_Check_Activity extends AppCompatActivity {
 
         Queue = Volley.newRequestQueue(getApplicationContext());
 
-        Point_Ck_day = findViewById(R.id.Point_Ck_day);
-        Point_Ck_content = findViewById(R.id.Point_Ck_content);
-        Point_Ck_point = findViewById(R.id.Point_Ck_point);
+
 
 
         // 접속한 사용자 ID가져오기
@@ -65,41 +64,45 @@ public class Point_Check_Activity extends AppCompatActivity {
             @Override
             public void onResponse(String response) {
 
+                Log.d("여기여기", response);
+
                 try {
+                    String state;
                     JSONArray jsonArray = new JSONArray(response);
-                    Log.d("살려줘","제발 나좀 사렬주세요");
                     Point_ck_data = new ArrayList<>();
 
+
+
                     for (int i = 0; i < jsonArray.length(); i++) {
-                        JSONObject jsonObject = new JSONArray().getJSONObject(i);
+                        JSONObject jsonObject = jsonArray.getJSONObject(i);
+                        Log.d("살려줘",String.valueOf(jsonArray));;
 
-                        String state;
 
+                        if(jsonObject.getString("point_where").equals("0")) {
 
-                        if(jsonObject.getString("point_where").equals("0")){
-                            state = "병반납";
-
-                            Point_ck_data.add(new Point_ckVO(
-                            jsonObject.getString("point_date"),
-                            state,
-                            jsonObject.getString("point_point")));
-
-                        }
-                        else if(jsonObject.getString("point_where").equals("1")){
-                            state = "로또";
 
                             Point_ck_data.add(new Point_ckVO(
                                     jsonObject.getString("point_date"),
-                                    state,
+                                    "병반납",
                                     jsonObject.getString("point_point")));
 
-                        }else if(jsonObject.getString("point_where").equals("2")){
-                            state = "상품권 교한";
+                        }else if (jsonObject.getString("print_where").equals("1")){
+
 
                             Point_ck_data.add(new Point_ckVO(
                                     jsonObject.getString("point_date"),
-                                    state,
+                                    "공병로또",
                                     jsonObject.getString("point_point")));
+
+                        }else if (jsonObject.getString("point_where").equals("2")){
+
+
+                            Point_ck_data.add(new Point_ckVO(
+                                    jsonObject.getString("point_date"),
+                                    "상품권 교환",
+                                    jsonObject.getString("point_point")));
+
+
 
                         }
 
@@ -111,12 +114,10 @@ public class Point_Check_Activity extends AppCompatActivity {
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
-
-
+                Log.d("살려줘","제발 나좀 사렬주세요12");
                 ListView Point_main_ck_list = findViewById(R.id.Point_main_ck_list);
                 Point_Ck_Adapter = new Point_Ck_Adapter(getApplicationContext(), R.layout.point_custom_list, Point_ck_data);
                 Point_main_ck_list.setAdapter(Point_Ck_Adapter);
-
 
             }
         }, new Response.ErrorListener() {
@@ -129,13 +130,6 @@ public class Point_Check_Activity extends AppCompatActivity {
 
 
         Queue.add(request);
-
-
-
-
-
-
-
 
 
 
