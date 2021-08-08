@@ -81,7 +81,7 @@
     <!-- My_event_xml -->
     <string name="my_event_tlt">이벤트 사용내역 및 적립내역</string>
 
-    <string name="event_Check">적립/사용-</string>
+    <string name="event_Check">적립/사용</string>
     <string name="event_my_day">2021.03.14</string>
     <string name="event_my_Content">로또 이벤트 참여</string>
     <string name="event_my_point"> -5000 </string>

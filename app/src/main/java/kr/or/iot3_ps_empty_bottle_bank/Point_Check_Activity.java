@@ -28,7 +28,7 @@ import PSbankVO.Point_ckVO;
 
 public class Point_Check_Activity extends AppCompatActivity {
 
-    TextView Point_Ck_day, Point_Ck_content,Point_Ck_point;
+    TextView Point_Ck_day, Point_Ck_content, Point_Ck_point;
 
     private ListView Point_main_ck_list;
     private PSbankAdapter.Point_Ck_Adapter Point_Ck_Adapter;
@@ -40,8 +40,6 @@ public class Point_Check_Activity extends AppCompatActivity {
     private StringRequest request;
 
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,11 +49,9 @@ public class Point_Check_Activity extends AppCompatActivity {
         Queue = Volley.newRequestQueue(getApplicationContext());
 
 
-
-
         // 접속한 사용자 ID가져오기
         SharedPreferences sf = getSharedPreferences("login", Context.MODE_PRIVATE);
-        String login_id = sf.getString("login_id","");
+        String login_id = sf.getString("login_id", "");
 
         String S_my_point_url = "http://rspring41.iptime.org:3000/point/" + login_id;
 
@@ -67,46 +63,38 @@ public class Point_Check_Activity extends AppCompatActivity {
                 Log.d("여기여기", response);
 
                 try {
-                    String state;
+                    String p_where = "";
+                    String p_date = "";
+                    String p_point = "";
+                    String state = "";
                     JSONArray jsonArray = new JSONArray(response);
                     Point_ck_data = new ArrayList<>();
 
 
-
                     for (int i = 0; i < jsonArray.length(); i++) {
                         JSONObject jsonObject = jsonArray.getJSONObject(i);
-                        Log.d("살려줘",String.valueOf(jsonArray));;
+                        // 자자 값을 계속 가져오지 말고 한번만 가져와서 변수에 넣어놓고 쓰자구
+                        // 그리고 중복 코드 정리
+                        p_where = jsonObject.getString("point_where");
+                        p_date = jsonObject.getString("point_date");
+                        p_point = jsonObject.getString("point_point");
 
 
-                        if(jsonObject.getString("point_where").equals("0")) {
+                        if (p_where.equals("0")) {
+                            state = "공병반납";
 
+                        } else if (p_where.equals("1")) {
+                            state = "공병로또";
 
-                            Point_ck_data.add(new Point_ckVO(
-                                    jsonObject.getString("point_date"),
-                                    "병반납",
-                                    jsonObject.getString("point_point")));
-
-                        }else if (jsonObject.getString("print_where").equals("1")){
-
-
-                            Point_ck_data.add(new Point_ckVO(
-                                    jsonObject.getString("point_date"),
-                                    "공병로또",
-                                    jsonObject.getString("point_point")));
-
-                        }else if (jsonObject.getString("point_where").equals("2")){
-
-
-                            Point_ck_data.add(new Point_ckVO(
-                                    jsonObject.getString("point_date"),
-                                    "상품권 교환",
-                                    jsonObject.getString("point_point")));
-
-
-
+                        } else if (p_where.equals("2")) {
+                            state = "상품권 교환";
                         }
 
-
+                        Point_ck_data.add(new Point_ckVO(
+                                p_date,
+                                state,
+                                p_point
+                        ));
 
                     }
 
@@ -114,7 +102,7 @@ public class Point_Check_Activity extends AppCompatActivity {
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
-                Log.d("살려줘","제발 나좀 사렬주세요12");
+                Log.d("살려줘", "제발 나좀 사렬주세요12");
                 ListView Point_main_ck_list = findViewById(R.id.Point_main_ck_list);
                 Point_Ck_Adapter = new Point_Ck_Adapter(getApplicationContext(), R.layout.point_custom_list, Point_ck_data);
                 Point_main_ck_list.setAdapter(Point_Ck_Adapter);
@@ -130,7 +118,6 @@ public class Point_Check_Activity extends AppCompatActivity {
 
 
         Queue.add(request);
-
 
 
     }

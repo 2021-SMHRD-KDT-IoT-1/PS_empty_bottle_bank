@@ -9,13 +9,15 @@
         android:id="@+id/Point_Ck_day"
         android:layout_width="89dp"
         android:layout_height="78dp"
+        android:layout_marginStart="8dp"
         android:layout_weight="1"
         android:gravity="center"
         android:text="@string/s_my_store_day"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/Point_Ck_content"
