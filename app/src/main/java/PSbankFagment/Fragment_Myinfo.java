@@ -34,6 +34,7 @@ import kr.or.iot3_ps_empty_bottle_bank.Myinfo_Modify_Result;
 import kr.or.iot3_ps_empty_bottle_bank.Point_Check_Activity;
 import kr.or.iot3_ps_empty_bottle_bank.R;
 import kr.or.iot3_ps_empty_bottle_bank.S_my_store_Activity;
+import kr.or.iot3_ps_empty_bottle_bank.Store_Activity;
 
 
 public class Fragment_Myinfo extends Fragment {
@@ -47,7 +48,8 @@ public class Fragment_Myinfo extends Fragment {
     Button s_myinfo_btn_store;
     // ====적립내역 및 사용 내역 버튼
     Button s_myinfo_btn_total;
-
+    // ====스토어 버튼
+    Button s_myinfo_btn_buy_store;
 
     // ====여기는 수정하기 버튼
     Button s_myinfo_btn_edt;
@@ -176,6 +178,16 @@ public class Fragment_Myinfo extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), Point_Check_Activity.class);
+                startActivity(intent);
+            }
+        });
+
+        // ==== 여기는 상점으로 가는 버튼
+        s_myinfo_btn_buy_store = (Button)rootview.findViewById(R.id.s_myinfo_btn_buy_store);
+        s_myinfo_btn_buy_store.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), Store_Activity.class);
                 startActivity(intent);
             }
         });

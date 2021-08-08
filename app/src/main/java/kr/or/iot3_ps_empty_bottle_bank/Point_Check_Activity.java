@@ -28,7 +28,7 @@ import PSbankVO.Point_ckVO;
 
 public class Point_Check_Activity extends AppCompatActivity {
 
-    TextView Point_Ck_day, Point_Ck_content, Point_Ck_point;
+    TextView Point_Ck_day, Point_Ck_content,Point_Ck_point;
 
     private ListView Point_main_ck_list;
     private PSbankAdapter.Point_Ck_Adapter Point_Ck_Adapter;
@@ -40,12 +40,16 @@ public class Point_Check_Activity extends AppCompatActivity {
     private StringRequest request;
 
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_point_check);
 
-
+        Point_Ck_day = findViewById(R.id.Point_Ck_day);
+        Point_Ck_content = findViewById(R.id.Point_Ck_content);
+        Point_Ck_point = findViewById(R.id.Point_Ck_point);
         Queue = Volley.newRequestQueue(getApplicationContext());
 
 
