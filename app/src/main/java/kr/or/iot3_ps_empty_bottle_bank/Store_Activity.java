@@ -2,9 +2,12 @@ package kr.or.iot3_ps_empty_bottle_bank;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -23,13 +26,15 @@ import PSbankAdapter.Point_Ck_Adapter;
 import PSbankAdapter.Store_product_Adapter;
 import PSbankVO.Point_ckVO;
 import PSbankVO.Store_productVO;
+import PSbankVO.Store_s_pointVO;
 
 public class Store_Activity extends AppCompatActivity {
 
-
+    private TextView user_points;
     private ListView product_listview;
     private PSbankAdapter.Store_product_Adapter Store_product_Adapter;
     private ArrayList<Store_productVO> product_data;
+    private ArrayList<Store_s_pointVO> mypoint_data;
 
     RequestQueue queue;
 
@@ -48,8 +53,12 @@ public class Store_Activity extends AppCompatActivity {
         setContentView(R.layout.activity_store);
 
         queue = Volley.newRequestQueue(getApplicationContext());
+        user_points = findViewById(R.id.user_points);
+        // 접속한 사용자 ID가져오기===================================================
+        SharedPreferences sf = getSharedPreferences("login", Context.MODE_PRIVATE);
+        String login_id = sf.getString("login_id","");
 
-        String store_url = "http://rspring41.iptime.org:3000/store";
+        String store_url = "http://rspring41.iptime.org:3000/store?id=" + login_id;
 
 
 
@@ -61,10 +70,17 @@ public class Store_Activity extends AppCompatActivity {
 
                     JSONArray jsonArray = new JSONArray(response);
                     product_data = new ArrayList<>();
-                    Log.d("나는 뭘까?", "너는 뭘까?");
+
+                    Log.d("나는 뭘까?", response);
+
                     for (int i = 0; i <jsonArray.length(); i++){
                         JSONObject jsonObject = jsonArray.getJSONObject(i);
-                        Log.d("나는 나다!", "너는 너다!");
+
+
+
+
+
+
                         product_data.add(new Store_productVO(
                                jsonObject.getInt("item_code"),
                                 product_img_Array[i],
@@ -72,11 +88,11 @@ public class Store_Activity extends AppCompatActivity {
                                 jsonObject.getString("item_price"),
                                 jsonObject.getString("item_count")
 
-
                         ));
 
-
                     }
+
+
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
