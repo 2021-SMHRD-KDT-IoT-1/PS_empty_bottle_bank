@@ -1,267 +1,83 @@
 package kr.or.iot3_ps_empty_bottle_bank;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
 
-import android.Manifest;
-import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.Context;
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.location.LocationManager;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
-import android.provider.Settings;
-import android.util.Log;
-import android.view.ViewGroup;
-import android.widget.Toast;
 
-import net.daum.mf.map.api.MapPoint;
-import net.daum.mf.map.api.MapReverseGeoCoder;
-import net.daum.mf.map.api.MapView;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 
+public class Check_Loc_Activity extends AppCompatActivity implements OnMapReadyCallback {
 
-
-
-
-
-public class Check_Loc_Activity extends AppCompatActivity implements
-    MapView.CurrentLocationEventListener, MapReverseGeoCoder.ReverseGeoCodingResultListener {
-
-    private static final String LOG_TAG = "Check_Loc_Activity";
-
-    private MapView mMapView;
-
-    private static final int GPS_ENABLE_REQUEST_CODE = 2001;
-    private static final int PERMISSION_REQUEST_CODE = 100;
-    String[] REQUIRED_PERMISSIONS = {Manifest.permission.ACCESS_FINE_LOCATION};
-
-
-
+    private GoogleMap mMap;
+    private double[] latitude_array = {35.11090517646709, 35.149882507315205, 35.14816233553151, 35.160135786711756, 35.148571214508436, 35.14206335912754, 35.165322981154226, 35.154602383482484};
+    private double[] longtitude_array = {126.8773327692565, 126.91983094921517, 126.9245570043737, 126.85147868185122, 126.91326306206815, 126.93224500643585, 126.90923772658823, 126.90193318249759};
+    private String[] snippet_array = {"광주CGI센터","무인회수기 : 대의점","무인회수기 : 동명점","무인회수기 : 시청점","무인회수기 : 충장NC점","무인회수기 : 조선대점","무인회수기 : 광주역점","무인회수기 : 양동시장점"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_check_loc);
 
-       mMapView = (MapView) findViewById(R.id.map_view);
-
-       mMapView.setCurrentLocationEventListener(this);
-
-       if(!checkLocationServicesStatus()){
-
-           showDialogForLocationServiceSetting();
-       }else {
-
-           checkRunTimePermission();
-       }
-
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
+        mapFragment.getMapAsync(this);
 
     }
 
     @Override
-    protected void onDestroy(){
-        super.onDestroy();
+    public void onMapReady(GoogleMap googleMap) {
 
-        mMapView.setCurrentLocationTrackingMode(MapView.CurrentLocationTrackingMode.TrackingModeOff);
-        mMapView.setShowCurrentLocationMarker(false);
-    }
+        mMap = googleMap;
 
-    @Override
-    public void onCurrentLocationUpdate(MapView mapView, MapPoint currentLocation, float accuracyInMeters){
-        MapPoint.GeoCoordinate mapPointGeo = currentLocation.getMapPointGeoCoord();
-        Log.i(LOG_TAG, String.format("MapView onCurrentLocationUpdate (%f,%f) accuracy (%f)",
-                mapPointGeo.latitude, mapPointGeo.longitude, accuracyInMeters));
-    }
-
-
-    @Override
-    public void onCurrentLocationDeviceHeadingUpdate(MapView mapView, float v) {
-
-    }
-
-    @Override
-    public void onCurrentLocationUpdateFailed(MapView mapView) {
-
-    }
-
-    @Override
-    public void onCurrentLocationUpdateCancelled(MapView mapView) {
-
-    }
+        //37.56, 126.97 서울 위도 경도
+        // 35.14610451046296, 126.92312786427603  동구청 위도 경도 (동명동 지점?? 임시)
+        // 35.11090517646709, 126.8773327692565  광주 CGI 센터
 
 
 
+        LatLng GWANGJU_CGI_CENTER = new LatLng(35.11090517646709, 126.8773327692565);
 
+        /*MarkerOptions markerOptions = new MarkerOptions();         // 마커 생성
+        markerOptions.position(new LatLng(35.149753, 126.919913))
+                .title("광주광역시")                        // 마커 제목
+                .snippet("스마트인재개발원")                 // 마커 설명
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
+                .alpha(0.7f);
+        mMap.addMarker(markerOptions);*/
 
+        BitmapDrawable bitmapdraw = (BitmapDrawable)getResources().getDrawable(R.drawable.ps_marker);
+        Bitmap b = bitmapdraw.getBitmap();
+        Bitmap smallMarker = Bitmap.createScaledBitmap(b, 200, 200, false);
 
+        for(int i = 0; i<snippet_array.length; i++){
+
+            MarkerOptions markerOptions = new MarkerOptions();
+            markerOptions
+                    .position(new LatLng(latitude_array[i],longtitude_array[i]))
+                    .title("광주광역시")
+                    .snippet(snippet_array[i])
+                    .icon(BitmapDescriptorFactory.fromBitmap(smallMarker))
+                    .alpha(0.7f);
 
 
 
 
-    @Override
-    public void onReverseGeoCoderFoundAddress(MapReverseGeoCoder mapReverseGeoCoder, String s) {
-        mapReverseGeoCoder.toString();
-        onFinishReverseGeoCoding(s);
-    }
-
-
-
-    @Override
-    public void onReverseGeoCoderFailedToFindAddress(MapReverseGeoCoder mapReverseGeoCoder) {
-        onFinishReverseGeoCoding("Fail");
-    }
-
-    private void onFinishReverseGeoCoding(String result) {
-
-    }
-
-    @Override
-    public void onRequestPermissionsResult(int permsRequestCode,
-                                           @NonNull String[] permissions,
-                                           @NonNull int[] grandResults) {
-
-        super.onRequestPermissionsResult(permsRequestCode, permissions, grandResults);
-        if (permsRequestCode == PERMISSION_REQUEST_CODE && grandResults.length == REQUIRED_PERMISSIONS.length) {
-
-            boolean check_result = true;
-
-            for (int result : grandResults) {
-                if (result != PackageManager.PERMISSION_GRANTED) {
-                    check_result = false;
-                    break;
-                }
-            }
-
-            if (check_result) {
-                Log.d("@@", "start");
-
-                mMapView.setCurrentLocationTrackingMode(MapView.CurrentLocationTrackingMode.TrackingModeOnWithHeading);
-
-            } else {
-
-                if (ActivityCompat.shouldShowRequestPermissionRationale(this, REQUIRED_PERMISSIONS[0])) {
-                    Toast.makeText(Check_Loc_Activity.this, "퍼미션이 거부되었습니다. 앱을 다시 실행하여 퍼미션을 허용해주세요.",
-                            Toast.LENGTH_LONG).show();
-                    finish();
-
-                } else {
-
-                    Toast.makeText(Check_Loc_Activity.this, "퍼미션이 거부되었습니다. 설정(앱 정보)에서 퍼미션을 허용해야 합니다. ",
-                            Toast.LENGTH_LONG).show();
-
-                }
-
-            }
-
+            mMap.addMarker(markerOptions);
 
         }
 
-    }
 
 
-    void checkRunTimePermission() {
-
-        int hasFineLocationPermission = ContextCompat.checkSelfPermission(Check_Loc_Activity.this,
-                Manifest.permission.ACCESS_FINE_LOCATION);
-
-        if (hasFineLocationPermission == PackageManager.PERMISSION_GRANTED) {
-
-            mMapView.setCurrentLocationTrackingMode(MapView.CurrentLocationTrackingMode.TrackingModeOnWithHeading);
-
-        }else{
-
-            if (ActivityCompat.shouldShowRequestPermissionRationale(Check_Loc_Activity.this,REQUIRED_PERMISSIONS[0])) {
-
-                Toast.makeText(Check_Loc_Activity.this, "이 앱을 실행하려면 위치 접근 권한이 필요합니다.", Toast.LENGTH_LONG).show();
-
-                ActivityCompat.requestPermissions(Check_Loc_Activity.this, REQUIRED_PERMISSIONS, PERMISSION_REQUEST_CODE);
-
-
-            } else {
-
-                ActivityCompat.requestPermissions(Check_Loc_Activity.this, REQUIRED_PERMISSIONS, PERMISSION_REQUEST_CODE);
-
-
-            }
-
-        }
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(GWANGJU_CGI_CENTER));                 // 초기 위치
+        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(GWANGJU_CGI_CENTER,12));                         // 줌의 정도
+        googleMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);                           // 지도 유형 설정
 
     }
-
-
-
-    private void showDialogForLocationServiceSetting() {
-
-        AlertDialog.Builder builder = new AlertDialog.Builder(Check_Loc_Activity.this);
-        builder.setTitle("위치 서비스 비활성화");
-        builder.setMessage("앱을 사용하기 위해서는 위치 서비스가 필요합니다.\n" + "위치 설정을 수정하시겠습니까?");
-        builder.setCancelable(true);
-        builder.setPositiveButton("설정", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int id) {
-                Intent callGPSSettingIntent
-                        = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
-                startActivityForResult(callGPSSettingIntent, GPS_ENABLE_REQUEST_CODE);
-            }
-        });
-
-        builder.setNegativeButton("취소", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int id) {
-                dialog.cancel();
-            }
-        });
-
-        builder.create().show();
-
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-
-        super.onActivityResult(requestCode, resultCode, data);
-
-        switch (requestCode){
-
-            case GPS_ENABLE_REQUEST_CODE:
-
-                if (checkLocationServicesStatus()) {
-                    if (checkLocationServicesStatus()){
-
-                        Log.d("@@@", "onActivityResult : GPS활성화 돼있음");
-                        checkRunTimePermission();
-                        return;
-
-                    }
-                }
-
-                break;
-
-        }
-
-    }
-
-
-
-    private boolean checkLocationServicesStatus() {
-        LocationManager locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
-
-        return locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)
-                || locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
-    }
-
-
-
-
-
-
-
-
 }
-
-
-

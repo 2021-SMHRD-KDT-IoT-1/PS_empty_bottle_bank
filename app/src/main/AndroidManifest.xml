@@ -34,8 +34,8 @@
 
 
         <meta-data
-            android:name="com.kakao.sdk.AppKey"
-            android:value="cb5f7c620694791b7551ca729bf1d5b2" />
+            android:name="com.google.android.geo.API_KEY"
+            android:value="${MAPS_API_KEY}" />
 
         <activity android:name=".Detail_Activity" />
         <activity android:name=".Main_QR_Activity" />
@@ -44,14 +44,18 @@
         <activity android:name=".Returner_Myinfo_Modify_Result" />
         <activity android:name=".Myinfo_Modify_Result" />
         <activity android:name=".Join_Activity2" />
-        <activity android:name=".Login_Activity" />
-        <activity android:name=".MainActivity" />
-        <activity android:name=".Splash_Activity">
+        <activity android:name=".Login_Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity" >
+
+        </activity>
+        <activity android:name=".Splash_Activity">
+
         </activity>
     </application>
 

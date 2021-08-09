@@ -59,6 +59,7 @@ public class Detail_Activity extends AppCompatActivity {
         //고장여부
         Detail_broken = findViewById(R.id.Detail_broken);
 
+
         detail_queue = Volley.newRequestQueue(getApplicationContext());
 
         String Detail_url = "http://rspring41.iptime.org:3000/machine/" + machine_num;
