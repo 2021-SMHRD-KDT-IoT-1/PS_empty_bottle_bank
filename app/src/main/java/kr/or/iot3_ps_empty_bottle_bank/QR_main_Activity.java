@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
@@ -34,6 +35,8 @@ import com.journeyapps.barcodescanner.CaptureActivity;
 import java.util.HashMap;
 import java.util.Map;
 
+import PSbankFagment.Fragment_Main;
+
 
 public class QR_main_Activity extends AppCompatActivity {
 
@@ -63,12 +66,18 @@ public class QR_main_Activity extends AppCompatActivity {
         //바코드 스캐너 시작
         integrator.initiateScan();
 
+
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
 
+        Handler timer = new Handler();
+
+
         IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
+
+
 
         if (result != null) {
             if (result.getContents() == null) {
@@ -77,16 +86,33 @@ public class QR_main_Activity extends AppCompatActivity {
                 // qr코드 가져옴
 
 
-                //  회수기 정보가 같이 보내져야함
-                String login_url = result.getContents();
-                Log.d("mmmmm", login_url);
+                // 접속한 사용자 ID가져오기===================================================
+                SharedPreferences sf = getApplicationContext().getSharedPreferences("login", Context.MODE_PRIVATE);
+                String login_id = sf.getString("login_id", "");
+
+                // 로그인 url에 스캔해온 result.getContents() + 접속한 아이디;를 서버에 다시 전송
+                String login_url = result.getContents() + login_id;
 
 
-                StringRequest request = new StringRequest(Request.Method.POST, login_url,
+
+
+                StringRequest request = new StringRequest(Request.Method.GET, login_url,
                         new Response.Listener<String>() {
                             @Override
                             public void onResponse(String response) {
-                                    Toast.makeText(getApplicationContext(), "접속 성공", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getApplicationContext(), "접속 성공", Toast.LENGTH_SHORT).show();
+
+                                // 딜레이 3초주고 엑티비티 넘어가기
+                                timer.postDelayed(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                                        startActivity(intent);
+                                        finish();
+                                    }
+                                },3000);
+
+
                             }
                         },
                         new Response.ErrorListener() {
@@ -94,24 +120,12 @@ public class QR_main_Activity extends AppCompatActivity {
                             public void onErrorResponse(VolleyError error) {
                                 Toast.makeText(getApplicationContext(), "접속 실패", Toast.LENGTH_SHORT).show();
                             }
-                        }){
-                    @Override
-                    protected Map<String, String> getParams() throws AuthFailureError {
-                        Map<String, String> params = new HashMap<>();
+                        });
 
-//                        params.put("id", id);
-//                        params.put("pw", pw);
-
-                        return params;
-                    }
-                };
                 queue.add(request);
 
 
 
-                // 화면 전환
-//                Intent intent = new Intent(getApplicationContext(), Detail_Activity.class);
-//                startActivity(intent);
             }
         } else {
             super.onActivityResult(requestCode, resultCode, data);

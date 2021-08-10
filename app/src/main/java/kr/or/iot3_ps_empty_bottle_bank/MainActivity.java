@@ -2,6 +2,7 @@ package kr.or.iot3_ps_empty_bottle_bank;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -49,9 +50,11 @@ public class MainActivity extends AppCompatActivity {
         //replace(부모레이아웃, 화면에 출력할 프래그먼트객체)
         getSupportFragmentManager().beginTransaction().replace(R.id.frame, fragment_main).commit();
 
+
         navigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
 
                 int itemId = item.getItemId();
 

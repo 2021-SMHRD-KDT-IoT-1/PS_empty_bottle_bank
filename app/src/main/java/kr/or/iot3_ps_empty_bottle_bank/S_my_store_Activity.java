@@ -45,7 +45,6 @@ public class S_my_store_Activity extends AppCompatActivity {
 
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -70,6 +69,8 @@ public class S_my_store_Activity extends AppCompatActivity {
          request = new StringRequest(Request.Method.GET, S_my_store_url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
+
+
 
                 try {
                     JSONArray jsonArray = new JSONArray(response);
@@ -108,19 +109,12 @@ public class S_my_store_Activity extends AppCompatActivity {
         });
 
 
-
-
         queue.add(request);
 
 
-
-
-
-
-
-
-
     }
+
+
 }
 
 

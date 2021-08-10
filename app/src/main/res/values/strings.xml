@@ -102,5 +102,12 @@
     <string name="Point_Ck_content">맥주병 Point 적립</string>
     <string name="Point_Ck_point">+120</string>
 
+    <!-- my_info -->
+    <string name="btn_reset">새로고침</string>
+
+    <!--QR_main -->
+
+    <string name="qr_text">현재 회수기의 대한 정보가 입력중입니다. 해당하는 회수기의 모니터를 바라보며 잠시만 기다려주시기 바랍니다.</string>
+
 
 </resources>
