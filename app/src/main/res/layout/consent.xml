@@ -11,6 +11,7 @@
         android:layout_height="32dp">
 
         <CheckBox
+            android:fontFamily = "@font/nanana"
             android:id="@+id/checkbox1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -26,6 +27,7 @@
         android:orientation="horizontal">
 
         <CheckBox
+            android:fontFamily = "@font/nanana"
             android:id="@+id/checkbox2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -35,9 +37,11 @@
             android:textSize="14sp" />
 
         <Button
+            android:fontFamily = "@font/nanana"
             android:id="@+id/btn_agr"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:backgroundTint="#4CAF50"
             android:text="@string/btn_bobobo"
             android:textSize="10sp" />
     </LinearLayout>
@@ -47,6 +51,7 @@
         android:layout_height="32dp">
 
         <CheckBox
+            android:fontFamily = "@font/nanana"
             android:id="@+id/checkbox3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -57,9 +62,11 @@
             android:textSize="14sp" />
 
         <Button
+            android:fontFamily = "@font/nanana"
             android:id="@+id/btn_agr2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:backgroundTint="#4CAF50"
             android:text="@string/btn_bobobo"
             android:textSize="10dp" />
     </LinearLayout>
@@ -69,6 +76,7 @@
         android:layout_height="32dp">
 
         <CheckBox
+            android:fontFamily = "@font/nanana"
             android:id="@+id/checkbox4"
             android:layout_width="wrap_content"
 
@@ -79,9 +87,11 @@
             android:textSize="14sp" />
 
         <Button
+            android:fontFamily = "@font/nanana"
             android:id="@+id/btn_agr3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:backgroundTint="#4CAF50"
             android:text="@string/btn_bobobo"
             android:textSize="10dp" />
     </LinearLayout>

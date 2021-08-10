@@ -5,12 +5,14 @@
     android:id="@+id/join_btn_refresh"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Join_Activity2">
+    tools:context=".Join_Activity2"
+    >
 
     <EditText
+        android:fontFamily = "@font/nanana"
         android:id="@+id/edt_join_id"
         android:layout_width="325dp"
-        android:layout_height="45dp"
+        android:layout_height="44dp"
         android:layout_marginTop="44dp"
         android:ems="10"
         android:hint="아이디 입력"
@@ -20,6 +22,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
+        android:fontFamily = "@font/nanana"
         android:id="@+id/edt_join_pw"
         android:layout_width="325dp"
         android:layout_height="45dp"
@@ -32,6 +35,7 @@
         app:layout_constraintTop_toBottomOf="@+id/edt_join_id" />
 
     <EditText
+        android:fontFamily = "@font/nanana"
         android:id="@+id/edt_join_pw_ck"
         android:layout_width="325dp"
         android:layout_height="45dp"
@@ -43,18 +47,20 @@
         app:layout_constraintTop_toBottomOf="@+id/edt_join_pw" />
 
     <EditText
+        android:fontFamily = "@font/nanana"
         android:id="@+id/edt_join_name"
         android:layout_width="325dp"
         android:layout_height="45dp"
         android:layout_marginTop="32dp"
         android:ems="10"
-        android:hint="아름 입력"
+        android:hint="이름 입력"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="@+id/edt_join_pw_ck"
         app:layout_constraintStart_toStartOf="@+id/edt_join_pw_ck"
         app:layout_constraintTop_toBottomOf="@+id/edt_join_pw_ck" />
 
     <EditText
+        android:fontFamily = "@font/nanana"
         android:id="@+id/edt_join_tel"
         android:layout_width="325dp"
         android:layout_height="45dp"
@@ -76,12 +82,14 @@
         app:layout_constraintTop_toBottomOf="@+id/edt_join_tel">
 
         <Spinner
+            android:fontFamily = "@font/nanana"
             android:id="@+id/spinner_loc_data"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
 
         <Spinner
+            android:fontFamily = "@font/nanana"
             android:id="@+id/spinner_loc_plus_data"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -107,29 +115,36 @@
     </LinearLayout>
 
     <Button
+        android:fontFamily = "@font/nanana"
         android:id="@+id/join_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="#4CAF50"
         android:text="@string/join_btn"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/linearLayout2"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
     <Button
+        android:fontFamily = "@font/nanana"
         android:id="@+id/join_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="#8BC34A"
         android:text="@string/join_back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
     <Button
+        android:fontFamily = "@font/nanana"
         android:id="@+id/check_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="70dp"
+        android:layout_height="45dp"
         android:layout_marginEnd="16dp"
-        android:text="Button"
+        android:backgroundTint="#4CAF50"
+        android:text="확 인"
+        app:iconTint="#4CAF50"
         app:layout_constraintBottom_toBottomOf="@+id/edt_join_id"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/edt_join_id"
