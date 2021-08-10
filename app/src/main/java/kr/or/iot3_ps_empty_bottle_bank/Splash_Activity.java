@@ -22,7 +22,7 @@ public class Splash_Activity extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             }
-        },3000);
+        },2000);
     }
     protected void onPause() {
         super.onPause();

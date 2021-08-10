@@ -50,9 +50,10 @@ public class Store_Activity extends AppCompatActivity {
 
 
 
-    private int[] product_img_Array = {R.drawable.item1, R.drawable.sojo, R.drawable.apeach,
-            R.drawable.item2, R.drawable.item3, R.drawable.item3,
-            R.drawable.item3, R.drawable.item3, R.drawable.item3};
+    private int[] product_img_Array = {R.drawable.starbucks, R.drawable.baskinrobbins,
+            R.drawable.twosome, R.drawable.touslesjours, R.drawable.starbucksrrdd,
+            R.drawable.twosomerrdd, R.drawable.coffeebean, R.drawable.joss,
+            R.drawable.bkblock, R.drawable.starbuckmint};
 
 
     @Override

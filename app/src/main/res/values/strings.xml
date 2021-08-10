@@ -11,7 +11,7 @@
 
 
     <!--Main.xml-->
-    <string name="gongji">대박 로또 게임 진행중(07.01~08.31)</string>
+    <string name="gongji">대박 로또 이벤트 진행중(07.28~08.13)</string>
 
 
     <!--join.xml -->
@@ -48,7 +48,7 @@
     <string name="Detail_bottle_now">  현재공병갯수</string>
     <string name="Detail_bottle_now_num">15</string>
     <string name="Detail_care">📢 주의 사항 📢</string>
-    <string name="Detail_content"> 현재 PS 상무지구점 무인 공병 회수기는 소주병 맥주병전용입니다.
+    <string name="Detail_content"> 현재 PS 상무지구점 무인 공병 회수기는 소주병/맥주병전용입니다.
     이물질이 들어간 병 삽입은 삼가해주시기 바랍니다. 소주병, 맥주병이 아닌 것들은 삽입을 삼가해주시 바랍니다.
     (주) PS공병은행 </string>
     <string name="Check_loc_btn">위치보기</string>
@@ -107,7 +107,7 @@
 
     <!--QR_main -->
 
-    <string name="qr_text">현재 회수기의 대한 정보가 입력중입니다. 해당하는 회수기의 모니터를 바라보며 잠시만 기다려주시기 바랍니다.</string>
+    <string name="qr_text">현재 회수기의 대한 정보가 입력중입니다. 잠시만 기다려주시기 바랍니다.</string>
 
 
 </resources>
