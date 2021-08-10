@@ -1,11 +1,14 @@
 package kr.or.iot3_ps_empty_bottle_bank;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DownloadManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -43,7 +46,6 @@ public class Myinfo_Modify_Result extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_myinfo_modify_result);
 
-        myinfo_result_btn_modify = findViewById(R.id.myinfo_result_btn_modify);
 
         myinfo_result_name = findViewById(R.id.myinfo_result_name);
         myinfo_result_id = findViewById(R.id.myinfo_result_id);
@@ -57,8 +59,6 @@ public class Myinfo_Modify_Result extends AppCompatActivity {
         String login_id = sf.getString("login_id", "");
 
 
-
-
         String myinfo_url = "http://rspring41.iptime.org:3000/myinfo";
         myinfo_url += "/" + login_id;
 
@@ -70,9 +70,9 @@ public class Myinfo_Modify_Result extends AppCompatActivity {
                             JSONArray myinfo_array = new JSONArray(response);
                             JSONObject myinfo = myinfo_array.getJSONObject(0);
 
-                            myinfo_result_name.setText("이름 : "+myinfo.getString("name"));
-                            myinfo_result_id.setText("아이디 : "+myinfo.getString("id"));
-                            myinfo_result_tellnum.setText("전화번호 : "+myinfo.getString("tel"));
+                            myinfo_result_name.setText("이름 : " + myinfo.getString("name"));
+                            myinfo_result_id.setText("아이디 : " + myinfo.getString("id"));
+                            myinfo_result_tellnum.setText("전화번호 : " + myinfo.getString("tel"));
 
 
                         } catch (JSONException e) {
@@ -95,13 +95,51 @@ public class Myinfo_Modify_Result extends AppCompatActivity {
         queue.add(request);
 
 
+        myinfo_result_btn_modify = findViewById(R.id.myinfo_result_btn_modify);
+
+
+
         myinfo_result_btn_modify.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),Myinfo_Modify.class);
-                startActivity(intent);
+
+                Intent intent = new Intent(getApplicationContext(), Myinfo_Modify.class);
+                startActivityForResult(intent,1000);
+
+
             }
         });
+
+
+//
+//        myinfo_result_btn_modify.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(getApplicationContext(), Myinfo_Modify.class);
+//                startActivity(intent);
+//            }
+//        });
+
+
+    }
+
+
+
+
+
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if(requestCode==1000){
+
+            myinfo_result_name.setText("이름 : " + data.getStringExtra("name"));
+            myinfo_result_id.setText("아이디 : " + data.getStringExtra("id"));
+            myinfo_result_tellnum.setText("전화번호 : " + data.getStringExtra("tel"));
+
+        }
+
 
     }
 }

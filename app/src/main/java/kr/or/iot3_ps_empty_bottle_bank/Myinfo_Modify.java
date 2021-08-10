@@ -6,12 +6,8 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Spinner;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -29,8 +25,8 @@ import java.util.Map;
 
 public class Myinfo_Modify extends AppCompatActivity {
 
-    Button myinfo_btn_modify;
-    EditText edt_myinfo_name, edt_myinfo_tellnum;
+   Button myinfo_btn_modify;
+    EditText edt_name, edt_pw, edt_tellnum;
 
     RequestQueue queue;
 
@@ -40,78 +36,85 @@ public class Myinfo_Modify extends AppCompatActivity {
         setContentView(R.layout.activity_myinfo_modify);
 
 
-        edt_myinfo_name.findViewById(R.id.edt_myinfo_name);
-        edt_myinfo_tellnum.findViewById(R.id.edt_myinfo_tellnum);
-        myinfo_btn_modify.findViewById(R.id.myinfo_btn_modify);
+        edt_name = findViewById(R.id.edt_name);
+        edt_pw = findViewById(R.id.edt_pw);
+        edt_tellnum = findViewById(R.id.edt_tellnum);
+        myinfo_btn_modify = findViewById(R.id.myinfo_btn_modify);
 
         queue = Volley.newRequestQueue(getApplicationContext());
 
 
 
-
-        // 화원정보 수정완료 버튼
         myinfo_btn_modify.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-
-                if (edt_myinfo_name.length() == 0) {
-                    Toast.makeText(getApplicationContext(), "이름을 입력하세요.", Toast.LENGTH_SHORT).show();
-                    edt_myinfo_name.requestFocus();
-                    return;
-                } else if (edt_myinfo_tellnum.length() == 0) {
-                    Toast.makeText(getApplicationContext(), "전화번호를 입력하세요.", Toast.LENGTH_SHORT).show();
-                    edt_myinfo_tellnum.requestFocus();
-                    return;
-                } else {
-
-                    // 접속한 사용자 ID가져오기===================================================
-                    SharedPreferences sf = getSharedPreferences("login", Context.MODE_PRIVATE);
-                    String login_id = sf.getString("login_id","");
-
-                    String change_name = edt_myinfo_name.getText().toString();
-                    String change_tel = edt_myinfo_tellnum.getText().toString();
+                replace_user_info();
 
 
-                    String myinfo_modify = "http://rspring41.iptime.org:3000/myinfo_modify/";
-                    myinfo_modify += login_id;
-
-
-
-
-                    StringRequest request = new StringRequest(Request.Method.POST, myinfo_modify,
-                            new Response.Listener<String>() {
-                                @Override
-                                public void onResponse(String response) {
-                                    Log.v("계정내역", response);
-                                    if (response.equals("0")) {
-                                        Toast.makeText(Myinfo_Modify.this, "정보수정 실패", Toast.LENGTH_SHORT).show();
-                                    } else {
-                                        Toast.makeText(Myinfo_Modify.this, "정보수정 성공", Toast.LENGTH_SHORT).show();
-
-                                        // ShardPreference : Android 내 파일로 Data를 저장하는 기술
-                                        SharedPreferences pref = getSharedPreferences("myinfo", MODE_PRIVATE);
-                                        SharedPreferences.Editor editor = pref.edit();
-                                        String name = edt_myinfo_name.getText().toString();
-                                        String tel  = edt_myinfo_tellnum.getText().toString();
-                                        editor.putString("name", name);
-                                        editor.putString("tel", tel);
-                                        editor.commit();
-                                        Intent intent = new Intent(Myinfo_Modify.this, Myinfo_Modify_Result.class);
-                                        startActivity(intent);
-                                    }
-                                }
-                            },
-                            new Response.ErrorListener() {
-                                @Override
-                                public void onErrorResponse(VolleyError error) {
-                                    Log.v("오류", "요청실패");
-                                }
-                            });
-                    queue.add(request);
-
-                }
             }
         });
+    }
+
+
+    // 사용자 이름 검사
+    public void replace_user_info() {
+        String name = edt_name.getText().toString();
+        String pw = edt_pw.getText().toString();
+        String tel = edt_tellnum.getText().toString();
+        // 접속한 사용자 ID가져오기
+        SharedPreferences sf = getSharedPreferences("login", Context.MODE_PRIVATE);
+        String login_id = sf.getString("login_id", "");
+
+
+        if (name.length() == 0) {
+            Toast.makeText(this, "이름을 입력해주세요", Toast.LENGTH_SHORT).show();
+            edt_name.requestFocus();
+            return;
+        } else if (pw.length() == 0) {
+            Toast.makeText(getApplicationContext(), "비밀번호를 입력하세요.", Toast.LENGTH_SHORT).show();
+            edt_pw.requestFocus();
+            return;
+        } else if (tel.length() == 0) {
+            Toast.makeText(getApplicationContext(), "전화번호를 입력해주세요", Toast.LENGTH_SHORT).show();
+            edt_tellnum.requestFocus();
+            return;
+        } else {
+
+
+            String requestURL = "http://rspring41.iptime.org:3000/myinfo_modify/";
+            requestURL += login_id + "?name=" + name + "&tel=" + tel + "&pw=" + pw;
+
+
+            StringRequest request = new StringRequest(Request.Method.GET, requestURL,
+                    new Response.Listener<String>() {
+                        @Override
+                        public void onResponse(String response) {
+                            Log.v("계정내역", response);
+                            if (response.equals("0")) {
+                                Toast.makeText(getApplicationContext(), "변경 실패", Toast.LENGTH_SHORT).show();
+                            } else {
+                                Toast.makeText(getApplicationContext(), "변경 성공", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    },
+                    new Response.ErrorListener() {
+                        @Override
+                        public void onErrorResponse(VolleyError error) {
+                            Log.v("오류", "요청실패");
+                        }
+                    });
+            queue.add(request);
+
+
+        }
+
+
+        Intent intent =  new Intent();
+        intent.putExtra("name",name);
+        intent.putExtra("id",login_id);
+        intent.putExtra("tel",tel);
+        setResult(RESULT_OK,intent);
+        finish();
     }
 }
