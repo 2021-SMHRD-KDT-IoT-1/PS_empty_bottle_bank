@@ -16,7 +16,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.IoT3_PS_empty_bottle_bank"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Store_Activity"/>
+        <activity android:name=".Store_Activity" />
         <activity android:name=".Password_Change_Activity" />
         <activity android:name=".User_Activity" />
         <activity android:name=".Version_Info_Activity" />
@@ -32,7 +32,6 @@
         <activity android:name=".Bottle_king_Activity" />
         <activity android:name=".Check_Loc_Activity" />
 
-
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="${MAPS_API_KEY}" />
@@ -44,7 +43,7 @@
         <activity android:name=".Returner_Myinfo_Modify_Result" />
         <activity android:name=".Myinfo_Modify_Result" />
         <activity android:name=".Join_Activity2" />
-        <activity android:name=".Login_Activity"/>
+        <activity android:name=".Login_Activity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".Splash_Activity">
             <intent-filter>
