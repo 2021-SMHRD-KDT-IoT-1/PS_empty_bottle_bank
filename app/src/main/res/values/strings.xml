@@ -32,14 +32,14 @@
     <string name="main_list_tlt">구시청 무인공병 회수기</string>
     <string name="main_list_text1">상무지구</string>
     <string name="main_list_text2">회수상태 OK</string>
-    <string name="main_list_text3">소주병 맥주병 전용</string>
-    <string name="main_list_text4">환금금 : 소주병 100원, 맥주병, 130원</string>
+    <string name="main_list_text3">소주 / 맥주병 전용</string>
+    <string name="main_list_text4">환급금 : 소주병 100원 / 맥주병 130원</string>
 
 
     <!-- Detail_Activity.xml-->
-    <string name="Detail_tlt">PS무인공병 상무지구점</string>
-    <string name="Detail_text1">소주병, 맥주병전용</string>
-    <string name="Detail_text2">환급금</string>
+    <string name="Detail_tlt">PS무인회수기 상무지구점</string>
+    <string name="Detail_text1">소주 / 맥주병전용</string>
+    <string name="Detail_text2">환급금 정보</string>
     <string name="Detail_text3">소주병 100원</string>
     <string name="Detail_text4">맥주병 130원</string>
     <string name="Detail_btn_back">뒤로</string>
@@ -48,8 +48,10 @@
     <string name="Detail_bottle_now">  현재공병갯수</string>
     <string name="Detail_bottle_now_num">15</string>
     <string name="Detail_care">📢 주의 사항 📢</string>
-    <string name="Detail_content"> 현재 PS 상무지구점 무인 공병 회수기는 소주병/맥주병전용입니다.
-    이물질이 들어간 병 삽입은 삼가해주시기 바랍니다. 소주병, 맥주병이 아닌 것들은 삽입을 삼가해주시 바랍니다.
+    <string name="Detail_content"> 현재 PS 무인 회수기는 소주병 / 맥주병전용입니다.
+        \n이물질이 들어간 병 삽입은 삼가해주시기 바랍니다.
+        \n소주 / 맥주병이 아닌 병은 인식이 불가 합니다.
+        \n \n
     (주) PS공병은행 </string>
     <string name="Check_loc_btn">위치보기</string>
 
@@ -82,7 +84,7 @@
     <string name="my_event_tlt">이벤트 사용내역 및 적립내역</string>
 
     <string name="event_Check">적립/사용</string>
-    <string name="event_my_day">2021.03.14</string>
+    <string name="event_my_day">2021.07.28</string>
     <string name="event_my_Content">로또 이벤트 참여</string>
     <string name="event_my_point"> -5000 </string>
 
@@ -107,7 +109,7 @@
 
     <!--QR_main -->
 
-    <string name="qr_text">현재 회수기의 대한 정보가 입력중입니다. 잠시만 기다려주시기 바랍니다.</string>
+    <string name="qr_text">현재 회수기의 대한 정보가 입력중입니다. \n 잠시만 기다려주시기 바랍니다.</string>
 
 
 </resources>

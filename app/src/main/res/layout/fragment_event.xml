@@ -10,14 +10,17 @@
         android:id="@+id/event_notice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/nanana"
         android:gravity="center"
-        android:text="공지사항 : 대박 로또 게임 진행중(07.01~08.31)"
+        android:text="대박 로또 이벤트 진행중(07.28~08.13)"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ListView
+        android:fontFamily = "@font/nanana"
         android:id="@+id/event_main_ListView"
         android:layout_width="406dp"
         android:layout_height="609dp"

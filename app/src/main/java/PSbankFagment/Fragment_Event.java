@@ -27,8 +27,8 @@ public class Fragment_Event extends Fragment  {
 
     private int[] eventnum = {1,2,3,4,5};
     private int[] imgArray = {R.drawable.event1, R.drawable.event2, R.drawable.eventwait1, R.drawable.eventwait1,R.drawable.eventwait1};
-    private String[] eventname = {"우리동네 공병왕 이벤트", "대박로또이벤트", "현재 이벤트 준비중 입니다." ,"현재 이벤트 준비중 입니다.","현재 이벤트 준비중 입니다."};
-    private String[] eventtime = {"2021.03.14 ~ 2021.08.13", "2021.03.14 ~ 2021.08.13", "",
+    private String[] eventname = {"우리동네 공병왕 이벤트", "대박 로또 이벤트 6회차", "현재 이벤트 준비중 입니다." ,"현재 이벤트 준비중 입니다.","현재 이벤트 준비중 입니다."};
+    private String[] eventtime = {"2021.03.14 ~ 2021.08.13", "2021.07.28 ~ 2021.08.13", "",
             "",""};
 
 
