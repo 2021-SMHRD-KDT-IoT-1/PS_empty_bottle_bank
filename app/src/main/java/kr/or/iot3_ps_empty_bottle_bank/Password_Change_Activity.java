@@ -37,7 +37,7 @@ public class Password_Change_Activity extends AppCompatActivity {
                     Log.d("비밀번호 --->","일치");
                     Intent intent = new Intent(getApplicationContext(), User_Activity.class);
                     startActivity(intent);
-                }else{
+                }else {
                     Log.d("비밀번호 --->","불일치");
                 }
             }

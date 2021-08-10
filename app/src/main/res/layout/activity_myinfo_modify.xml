@@ -18,40 +18,27 @@
         app:srcCompat="@drawable/apeach" />
 
     <TextView
-        android:id="@+id/myinfo_name"
+        android:id="@+id/edt_myinfo_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="88dp"
+        android:layout_marginBottom="50dp"
         android:text="이름 : "
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/edt_myinfo_tellnum"
+        app:layout_constraintStart_toStartOf="@+id/edt_myinfo_tellnum"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
 
     <TextView
-        android:id="@+id/myinfo_id"
+        android:id="@+id/edt_myinfo_tellnum"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="아이디 : "
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="@+id/myinfo_name"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/myinfo_name"
-        app:layout_constraintTop_toBottomOf="@+id/myinfo_name" />
-
-    <TextView
-        android:id="@+id/myinfo_tellnum"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginStart="10dp"
         android:text="전화번호 : "
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="@+id/myinfo_id"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/myinfo_id"
-        app:layout_constraintTop_toBottomOf="@+id/myinfo_id" />
+        app:layout_constraintBottom_toTopOf="@+id/myinfo_btn_modify"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/edt_myinfo_name" />
 
     <Button
         android:id="@+id/myinfo_btn_modify"
@@ -71,21 +58,10 @@
         android:layout_height="45dp"
         android:ems="10"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="@+id/myinfo_name"
+        app:layout_constraintBottom_toBottomOf="@+id/edt_myinfo_name"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/myinfo_name"
-        app:layout_constraintTop_toTopOf="@+id/myinfo_name" />
-
-    <EditText
-        android:id="@+id/edt_id"
-        android:layout_width="132dp"
-        android:layout_height="45dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="@+id/myinfo_id"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/myinfo_id"
-        app:layout_constraintTop_toTopOf="@+id/myinfo_id" />
+        app:layout_constraintStart_toEndOf="@+id/edt_myinfo_name"
+        app:layout_constraintTop_toTopOf="@+id/edt_myinfo_name" />
 
     <EditText
         android:id="@+id/edt_tellnum"
@@ -93,9 +69,9 @@
         android:layout_height="45dp"
         android:ems="10"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="@+id/myinfo_tellnum"
+        app:layout_constraintBottom_toBottomOf="@+id/edt_myinfo_tellnum"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/myinfo_tellnum"
-        app:layout_constraintTop_toTopOf="@+id/myinfo_tellnum" />
+        app:layout_constraintStart_toEndOf="@+id/edt_myinfo_tellnum"
+        app:layout_constraintTop_toTopOf="@+id/edt_myinfo_tellnum" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
