@@ -108,7 +108,7 @@ public class Store_Activity extends AppCompatActivity {
 
                     JSONArray jsonArray2 = jsonArray.getJSONArray(0);
 
-                    for (int row2 = 0; row2 < jsonArray2.length() - 1; row2++) {
+                    for (int row2 = 0; row2 < jsonArray2.length(); row2++) {
                         JSONObject jsonObject = jsonArray2.getJSONObject(row2);
 
                         product_data.add(new Store_productVO(

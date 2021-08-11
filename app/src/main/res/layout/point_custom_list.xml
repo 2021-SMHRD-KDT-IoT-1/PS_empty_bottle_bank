@@ -6,6 +6,7 @@
     android:layout_height="wrap_content">
 
     <TextView
+        android:fontFamily = "@font/nanana"
         android:id="@+id/Point_Ck_day"
         android:layout_width="89dp"
         android:layout_height="78dp"
@@ -13,13 +14,14 @@
         android:layout_weight="1"
         android:gravity="center"
         android:text="@string/s_my_store_day"
-        android:textSize="16sp"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
+        android:fontFamily = "@font/nanana"
         android:id="@+id/Point_Ck_content"
         android:layout_width="239dp"
         android:layout_height="77dp"
@@ -36,6 +38,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:fontFamily = "@font/nanana"
         android:id="@+id/Point_Ck_point"
         android:layout_width="79dp"
         android:layout_height="76dp"

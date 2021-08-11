@@ -15,9 +15,11 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
+            android:fontFamily = "@font/nanana"
             android:id="@+id/my_event_tlt"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
+            android:layout_marginTop="24dp"
             android:gravity="center"
             android:text="@string/my_event_tlt"
             android:textSize="24sp"
@@ -31,17 +33,19 @@
             android:layout_width="130dp"
             android:layout_height="33dp"
             android:layout_marginStart="64dp"
-            android:layout_marginLeft="64dp"
-            android:layout_marginTop="44dp"
-            android:layout_marginBottom="3dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/nanana"
             android:gravity="center"
             android:text="@string/my_event_name"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/my_event_tlt" />
+            app:layout_constraintTop_toBottomOf="@+id/my_event_tlt"
+            app:layout_constraintVertical_bias="0.0" />
 
         <TextView
+            android:fontFamily = "@font/nanana"
             android:id="@+id/my_event_point"
             android:layout_width="158dp"
             android:layout_height="36dp"
@@ -76,8 +80,9 @@
             <TextView
                 android:id="@+id/event_day"
                 android:layout_width="73dp"
-                android:layout_height="wrap_content"
+                android:layout_height="29dp"
                 android:layout_weight="1"
+                android:fontFamily="@font/nanana"
                 android:gravity="center"
                 android:text="@string/event_day"
                 android:textSize="20sp" />
@@ -85,8 +90,9 @@
             <TextView
                 android:id="@+id/event_Content"
                 android:layout_width="219dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:fontFamily="@font/nanana"
                 android:gravity="center"
                 android:text="@string/event_Content"
                 android:textSize="20sp" />
@@ -94,8 +100,9 @@
             <TextView
                 android:id="@+id/s_my_store_Check"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:fontFamily="@font/nanana"
                 android:gravity="center"
                 android:text="@string/event_Check"
                 android:textSize="20sp" />
@@ -106,7 +113,11 @@
         android:id="@+id/my_event_list_view_co"
         android:layout_width="409dp"
         android:layout_height="520dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
         android:layout_marginBottom="1dp"
+        android:fontFamily="@font/nanana"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

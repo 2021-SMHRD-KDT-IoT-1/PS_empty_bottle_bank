@@ -7,6 +7,7 @@
     android:layout_height="wrap_content">
 
     <TextView
+        android:fontFamily = "@font/nanana"
         android:id="@+id/notice_title"
         android:layout_width="247dp"
         android:layout_height="25dp"
@@ -23,6 +24,7 @@
         app:layout_constraintVertical_bias="0.123" />
 
     <TextView
+        android:fontFamily = "@font/nanana"
         android:id="@+id/notice_content"
         android:layout_width="316dp"
         android:layout_height="38dp"
@@ -36,6 +38,7 @@
         app:layout_constraintTop_toBottomOf="@+id/notice_title" />
 
     <TextView
+        android:fontFamily = "@font/nanana"
         android:id="@+id/notice_num"
         android:layout_width="37dp"
         android:layout_height="33dp"
