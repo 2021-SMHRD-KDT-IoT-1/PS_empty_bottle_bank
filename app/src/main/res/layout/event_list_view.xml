@@ -20,30 +20,25 @@
         app:srcCompat="@drawable/sojo" />
 
     <TextView
-        android:fontFamily = "@font/nanana"
         android:id="@+id/event_tlt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginLeft="12dp"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/nanana"
         android:text="@string/envent_tlt"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.216"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/event_time"
         app:layout_constraintStart_toEndOf="@+id/event_img"
-        app:layout_constraintTop_toTopOf="@+id/event_img" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:fontFamily = "@font/nanana"
         android:id="@+id/event_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="28dp"
+        android:fontFamily="@font/nanana"
         android:text="@string/envent_time"
-        app:layout_constraintBottom_toBottomOf="@+id/event_img"
-        app:layout_constraintEnd_toEndOf="@+id/event_tlt"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/event_tlt"
-        app:layout_constraintTop_toBottomOf="@+id/event_tlt"
-        app:layout_constraintVertical_bias="0.487" />
+        app:layout_constraintTop_toBottomOf="@+id/event_tlt" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

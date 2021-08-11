@@ -82,7 +82,7 @@ public class Detail_Activity extends AppCompatActivity {
 
 
                             machine_name_tlt.setText(machine_info.getString("machine_name"));
-                            Detail_bottle_set_num.setText(machine_info.getString("max_bottle"));
+                            Detail_bottle_set_num.setText(machine_info.getString("storable_bottle"));
                             Detail_bottle_now_num.setText(machine_info.getString("now_bottle"));
                             Detail_broken.setText(broken);
 

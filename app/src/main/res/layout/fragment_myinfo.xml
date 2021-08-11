@@ -19,22 +19,22 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:fontFamily = "@font/nanana"
         android:id="@+id/s_myinfo_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/nanana"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.481"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/user_state" />
 
     <TextView
-        android:fontFamily = "@font/nanana"
         android:id="@+id/s_myinfo_adr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:fontFamily="@font/nanana"
         android:text="광주 ㅣ 010-2222-4848"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -42,12 +42,12 @@
         app:layout_constraintTop_toBottomOf="@+id/s_myinfo_name" />
 
     <Button
-        android:fontFamily = "@font/nanana"
         android:id="@+id/s_myinfo_btn_edt"
         android:layout_width="200dp"
         android:layout_height="40dp"
         android:layout_marginTop="12dp"
         android:backgroundTint="#8BC34A"
+        android:fontFamily="@font/nanana"
         android:text="수정하기"
         android:textColor="@color/black"
         app:backgroundTint="@color/white"
@@ -60,56 +60,62 @@
         android:id="@+id/s_myinfo_current_money"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
         android:fontFamily="@font/nanana"
         android:text="현재 적립 금액"
         android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/s_myinfo_ranking"
         app:layout_constraintEnd_toStartOf="@+id/s_myinfo_current_money_view"
-        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/s_myinfo_img" />
+        app:layout_constraintTop_toBottomOf="@+id/s_myinfo_img"
+        app:layout_constraintVertical_chainStyle="packed" />
 
     <TextView
-        android:fontFamily = "@font/nanana"
         android:id="@+id/s_myinfo_ranking"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginLeft="24dp"
+        android:fontFamily="@font/nanana"
         android:text="랭킹"
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="@+id/s_myinfo_current_money"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/s_myinfo_current_money"
+        app:layout_constraintBottom_toTopOf="@+id/s_myinfo_btn_event"
+        app:layout_constraintEnd_toStartOf="@+id/s_myinfo_ranking_view"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/s_myinfo_current_money" />
 
     <TextView
         android:id="@+id/s_myinfo_ranking_view"
         android:layout_width="213dp"
         android:layout_height="38dp"
+        android:layout_marginRight="24dp"
         android:fontFamily="@font/nanana"
         android:gravity="right"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@+id/s_myinfo_ranking"
-        app:layout_constraintEnd_toEndOf="@+id/s_myinfo_current_money_view"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/s_myinfo_current_money_view"
-        app:layout_constraintTop_toTopOf="@+id/s_myinfo_ranking"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/s_myinfo_ranking"
+        app:layout_constraintTop_toTopOf="@+id/s_myinfo_ranking" />
 
     <TextView
         android:id="@+id/s_myinfo_current_money_view"
         android:layout_width="213dp"
         android:layout_height="38dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginRight="24dp"
         android:fontFamily="@font/nanana"
         android:gravity="right"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@+id/s_myinfo_current_money"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/s_myinfo_current_money"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/s_myinfo_current_money"
+        app:layout_constraintTop_toTopOf="@+id/s_myinfo_current_money" />
 
     <Button
         android:id="@+id/s_myinfo_btn_event"
@@ -117,7 +123,7 @@
         android:layout_height="47dp"
         android:layout_marginTop="384dp"
         android:fontFamily="@font/nanana"
-        android:gravity="left"
+        android:gravity="left|center_vertical"
         android:text="이벤트 참여내역"
         android:textColor="@color/black"
         app:backgroundTint="@color/white"
@@ -127,11 +133,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:fontFamily = "@font/nanana"
         android:id="@+id/s_myinfo_btn_store"
         android:layout_width="377dp"
         android:layout_height="47dp"
-        android:gravity="left"
+        android:fontFamily="@font/nanana"
+        android:gravity="left|center_vertical"
         android:text="스토어 구매내역"
         android:textColor="@color/black"
         app:backgroundTint="@color/white"
@@ -141,11 +147,11 @@
         app:layout_constraintTop_toBottomOf="@+id/s_myinfo_btn_event" />
 
     <Button
-        android:fontFamily = "@font/nanana"
         android:id="@+id/s_myinfo_btn_buy_store"
         android:layout_width="377dp"
         android:layout_height="47dp"
-        android:gravity="left"
+        android:fontFamily="@font/nanana"
+        android:gravity="left|center_vertical"
         android:text="스토어 상점"
         android:textColor="@color/black"
         app:backgroundTint="@color/white"
@@ -155,11 +161,11 @@
         app:layout_constraintTop_toBottomOf="@+id/s_myinfo_btn_store" />
 
     <Button
-        android:fontFamily = "@font/nanana"
         android:id="@+id/s_myinfo_btn_total"
         android:layout_width="377dp"
         android:layout_height="47dp"
         android:backgroundTint="#8BC34A"
+        android:fontFamily="@font/nanana"
         android:gravity="center"
         android:text="적립내역 및 사용내역 보기"
         android:textColor="@color/black"
@@ -170,12 +176,12 @@
         app:layout_constraintTop_toBottomOf="@+id/s_myinfo_btn_buy_store" />
 
     <TextView
-        android:fontFamily = "@font/nanana"
         android:id="@+id/user_state"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/nanana"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/s_myinfo_name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -188,8 +194,11 @@
         android:backgroundTint="#4CAF50"
         android:fontFamily="@font/nanana"
         android:text="@string/btn_reset"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/s_myinfo_btn_total"
+        app:layout_constraintHorizontal_bias="0.511"
         app:layout_constraintStart_toStartOf="@+id/s_myinfo_btn_total"
-        app:layout_constraintTop_toBottomOf="@+id/s_myinfo_btn_total" />
+        app:layout_constraintTop_toBottomOf="@+id/s_myinfo_btn_total"
+        app:layout_constraintVertical_bias="0.094" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

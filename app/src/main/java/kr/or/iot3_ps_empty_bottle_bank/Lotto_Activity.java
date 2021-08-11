@@ -86,7 +86,10 @@ public class Lotto_Activity extends AppCompatActivity {
                                         db_object.getString("round"),
                                         db_object.getString("1st_winner"),
                                         db_object.getString("2nd_winner"),
-                                        db_object.getString("3rd_winner")
+                                        db_object.getString("3rd_winner"),
+                                        db_object.getString("1st_prize"),
+                                        db_object.getString("2nd_prize"),
+                                        db_object.getString("3rd_prize")
 
                                 ) );
 

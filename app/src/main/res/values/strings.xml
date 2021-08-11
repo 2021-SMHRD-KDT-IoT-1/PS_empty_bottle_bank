@@ -43,9 +43,9 @@
     <string name="Detail_text3">소주병 100원</string>
     <string name="Detail_text4">맥주병 130원</string>
     <string name="Detail_btn_back">뒤로</string>
-    <string name="Detail_bottle_set">  투입가능갯수</string>
+    <string name="Detail_bottle_set">  투입가능개수</string>
     <string name="Detail_bottle_set_num">5</string>
-    <string name="Detail_bottle_now">  현재공병갯수</string>
+    <string name="Detail_bottle_now">  현재공병개수</string>
     <string name="Detail_bottle_now_num">15</string>
     <string name="Detail_care">📢 주의 사항 📢</string>
     <string name="Detail_content"> 현재 PS 무인 회수기는 소주병 / 맥주병전용입니다.
@@ -64,7 +64,7 @@
     <!-- Bottle_king.xml -->
     <string name="bottle_king_round">1</string>
     <string name="bottle_king_id">홍진석</string>
-    <string name="bottle_king_now">현재 갯수</string>
+    <string name="bottle_king_now">현재 개수</string>
     <string name="bottle_king_score">120ECO</string>
 
     <!-- lotto.xml -->

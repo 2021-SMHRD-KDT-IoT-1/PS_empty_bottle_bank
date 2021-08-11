@@ -10,64 +10,58 @@
         android:id="@+id/bottle_king_img"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="88dp"
         app:layout_constraintBottom_toBottomOf="@+id/bottle_king_round"
-        app:layout_constraintStart_toEndOf="@+id/bottle_king_round"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/bottle_king_round"
-        app:layout_constraintVertical_bias="0.392"
+        app:layout_constraintVertical_bias="0.366"
         app:srcCompat="@drawable/sojo" />
 
     <TextView
-        android:fontFamily = "@font/nanana"
         android:id="@+id/bottle_king_round"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
         android:layout_marginTop="36dp"
+        android:fontFamily="@font/nanana"
         android:text="@string/bottle_king_round"
         android:textSize="48sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:fontFamily = "@font/nanana"
         android:id="@+id/bottle_king_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
+        android:fontFamily="@font/nanana"
         android:text="@string/bottle_king_id"
         android:textSize="28sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintBottom_toTopOf="@+id/bottle_king_now"
         app:layout_constraintStart_toEndOf="@+id/bottle_king_img"
-        app:layout_constraintTop_toTopOf="@+id/bottle_king_img" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:fontFamily = "@font/nanana"
         android:id="@+id/bottle_king_now"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:fontFamily="@font/nanana"
         android:text="@string/bottle_king_now"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/bottle_king_id"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintBottom_toTopOf="@+id/bottle_king_score"
         app:layout_constraintStart_toStartOf="@+id/bottle_king_id"
         app:layout_constraintTop_toBottomOf="@+id/bottle_king_id" />
 
     <TextView
-        android:fontFamily = "@font/nanana"
         android:id="@+id/bottle_king_score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/nanana"
         android:text="@string/bottle_king_score"
-        app:layout_constraintBottom_toBottomOf="@+id/bottle_king_img"
-        app:layout_constraintEnd_toEndOf="@+id/bottle_king_now"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/bottle_king_now"
-        app:layout_constraintTop_toBottomOf="@+id/bottle_king_now"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/bottle_king_now" />
 </androidx.constraintlayout.widget.ConstraintLayout>

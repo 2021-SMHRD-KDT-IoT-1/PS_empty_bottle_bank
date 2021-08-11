@@ -20,16 +20,16 @@
         app:srcCompat="@drawable/item1" />
 
     <TextView
-        android:fontFamily = "@font/nanana"
         android:id="@+id/item_name"
-        android:layout_width="122dp"
-        android:layout_height="43dp"
+        android:layout_width="222dp"
+        android:layout_height="42dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/nanana"
         android:gravity="center"
         android:text="라이언 텀블러"
-        app:layout_constraintEnd_toStartOf="@+id/btn_buy"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/btn_buy"
         app:layout_constraintStart_toEndOf="@+id/product_img"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="packed" />
@@ -98,11 +98,12 @@
         app:layout_constraintTop_toBottomOf="@+id/item_name" />
 
     <Button
-        android:fontFamily = "@font/nanana"
         android:id="@+id/btn_buy"
         android:layout_width="81dp"
         android:layout_height="40dp"
         android:layout_marginEnd="16dp"
+        android:backgroundTint="#8BC34A"
+        android:fontFamily="@font/nanana"
         android:text="구매하기"
         app:layout_constraintBottom_toBottomOf="@+id/item_count"
         app:layout_constraintEnd_toEndOf="parent"

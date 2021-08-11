@@ -60,6 +60,9 @@ public class lotto_win_Adapter extends BaseAdapter {
         TextView lotto_win_1 = convertView.findViewById(R.id.lotto_win_1);
         TextView lotto_win_2 = convertView.findViewById(R.id.lotto_win_2);
         TextView lotto_win_3 = convertView.findViewById(R.id.lotto_win_3);
+        TextView prize_1 = convertView.findViewById(R.id.prize_1);
+        TextView prize_2 = convertView.findViewById(R.id.prize_2);
+        TextView prize_3 = convertView.findViewById(R.id.prize_3);
         View lotto_list_view = convertView.findViewById(R.id.lotto_list_view);
 
         lotto_winVO lotto_vo2 = lotto_data.get(position);
@@ -68,6 +71,10 @@ public class lotto_win_Adapter extends BaseAdapter {
         lotto_win_1.setText("1등 : " + lotto_vo2.getLotto_win1());
         lotto_win_2.setText("2등 : " + lotto_vo2.getLotto_win2());
         lotto_win_3.setText("3등 : " + lotto_vo2.getLotto_win3());
+
+        prize_1.setText("당첨금 : " + lotto_vo2.getPrize_1());
+        prize_2.setText("당첨금 : " + lotto_vo2.getPrize_2());
+        prize_3.setText("당첨금 : " + lotto_vo2.getPrize_3());
 
 
 

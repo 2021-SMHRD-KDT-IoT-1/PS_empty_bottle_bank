@@ -16,13 +16,14 @@
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed">
 
         <TextView
-            android:fontFamily = "@font/nanana"
             android:id="@+id/gongji"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/nanana"
             android:gravity="center_horizontal"
             android:text="@string/gongji"
             android:textAllCaps="false"
@@ -45,6 +46,7 @@
         android:id="@+id/constraintLayout3"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -84,9 +86,9 @@
         <ListView
             android:id="@+id/main_list"
             android:layout_width="413dp"
-            android:layout_height="363dp"
+            android:layout_height="400dp"
             android:layout_marginTop="1dp"
-            android:background="#DCDCDC"
+            android:background="#DDEDDE"
             android:fontFamily="@font/nanana"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -100,17 +102,20 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
 
         <Button
-            android:fontFamily = "@font/nanana"
             android:id="@+id/btn_main_qr"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="큐알코드 버튼"
+            android:backgroundTint="#4CAF50"
+            android:fontFamily="@font/nanana"
+            android:text="QR코드 인식"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

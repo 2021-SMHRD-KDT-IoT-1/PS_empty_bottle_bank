@@ -7,12 +7,12 @@
     android:layout_height="wrap_content">
 
     <TextView
-        android:fontFamily = "@font/nanana"
         android:id="@+id/lotto_round"
         android:layout_width="69dp"
         android:layout_height="86dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
+        android:fontFamily="@font/nanana"
         android:gravity="center"
         android:text="@string/lotto_round"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -20,40 +20,79 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:fontFamily = "@font/nanana"
         android:id="@+id/lotto_win_1"
         android:layout_width="wrap_content"
         android:layout_height="23dp"
+        android:layout_marginStart="68dp"
+        android:fontFamily="@font/nanana"
+        android:gravity="left"
         android:text="TextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.246"
+        android:textAlignment="textStart"
+        app:layout_constraintBottom_toTopOf="@+id/lotto_win_2"
         app:layout_constraintStart_toEndOf="@+id/lotto_round"
-        app:layout_constraintTop_toTopOf="@+id/lotto_round" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread" />
 
     <TextView
-        android:fontFamily = "@font/nanana"
-        android:id="@+id/lotto_win_3"
-        android:layout_width="wrap_content"
-        android:layout_height="23dp"
-        android:layout_marginTop="7dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/lotto_win_2"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/lotto_win_2"
-        app:layout_constraintTop_toBottomOf="@+id/lotto_win_2"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <TextView
-        android:fontFamily = "@font/nanana"
         android:id="@+id/lotto_win_2"
         android:layout_width="wrap_content"
         android:layout_height="23dp"
-        android:layout_marginTop="8dp"
+        android:fontFamily="@font/nanana"
+        android:gravity="left"
         android:text="TextView"
-        app:layout_constraintEnd_toEndOf="@+id/lotto_win_1"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:textAlignment="textStart"
+        app:layout_constraintBottom_toTopOf="@+id/lotto_win_3"
         app:layout_constraintStart_toStartOf="@+id/lotto_win_1"
         app:layout_constraintTop_toBottomOf="@+id/lotto_win_1" />
+
+    <TextView
+        android:id="@+id/lotto_win_3"
+        android:layout_width="wrap_content"
+        android:layout_height="23dp"
+        android:fontFamily="@font/nanana"
+        android:gravity="left"
+        android:text="TextView"
+        android:textAlignment="textStart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/lotto_win_2"
+        app:layout_constraintTop_toBottomOf="@+id/lotto_win_2" />
+
+    <TextView
+        android:id="@+id/prize_1"
+        android:layout_width="wrap_content"
+        android:layout_height="23dp"
+        android:layout_marginStart="184dp"
+        android:fontFamily="@font/nanana"
+        android:gravity="left"
+        android:text="TextView"
+        android:textAlignment="textStart"
+        app:layout_constraintBottom_toTopOf="@+id/prize_2"
+        app:layout_constraintStart_toEndOf="@+id/lotto_round"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <TextView
+        android:id="@+id/prize_2"
+        android:layout_width="wrap_content"
+        android:layout_height="23dp"
+        android:fontFamily="@font/nanana"
+        android:gravity="left"
+        android:text="TextView"
+        android:textAlignment="textStart"
+        app:layout_constraintBottom_toTopOf="@+id/prize_3"
+        app:layout_constraintStart_toStartOf="@+id/prize_1"
+        app:layout_constraintTop_toBottomOf="@+id/prize_1" />
+
+    <TextView
+        android:id="@+id/prize_3"
+        android:layout_width="wrap_content"
+        android:layout_height="23dp"
+        android:fontFamily="@font/nanana"
+        android:gravity="left"
+        android:text="TextView"
+        android:textAlignment="textStart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/prize_2"
+        app:layout_constraintTop_toBottomOf="@+id/prize_2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

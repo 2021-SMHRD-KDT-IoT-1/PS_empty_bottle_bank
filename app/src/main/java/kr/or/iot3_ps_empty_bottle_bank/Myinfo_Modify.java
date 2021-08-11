@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -27,6 +28,7 @@ public class Myinfo_Modify extends AppCompatActivity {
 
    Button myinfo_btn_modify;
     EditText edt_name, edt_pw, edt_tellnum;
+    ImageView ps_picture;
 
     RequestQueue queue;
 
@@ -40,9 +42,20 @@ public class Myinfo_Modify extends AppCompatActivity {
         edt_pw = findViewById(R.id.edt_pw);
         edt_tellnum = findViewById(R.id.edt_tellnum);
         myinfo_btn_modify = findViewById(R.id.myinfo_btn_modify);
+        ps_picture = findViewById(R.id.ps_picture);
 
         queue = Volley.newRequestQueue(getApplicationContext());
 
+        SharedPreferences sf = getSharedPreferences("login", Context.MODE_PRIVATE);
+        String login_id = sf.getString("login_id", "");
+
+        if(login_id.equals("hong")){
+            ps_picture.setImageResource(R.drawable.profile2);
+        }else if(login_id.equals("ps")){
+            ps_picture.setImageResource(R.drawable.profile1);
+        }else if(login_id.equals("choi")){
+            ps_picture.setImageResource(R.drawable.profile3);
+        }
 
 
         myinfo_btn_modify.setOnClickListener(new View.OnClickListener() {

@@ -53,7 +53,6 @@ public class Myinfo_Modify_Result extends AppCompatActivity {
         myinfo_result_id = findViewById(R.id.myinfo_result_id);
         myinfo_result_tellnum = findViewById(R.id.myinfo_result_tellnum);
         ps_picture = findViewById(R.id.ps_picture);
-        ps_picture.setImageResource(R.drawable.profile1);
 
         queue = Volley.newRequestQueue(getApplicationContext());
 
@@ -72,6 +71,15 @@ public class Myinfo_Modify_Result extends AppCompatActivity {
                         try {
                             JSONArray myinfo_array = new JSONArray(response);
                             JSONObject myinfo = myinfo_array.getJSONObject(0);
+
+                            if(login_id.equals("hong")){
+                                ps_picture.setImageResource(R.drawable.profile2);
+                            }else if(login_id.equals("ps")){
+                                ps_picture.setImageResource(R.drawable.profile1);
+                            }else if(login_id.equals("choi")){
+                                ps_picture.setImageResource(R.drawable.profile3);
+                            }
+
 
                             myinfo_result_name.setText(myinfo.getString("name"));
                             myinfo_result_id.setText(myinfo.getString("id"));

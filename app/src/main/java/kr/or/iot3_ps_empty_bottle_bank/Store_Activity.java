@@ -138,7 +138,6 @@ public class Store_Activity extends AppCompatActivity {
                 Store_product_Adapter = new Store_product_Adapter(getApplicationContext(), R.layout.store_buy_listview, product_data);
                 product_listview.setAdapter(Store_product_Adapter);
 
-
             }
         }, new Response.ErrorListener() {
             @Override
@@ -150,7 +149,6 @@ public class Store_Activity extends AppCompatActivity {
             }
         });
         queue.add(request);
-
     }
 
 

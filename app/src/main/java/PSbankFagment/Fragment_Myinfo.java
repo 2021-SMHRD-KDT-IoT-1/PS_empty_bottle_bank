@@ -43,7 +43,8 @@ import kr.or.iot3_ps_empty_bottle_bank.Store_Activity;
 
 public class Fragment_Myinfo extends Fragment {
 
-    TextView s_myinfo_name, s_myinfo_current_money_view, s_myinfo_ranking_view, user_state;
+    TextView s_myinfo_name, s_myinfo_current_money_view, s_myinfo_ranking_view, user_state, s_myinfo_adr;
+    ImageView s_myinfo_img;
 
 
     // ====이벤트 참여내역 버튼
@@ -81,6 +82,9 @@ public class Fragment_Myinfo extends Fragment {
         s_myinfo_current_money_view = rootview.findViewById(R.id.s_myinfo_current_money_view);
         s_myinfo_ranking_view = rootview.findViewById(R.id.s_myinfo_ranking_view);
         btn_reset = rootview.findViewById(R.id.btn_reset);
+        s_myinfo_img = rootview.findViewById(R.id.s_myinfo_img);
+        s_myinfo_adr = rootview.findViewById(R.id.s_myinfo_adr);
+
         queue = Volley.newRequestQueue(requireActivity().getApplicationContext());
 
 
@@ -165,6 +169,14 @@ public class Fragment_Myinfo extends Fragment {
 
         String My_info_url = "http://rspring41.iptime.org:3000/myinfo/" + login_id;
 
+//        if(login_id.equals("hong")){
+//            s_myinfo_img.setImageResource(R.drawable.profile2);
+//        }else if(login_id.equals("ps")){
+//            s_myinfo_img.setImageResource(R.drawable.profile1);
+//        }else if(login_id.equals("choi")){
+//            s_myinfo_img.setImageResource(R.drawable.profile3);
+//        }
+
         StringRequest request = new StringRequest(Request.Method.GET, My_info_url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -191,6 +203,14 @@ public class Fragment_Myinfo extends Fragment {
                         s_myinfo_name.setText(json_object.getString("name"));
                         s_myinfo_current_money_view.setText(json_object.getString("point"));
                         s_myinfo_ranking_view.setText(json_object.getString("rank"));
+                        s_myinfo_adr.setText("광주 ㅣ " + json_object.getString("tel"));
+                        if(login_id.equals("hong")){
+                            s_myinfo_img.setImageResource(R.drawable.profile2);
+                        }else if(login_id.equals("ps")){
+                            s_myinfo_img.setImageResource(R.drawable.profile1);
+                        }else if(login_id.equals("choi")){
+                            s_myinfo_img.setImageResource(R.drawable.profile3);
+                        }
 
                     }
                 } catch (JSONException e) {
