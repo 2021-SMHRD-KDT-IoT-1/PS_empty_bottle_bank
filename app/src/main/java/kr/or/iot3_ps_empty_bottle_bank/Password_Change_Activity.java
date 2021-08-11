@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import PSbankFagment.Fragment_Setting;
+
 public class Password_Change_Activity extends AppCompatActivity {
 
     TextView edt_change_pass,edt_change_pass_check;
@@ -35,7 +37,7 @@ public class Password_Change_Activity extends AppCompatActivity {
 
                 if (change_pass.equals(change_pass_check)){
                     Log.d("비밀번호 --->","일치");
-                    Intent intent = new Intent(getApplicationContext(), User_Activity.class);
+                    Intent intent = new Intent(getApplicationContext(), Fragment_Setting.class);
                     startActivity(intent);
                 }else {
                     Log.d("비밀번호 --->","불일치");

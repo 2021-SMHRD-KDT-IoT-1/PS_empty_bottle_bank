@@ -64,10 +64,10 @@ public class lotto_win_Adapter extends BaseAdapter {
 
         lotto_winVO lotto_vo2 = lotto_data.get(position);
 
-        lotto_round.setText(lotto_vo2.getLotto_round());
-        lotto_win_1.setText(lotto_vo2.getLotto_win1());
-        lotto_win_2.setText(lotto_vo2.getLotto_win2());
-        lotto_win_3.setText(lotto_vo2.getLotto_win3());
+        lotto_round.setText(lotto_vo2.getLotto_round()+"회차");
+        lotto_win_1.setText("1등 : " + lotto_vo2.getLotto_win1());
+        lotto_win_2.setText("2등 : " + lotto_vo2.getLotto_win2());
+        lotto_win_3.setText("3등 : " + lotto_vo2.getLotto_win3());
 
 
 

@@ -18,7 +18,6 @@
         android:usesCleartextTraffic="true">
         <activity android:name=".Store_Activity" />
         <activity android:name=".Password_Change_Activity" />
-        <activity android:name=".User_Activity" />
         <activity android:name=".Version_Info_Activity" />
         <activity android:name=".Notice_1_Activity" />
         <activity android:name=".Help_Activity" />

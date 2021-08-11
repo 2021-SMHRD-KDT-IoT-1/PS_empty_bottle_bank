@@ -10,13 +10,10 @@ import android.widget.Button;
 
 import androidx.fragment.app.Fragment;
 
-import kr.or.iot3_ps_empty_bottle_bank.Account_info;
 import kr.or.iot3_ps_empty_bottle_bank.Help_Activity;
 import kr.or.iot3_ps_empty_bottle_bank.Login_Activity;
-import kr.or.iot3_ps_empty_bottle_bank.Lotto_Activity;
 import kr.or.iot3_ps_empty_bottle_bank.Notice_Activity;
 import kr.or.iot3_ps_empty_bottle_bank.R;
-import kr.or.iot3_ps_empty_bottle_bank.User_Activity;
 import kr.or.iot3_ps_empty_bottle_bank.Version_Info_Activity;
 
 
@@ -38,7 +35,7 @@ public class Fragment_Setting extends Fragment {
         set_btn_log.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), User_Activity.class);
+                Intent intent = new Intent(getActivity(), Login_Activity.class);
                 startActivity(intent);
             }
         });
