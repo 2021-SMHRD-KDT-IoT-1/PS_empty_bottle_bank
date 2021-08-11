@@ -20,6 +20,7 @@
         app:srcCompat="@drawable/sojo" />
 
     <TextView
+        android:fontFamily = "@font/nanana"
         android:id="@+id/event_tlt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -32,6 +33,7 @@
         app:layout_constraintTop_toTopOf="@+id/event_img" />
 
     <TextView
+        android:fontFamily = "@font/nanana"
         android:id="@+id/event_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

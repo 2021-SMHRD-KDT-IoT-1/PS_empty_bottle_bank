@@ -11,7 +11,7 @@
         android:layout_width="384dp"
         android:layout_height="173dp"
         android:gravity="center"
-        android:text="Version 0.0.1 TestVersion"
+        android:text="Version 21.8.13 Bottle-Coin"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

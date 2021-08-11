@@ -5,7 +5,8 @@
     android:id="@+id/Fragment_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="PSbankFagment.Fragment_Main">
+    tools:context="PSbankFagment.Fragment_Main"
+    android:fontFamily = "@font/nanana">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
@@ -18,6 +19,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
+            android:fontFamily = "@font/nanana"
             android:id="@+id/gongji"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -84,6 +86,8 @@
             android:layout_width="413dp"
             android:layout_height="363dp"
             android:layout_marginTop="1dp"
+            android:background="#DCDCDC"
+            android:fontFamily="@font/nanana"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -102,6 +106,7 @@
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
 
         <Button
+            android:fontFamily = "@font/nanana"
             android:id="@+id/btn_main_qr"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
