@@ -44,8 +44,7 @@ import kr.or.iot3_ps_empty_bottle_bank.Store_Activity;
 public class Fragment_Myinfo extends Fragment {
 
     TextView s_myinfo_name, s_myinfo_current_money_view, s_myinfo_ranking_view, user_state;
-    ImageView s_myinfo_img;
-    TextView s_myinfo_adr;
+
 
     // ====이벤트 참여내역 버튼
     Button s_myinfo_btn_event;
@@ -82,8 +81,6 @@ public class Fragment_Myinfo extends Fragment {
         s_myinfo_current_money_view = rootview.findViewById(R.id.s_myinfo_current_money_view);
         s_myinfo_ranking_view = rootview.findViewById(R.id.s_myinfo_ranking_view);
         btn_reset = rootview.findViewById(R.id.btn_reset);
-        s_myinfo_img = rootview.findViewById(R.id.s_myinfo_img);
-        s_myinfo_adr = rootview.findViewById(R.id.s_myinfo_adr);
         queue = Volley.newRequestQueue(requireActivity().getApplicationContext());
 
 
@@ -194,14 +191,7 @@ public class Fragment_Myinfo extends Fragment {
                         s_myinfo_name.setText(json_object.getString("name"));
                         s_myinfo_current_money_view.setText(json_object.getString("point"));
                         s_myinfo_ranking_view.setText(json_object.getString("rank"));
-                        s_myinfo_adr.setText(json_object.getString("tel"));
-                        if(login_id.equals("hong")){
-                            s_myinfo_img.setImageResource(R.drawable.profile2);
-                        }else if(login_id.equals("ps")){
-                            s_myinfo_img.setImageResource(R.drawable.profile1);
-                        }else if(login_id.equals("choi")){
-                            s_myinfo_img.setImageResource(R.drawable.profile3);
-                        }
+
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();

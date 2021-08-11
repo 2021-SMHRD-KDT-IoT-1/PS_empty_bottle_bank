@@ -13,6 +13,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -50,6 +51,7 @@ public class Myinfo_Modify_Result extends AppCompatActivity {
         myinfo_result_name = findViewById(R.id.myinfo_result_name);
         myinfo_result_id = findViewById(R.id.myinfo_result_id);
         myinfo_result_tellnum = findViewById(R.id.myinfo_result_tellnum);
+
 
 
         queue = Volley.newRequestQueue(getApplicationContext());
