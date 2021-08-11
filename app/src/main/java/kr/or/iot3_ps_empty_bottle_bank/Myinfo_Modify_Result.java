@@ -72,9 +72,9 @@ public class Myinfo_Modify_Result extends AppCompatActivity {
                             JSONArray myinfo_array = new JSONArray(response);
                             JSONObject myinfo = myinfo_array.getJSONObject(0);
 
-                            myinfo_result_name.setText("이름 : " + myinfo.getString("name"));
-                            myinfo_result_id.setText("아이디 : " + myinfo.getString("id"));
-                            myinfo_result_tellnum.setText("전화번호 : " + myinfo.getString("tel"));
+                            myinfo_result_name.setText(myinfo.getString("name"));
+                            myinfo_result_id.setText(myinfo.getString("id"));
+                            myinfo_result_tellnum.setText(myinfo.getString("tel"));
 
 
                         } catch (JSONException e) {

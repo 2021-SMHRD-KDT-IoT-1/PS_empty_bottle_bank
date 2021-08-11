@@ -39,8 +39,6 @@
         <activity android:name=".Detail_Activity" />
         <activity android:name=".Main_QR_Activity" />
         <activity android:name=".Myinfo_Modify" />
-        <activity android:name=".Returner_Myinfo_Modify" />
-        <activity android:name=".Returner_Myinfo_Modify_Result" />
         <activity android:name=".Myinfo_Modify_Result" />
         <activity android:name=".Join_Activity2" />
         <activity android:name=".Login_Activity" />
