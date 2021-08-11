@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -60,6 +61,9 @@ public class Fragment_Myinfo extends Fragment {
     // 새로고침 버튼
     Button btn_reset;
 
+    ImageView s_myinfo_img;
+    TextView s_myinfo_adr;
+
 
     //=====큐 생성
     RequestQueue queue;
@@ -80,6 +84,9 @@ public class Fragment_Myinfo extends Fragment {
         s_myinfo_current_money_view = rootview.findViewById(R.id.s_myinfo_current_money_view);
         s_myinfo_ranking_view = rootview.findViewById(R.id.s_myinfo_ranking_view);
         btn_reset = rootview.findViewById(R.id.btn_reset);
+        s_myinfo_img = rootview.findViewById(R.id.s_myinfo_img);
+        s_myinfo_adr = rootview.findViewById(R.id.s_myinfo_adr);
+
         queue = Volley.newRequestQueue(requireActivity().getApplicationContext());
 
 
@@ -190,6 +197,15 @@ public class Fragment_Myinfo extends Fragment {
                         s_myinfo_name.setText(json_object.getString("name"));
                         s_myinfo_current_money_view.setText(json_object.getString("point"));
                         s_myinfo_ranking_view.setText(json_object.getString("rank"));
+                        s_myinfo_adr.setText(json_object.getString("tel"));
+                        if(login_id.equals("hong")){
+                            s_myinfo_img.setImageResource(R.drawable.profile2);
+                        }else if(login_id.equals("ps")){
+                            s_myinfo_img.setImageResource(R.drawable.profile1);
+                        }else if(login_id.equals("choi")){
+                            s_myinfo_img.setImageResource(R.drawable.profile3);
+                        }
+
 
                     }
                 } catch (JSONException e) {
