@@ -10,7 +10,7 @@
         android:id="@+id/event_notice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24sp"
         android:fontFamily="@font/nanana"
         android:gravity="center"
         android:text="대박 로또 이벤트 진행중(07.28~08.13)"

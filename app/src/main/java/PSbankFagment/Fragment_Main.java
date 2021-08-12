@@ -58,8 +58,7 @@ public class Fragment_Main extends Fragment {
 
 
     // ===== 여기는 메인 페이지
-    private int[] main_imgview = {R.drawable.item1, R.drawable.item2, R.drawable.item3, R.drawable.item1, R.drawable.item2, R.drawable.item3,
-            R.drawable.item1, R.drawable.item2, R.drawable.item3, R.drawable.item1, R.drawable.item2, R.drawable.item3};
+    private int main_imgview = R.drawable.machine;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -124,7 +123,7 @@ public class Fragment_Main extends Fragment {
 
                                 main_list_data.add(new main_ProductVO(
                                         json_object.getInt("machine_num"),
-                                        main_imgview[i],
+                                        main_imgview,
                                         json_object.getString("machine_name"),
                                         json_object.getString("storable_bottle"),
                                         broken

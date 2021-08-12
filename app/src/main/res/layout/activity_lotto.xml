@@ -22,7 +22,7 @@
             android:fontFamily="@font/nanana"
             android:gravity="center"
             android:text="대박로또 추첨 결과"
-            android:textSize="20sp"
+            android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

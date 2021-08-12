@@ -49,7 +49,7 @@ public class Detail_Activity extends AppCompatActivity {
 
         String machine_num = getIntent().getStringExtra("machine_num");
 
-
+        Detail_img = findViewById(R.id.Detail_img);
         //회수기 이름
         machine_name_tlt = findViewById(R.id.machine_name_tlt);
         //회수기 투입가능 갯수
@@ -61,6 +61,8 @@ public class Detail_Activity extends AppCompatActivity {
 
 
         detail_queue = Volley.newRequestQueue(getApplicationContext());
+
+        Detail_img.setImageResource(R.drawable.machine);
 
         String Detail_url = "http://rspring41.iptime.org:3000/machine/" + machine_num;
 

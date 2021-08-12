@@ -21,38 +21,38 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_begin="231dp" />
+            app:layout_constraintGuide_begin="310dp" />
 
         <ImageView
             android:id="@+id/Detail_img"
             android:layout_width="174dp"
-            android:layout_height="122dp"
+            android:layout_height="220dp"
             android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
             android:src="@drawable/apeach"
             app:layout_constraintBottom_toTopOf="@+id/guideline4"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.607" />
+            app:layout_constraintVertical_bias="0.483" />
 
         <TextView
-            android:fontFamily = "@font/nanana"
             android:id="@+id/machine_name_tlt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="108dp"
+            android:fontFamily="@font/nanana"
             android:text="@string/temp"
+            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/Detail_img"
-            app:layout_constraintTop_toTopOf="@+id/Detail_img" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="24dp"
             android:fontFamily="@font/nanana"
             android:text="@string/Detail_text2"
             app:layout_constraintEnd_toEndOf="@+id/textView11"
@@ -61,52 +61,50 @@
             app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
         <TextView
-            android:fontFamily = "@font/nanana"
             android:id="@+id/textView7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/nanana"
             android:text="@string/Detail_text3"
             app:layout_constraintEnd_toEndOf="@+id/textView6"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/textView6"
             app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
         <TextView
-            android:fontFamily = "@font/nanana"
             android:id="@+id/textView10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/nanana"
             android:text="@string/Detail_text4"
-            app:layout_constraintBottom_toBottomOf="@+id/Detail_img"
             app:layout_constraintEnd_toEndOf="@+id/textView7"
             app:layout_constraintStart_toStartOf="@+id/textView7"
             app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
         <TextView
-            android:fontFamily = "@font/nanana"
             android:id="@+id/textView11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:fontFamily="@font/nanana"
             android:text="@string/Detail_text1"
-            app:layout_constraintEnd_toEndOf="@+id/machine_name_tlt"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/machine_name_tlt"
             app:layout_constraintTop_toBottomOf="@+id/machine_name_tlt" />
 
         <TextView
-            android:fontFamily = "@font/nanana"
             android:id="@+id/Detail_broken"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/nanana"
             android:text="고장"
             android:textSize="34sp"
             app:layout_constraintBottom_toTopOf="@+id/machine_name_tlt"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.756"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintStart_toEndOf="@+id/Detail_img"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.565" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -133,13 +131,14 @@
             <TextView
                 android:id="@+id/textView12"
                 android:layout_width="36dp"
-                android:layout_height="30dp"
+                android:layout_height="49dp"
                 android:layout_weight="1"
                 android:backgroundTint="#979797"
                 android:fontFamily="@font/nanana"
                 android:gravity="center"
                 android:text="@string/Detail_bottle_set"
                 android:textAllCaps="true"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -149,7 +148,8 @@
                 android:layout_weight="1"
                 android:fontFamily="@font/nanana"
                 android:gravity="center"
-                android:text="@string/temp" />
+                android:text="@string/temp"
+                android:textSize="16sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -170,7 +170,8 @@
                 android:layout_weight="1"
                 android:fontFamily="@font/nanana"
                 android:gravity="center"
-                android:text="@string/Detail_bottle_now" />
+                android:text="@string/Detail_bottle_now"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/Detail_bottle_now_num"
@@ -179,20 +180,21 @@
                 android:layout_weight="1"
                 android:fontFamily="@font/nanana"
                 android:gravity="center"
-                android:text="@string/temp" />
+                android:text="@string/temp"
+                android:textSize="16sp" />
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
-        android:fontFamily = "@font/nanana"
         android:id="@+id/textView17"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="56dp"
+        android:fontFamily="@font/nanana"
         android:text="@string/Detail_care"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.065"
+        app:layout_constraintHorizontal_bias="0.084"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout6" />
 
@@ -200,10 +202,11 @@
         android:id="@+id/textView18"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="40dp"
         android:fontFamily="@font/nanana"
         android:text="@string/Detail_content"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView17" />
 
@@ -211,7 +214,7 @@
         android:id="@+id/Check_loc_btn"
         android:layout_width="234dp"
         android:layout_height="64dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="32dp"
         android:backgroundTint="#4CAF50"
         android:fontFamily="@font/nanana"
         android:text="@string/Check_loc_btn"
@@ -219,6 +222,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView18" />
+        app:layout_constraintTop_toBottomOf="@+id/textView18"
+        app:layout_constraintVertical_bias="0.184" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
